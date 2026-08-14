@@ -15,11 +15,12 @@ It also has five problems that the portfolio makes unavoidable:
 1. **Nothing has been run with students.** Not one record carries evidence of a
    real student session, and the three flagship products state it outright in
    their own repositories. Every experience therefore sits at PLAYABLE or below.
-2. **Roughly 45 working simulations are effectively invisible.** 48 are live and
-   playable on GitHub Pages today; the public website's 24-lesson catalog links
-   exactly one of them. This is a linking problem, not a building problem.
-3. **25 active experiences cannot be launched at all**, including the largest
-   product in the account.
+2. **48 working simulations are effectively invisible.** 47 are live on GitHub
+   Pages and one on the public site; the website's own 24-lesson catalog links
+   none of the 47. This is a linking problem, not a building problem.
+3. **23 active experiences cannot be launched at all** — no link of any kind —
+   including the largest product in the account. Two more sit behind a student
+   login and a module gate.
 4. **Financial literacy is thin** — 5 experiences against 59 economics, for two
    pillars BOW describes as co-equal.
 5. **Nothing has an owner.** All 73 active experiences are unowned.
@@ -85,8 +86,9 @@ Gauntlet (4), website (3), analytics lab (2), pre-course (2), Front Office City
 (2), Highway World (2), plus Decision Challenges, Sports Agency, BOW Universe and
 the Entrepreneurship Lab.
 
-**Operability**: 48 of 73 launchable from a link. 20 of 73 have a recorded
-duration. 32 carry at least one known blocker.
+**Operability**: 50 of 73 have a launch URL — 48 that open directly, 2 behind a
+student login. 23 have none at all. 20 of 73 have a recorded duration. 32 carry
+at least one known blocker.
 
 ---
 
@@ -163,9 +165,10 @@ non-founder running any BOW simulation.
 
 Ranked by value against effort.
 
-1. **Link the 48 live simulations into the website's lesson catalog.** 23 of 24
-   lessons say "coming soon" while working simulations sit one URL away. Highest
-   value in the audit, and close to zero build cost.
+1. **Link the 48 live simulations into the website's lesson catalog.** 23 of the
+   24 lessons default to "coming soon" with no URL, and the site contains no
+   reference to `github.io` anywhere — while working simulations sit one URL
+   away. Highest value in the audit, at close to zero build cost.
 2. **Run one simulation with real students and record it.** The portfolio cannot
    leave PLAYABLE until this happens once. Pick a short, healthy, live one.
 3. **Assign owners** — start with the flagships and anything at Track level.

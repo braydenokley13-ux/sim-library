@@ -54,7 +54,7 @@ const view = sims.map((s) => {
     lastVerified: g.lastVerified ?? {}, govNotes: g.notes ?? null,
     confidence: s.provenance?.confidence ?? "UNKNOWN",
     evidence: s.provenance?.evidence ?? "", open: s.provenance?.openQuestions ?? [],
-    launch: (p.runResources ?? []).find((r) => r.kind === "live-url")?.url ?? null,
+    launch: (p.runResources ?? []).find((r) => r.kind === "live-url" || r.kind === "create-class-url")?.url ?? null,
   };
 });
 

@@ -44,22 +44,22 @@ Then open **`app/index.html`** in a browser. No server needed.
 
 Five things worth knowing before anything else:
 
-**1. Nothing has been student-tested.** Not one of the 76 records evidence of a
-real student run. In the three flagship products the source says so in as many
+**1. Nothing has been student-tested.** Not one of the 76 records carries
+evidence of a real student run. In the three flagship products the source says so in as many
 words — *"No real student has used this build"*, *"No child has used this build
 yet"*. Everything therefore sits at PLAYABLE or below, and the maturity model
 is built so that cannot be quietly upgraded.
 
-**2. About 45 working simulations are invisible.** 48 of the 73 active
-experiences are live and playable on GitHub Pages right now. The public website's
-24-lesson catalog links exactly one of them; the other 23 lessons say "coming
-soon" and point nowhere. **The gap is a linking problem, not a building
-problem** — and it is the cheapest, largest win available.
+**2. 48 working simulations are invisible.** 47 are live on GitHub Pages and one
+on the public site. The website's own 24-lesson catalog links none of the 47 —
+23 of those lessons default to "coming soon" pointing nowhere, and the site
+contains no reference to `github.io` anywhere. **The gap is a linking problem,
+not a building problem**, and it is the cheapest, largest win available.
 
-**3. 25 experiences cannot be launched at all.** No live link. That includes
+**3. 23 experiences cannot be launched at all.** No link of any kind. That includes
 Highway World, the largest product in the account: it has roughly 2,700 tests
 and no deployment of any kind, so running it requires cloning a repo and
-starting a dev server. For teaching purposes those 25 do not currently exist.
+starting a dev server. For teaching purposes those 23 do not currently exist.
 
 **4. Financial literacy is thin.** BOW calls Economics and Financial Literacy
 co-equal pillars. The portfolio is 59 economics to 5 financial literacy, and the
