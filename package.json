@@ -9,7 +9,7 @@
     "probe": "node scripts/probe-health.mjs",
     "seed": "node scripts/seed.mjs",
     "build": "node scripts/build-catalog.mjs",
-    "test": "node --test tests/"
+    "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
     "ajv": "^8.17.1",
