@@ -5,7 +5,7 @@ _Generated from the registry on 2026-08-14. Do not edit by hand; run `npm run bu
 **76 experiences** recorded — 73 active, 3 superseded.
 
 - Maturity: PLAYABLE 63 · EXPERIMENTAL 10
-- Technical health: healthy 48 · unknown 14 · needs-attention 7 · broken 4
+- Technical health: healthy 46 · unknown 16 · needs-attention 7 · broken 4
 - Pillar: economics 59 · cross-pillar 9 · financial-literacy 5
 - Launchable from a link today: 48 of 73
 - Duration recorded: 20 of 73
@@ -43,8 +43,8 @@ _Generated from the registry on 2026-08-14. Do not edit by hand; run `npm run bu
 
 | Simulation | Grades | Duration | Maturity | Health | Launch |
 | --- | --- | --- | --- | --- | --- |
-| **Front Office — Eastfield Eagles** | 7–8 | — | PLAYABLE | healthy | — |
-| **Simulation Room — Westbrook Wolves** | 5–6 | — | PLAYABLE | healthy | — |
+| **Front Office — Eastfield Eagles** | 7–8 | — | PLAYABLE | unknown | — |
+| **Simulation Room — Westbrook Wolves** | 5–6 | — | PLAYABLE | unknown | — |
 | **The Asset Everyone Wants** | 5–6 | — | PLAYABLE | healthy | yes |
 
 ## decision-challenges

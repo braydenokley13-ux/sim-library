@@ -83,8 +83,8 @@
       "productOwner": "UNOWNED"
     },
     "health": {
-      "technical": "healthy",
-      "technicalBasis": "Route exists in a deployed site; gated, so end-to-end reachability was not probed anonymously.",
+      "technical": "unknown",
+      "technicalBasis": "The route exists in a deployed site, but it is gated behind a student account and prior module completion, so the experience itself could not be reached and verified.",
       "documentation": "minimal",
       "knownBlockers": [
         "Gated behind a student account and prior module completion."

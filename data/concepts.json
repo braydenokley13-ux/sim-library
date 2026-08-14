@@ -111,6 +111,8 @@
   "gapsAcknowledged": [
     "The Financial Literacy spine has 7 concepts against 64 Economics concepts. That imbalance is real: it reflects BOW's actual portfolio, not a modelling shortcut.",
     "Credit, debt, interest, and insurance appear in BOW's source vocabulary but no discovered simulation teaches them as a primary concept, so they are deliberately NOT listed as canonical concepts yet. Adding a concept no BOW experience teaches would create a phantom gap rather than an honest one.",
-    "Concepts marked attestedIn: product-source are drawn from discovered simulation titles and source vocabulary rather than an existing BOW taxonomy file. They are the taxonomy's newest and least settled members."
+    "Concepts marked attestedIn: product-source are drawn from discovered simulation titles and source vocabulary rather than an existing BOW taxonomy file. They are the taxonomy's newest and least settled members.",
+    "Three concepts currently have no simulation at all: market equilibrium, monopoly, and auctions and bidding. They are deliberately NOT removed. Market equilibrium and monopoly sit on BOW's own published concept map as Track 101 Module 2 concepts, so deleting them would erase a real curriculum gap rather than report it. An uncovered concept is a finding, not a defect in the taxonomy.",
+    "Highway World's record carries 30 concepts, far more than any other. That is not over-tagging: the product defines 33 concept ids in packages/engine/src/curriculum/concepts.ts and enforces coverage of every one as a build contract. The count reflects the product, and it does skew the most-taught tallies upward for the decision-economics group."
   ]
 }

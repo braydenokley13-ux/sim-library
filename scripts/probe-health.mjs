@@ -41,22 +41,23 @@ let changed = 0;
 for (const f of files) {
   const path = join(SIM_DIR, f);
   const rec = JSON.parse(readFileSync(path, "utf8"));
-  const urls = [
-    ...(rec.product.runResources ?? []).filter((r) => r.url).map((r) => ({ label: r.kind, url: r.url })),
-    ...(rec.product.source.primary.url ? [{ label: "source", url: rec.product.source.primary.url }] : []),
-  ];
+  // Only a launch surface tells us anything about health. A repository URL
+  // resolving says nothing about whether the simulation runs, so probing it
+  // would manufacture exactly the false confidence this registry exists to avoid.
+  const urls = (rec.product.runResources ?? [])
+    .filter((r) => r.url && (r.kind === "live-url" || r.kind === "create-class-url"))
+    .map((r) => ({ label: r.kind, url: r.url }));
+
   if (!urls.length) {
-    rows.push({ id: rec.id, status: "no-url", detail: "nothing reachable to probe" });
-    continue;
+    rows.push({ id: rec.id, status: "not-probeable", detail: "no launch URL — health must be set by a human" });
+    continue; // never written, even with --write
   }
 
   const results = [];
   for (const u of urls) results.push({ ...u, status: await probe(u.url) });
 
-  const launchable = results.filter((r) => r.label === "live-url" || r.label === "create-class-url");
-  const relevant = launchable.length ? launchable : results;
-  const allOk = relevant.every((r) => r.status === 200);
-  const anyOk = relevant.some((r) => r.status === 200);
+  const allOk = results.every((r) => r.status === 200);
+  const anyOk = results.some((r) => r.status === 200);
   const technical = allOk ? "healthy" : anyOk ? "needs-attention" : "broken";
 
   rows.push({
