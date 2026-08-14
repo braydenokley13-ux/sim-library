@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "id": "gauntlet-l2-supply-chain-crisis",
+  "product": {
+    "title": "Gauntlet L2: Supply Chain Crisis",
+    "family": "gauntlet",
+    "pillar": "economics",
+    "summary": "Six rounds running a store across three products with different elasticities and supply risks.",
+    "whatStudentsDo": "Students order inventory and set prices for basketballs, jerseys and water bottles, each with its own cost, storage footprint, demand elasticity and supply reliability, working inside cash-flow and storage limits as supply becomes unreliable.",
+    "concepts": [
+      "econ.supply-chain",
+      "econ.price-elasticity",
+      "econ.pricing-strategy",
+      "econ.operations-tradeoffs",
+      "econ.marginal-value"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "PRACTICE",
+      "secondary": [
+        "APPLY"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "duration": {
+      "minutes": 25,
+      "basis": "stated-in-source"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "business-operator",
+      "market-and-pricing"
+    ],
+    "technology": "single-file HTML/CSS/JS",
+    "evidenceOutput": "scored-outcomes",
+    "studentDataProfile": {
+      "storesStudentData": "yes",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "yes",
+      "thirdPartyServices": [
+        "Google Apps Script"
+      ],
+      "notes": "Posts student email, score, tier, XP and full financial results to a Google Apps Script endpoint. This is the only Gauntlet level that transmits student data. Descriptive only."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/GAUNTLET",
+        "path": "GauntletL2/index.html"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/GAUNTLET/GauntletL2/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/GAUNTLET"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "The richest mechanics in the Gauntlet and the only level whose evidence path actually works end to end. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "Reachable, and the only Gauntlet level with a live results endpoint wired in. Probed 2026-08-14.",
+      "documentation": "missing",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "GAUNTLET/GauntletL2/index.html carries a real deployed Apps Script webAppUrl and a submitResults function posting email, score, tier, XP and game data."
+  }
+}

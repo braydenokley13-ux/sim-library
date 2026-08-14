@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "risk-volatility-gm-sim",
+  "product": {
+    "title": "Risk, Volatility & Rational Aggression",
+    "family": "track-301",
+    "pillar": "economics",
+    "summary": "Three seasons testing whether a team's risk-taking matches its situation.",
+    "whatStudentsDo": "Students pick a team whose circumstances differ — a legacy power, a small-market reset, a cash-rich expansion side — commit to a strategy from stability to boom-or-bust, then run three seasons of drafting, trading and free agency under the cap. Scoring weights whether the risk taken fitted the context, not whether it paid off.",
+    "concepts": [
+      "econ.risk-and-reward",
+      "econ.uncertainty",
+      "econ.expected-value",
+      "econ.salary-cap",
+      "econ.luxury-tax",
+      "econ.time-horizon",
+      "econ.process-vs-results"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "APPLY"
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "business-operator",
+      "investment-and-portfolio"
+    ],
+    "technology": "React + TypeScript + Zustand, deployed by GitHub Actions to Pages",
+    "evidenceOutput": "none",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/301-M2-L2",
+        "path": "index.html"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/301-M2-L2/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/301-M2-L2"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "A complete state machine and scoring model, deployed by CI, but visibly unpolished. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "minimal",
+      "knownBlockers": [
+        "The browser tab still reads 'React App' — the default title was never set.",
+        "The onboarding component references an image that does not exist in the repo, so it will 404 on the deployed site."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "301-M2-L2/sports-management-game/src/pages/IntroPage.tsx carries the title and a stated weighting of risk-context alignment 40%, financial sustainability 30%, on-court results 30%. TeamOnboarding.tsx references /301-M2-L2/images/brayden-white.jpg with no public/images directory present.",
+    "openQuestions": [
+      "A 1,042-line implementation plan describes a Postgres and Redis backend that was never built; the shipped app is entirely client-side. Its stated 20–30 minute session is a planning target, not a measurement, so no duration is recorded."
+    ]
+  }
+}

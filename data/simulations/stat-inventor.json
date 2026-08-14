@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "stat-inventor",
+  "product": {
+    "title": "Stat Inventor",
+    "family": "analytics-lab",
+    "pillar": "cross-pillar",
+    "summary": "Invent a scoring formula, then see who it crowns.",
+    "whatStudentsDo": "Students explore real player statistics across sports, star the players they rate, then build their own weighted formula in plain language and watch it decide a champion — discovering that what you choose to measure decides who wins.",
+    "concepts": [
+      "econ.analytics-and-war",
+      "econ.asset-valuation",
+      "econ.signal-vs-noise"
+    ],
+    "gradeBands": [
+      "5",
+      "6"
+    ],
+    "gradeBandBasis": "stated-in-source",
+    "purpose": {
+      "primary": "INTRODUCE",
+      "secondary": [
+        "EXPLORE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor",
+      "notes": "Students copy a share link that a teacher pastes into the separate Teacher Collector tool. That collector is a facilitator dashboard, not a student experience, so it is not a Library entry."
+    },
+    "pattern": [
+      "signal-vs-noise"
+    ],
+    "technology": "Alpine.js static site with real season data",
+    "evidenceOutput": "choices-recorded",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/BSC-BUILDANALYTIC",
+        "path": "track101/index.html"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/BSC-BUILDANALYTIC/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/BSC-BUILDANALYTIC"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Complete and reachable, with a share-link path into the facilitator collector. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "minimal",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "BSC-BUILDANALYTIC/index.html describes the Track 101 lane as 'Explore player data, build your own scoring formula using stars, and crown your champion' for 'Grades 5–6'."
+  }
+}

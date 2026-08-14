@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "the-league-in-a-box",
+  "product": {
+    "title": "The League in a Box",
+    "family": "track-101",
+    "pillar": "economics",
+    "summary": "Design the rules of a league, then meet the league you designed.",
+    "whatStudentsDo": "Students set nine governance levers — a spending cap, revenue sharing, a tax on high spenders, contract limits, draft order, rookie pay, expansion pace, player movement and enforcement — then ratify them. The engine profiles the league they built, names its character, and shows a matrix of who wins and who loses under those rules.",
+    "concepts": [
+      "econ.competition-and-market-structure",
+      "econ.revenue-sharing",
+      "econ.salary-cap",
+      "econ.luxury-tax",
+      "econ.incentives",
+      "econ.stakeholder-management",
+      "econ.market-size"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "SYNTHESIZE",
+      "secondary": [
+        "EXPLORE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "allocation-under-constraint"
+    ],
+    "technology": "single-file HTML build plus a React/Vite rewrite published from docs/",
+    "evidenceOutput": "none",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/league-in-a-box",
+        "path": "index.html"
+      },
+      "additional": [
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/league-in-a-box",
+          "path": "src/league-in-a-box-advanced.jsx"
+        }
+      ]
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/league-in-a-box/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/league-in-a-box"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Complete and reachable in two implementations, with a committed build output. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "missing",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    },
+    "notes": "Its own copy calls it a Track 101 capstone, so it is filed under Track 101 rather than as an unattached standalone — but it appears in no Track 101 lesson list. Worth reconciling against the curriculum."
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "league-in-a-box/src/league-in-a-box-advanced.jsx labels the intro screen 'Track 101 Capstone' and closes with 'Check out BOW Sports Capital's Track 101 to understand league governance.' Recorded as one experience across two implementations."
+  }
+}

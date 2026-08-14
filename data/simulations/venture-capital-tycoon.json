@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "venture-capital-tycoon",
+  "product": {
+    "title": "Venture Capital Tycoon",
+    "family": "track-301",
+    "pillar": "economics",
+    "summary": "Run a fifty-million-dollar venture fund across five years.",
+    "whatStudentsDo": "Students review deal flow each year and choose to invest or pass, then in portfolio review add follow-on capital or cut losers, then decide whether to sell now or hold for a riskier payout, while market news shifts sector valuations. The final score blends fund return with a scorecard of the economic reasoning used.",
+    "concepts": [
+      "econ.capital-and-investment",
+      "econ.portfolio-thinking",
+      "econ.opportunity-cost",
+      "econ.sunk-cost",
+      "econ.optionality",
+      "econ.marginal-value",
+      "econ.risk-and-reward"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "PRACTICE",
+      "secondary": [
+        "APPLY"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "investment-and-portfolio"
+    ],
+    "technology": "single-file HTML/CSS/JS, no build step",
+    "evidenceOutput": "none",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/301-M1-ECON",
+        "path": "index.html"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/301-M1-ECON/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/301-M1-ECON"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Complete and publicly reachable. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "minimal",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "301-M1-ECON/index.html <title>Venture Capital Tycoon</title>, subtitle 'Learn economics by running a $50M startup fund over 5 years', with concept chips naming opportunity cost, time value, option value, diminishing returns and the sunk cost fallacy."
+  }
+}

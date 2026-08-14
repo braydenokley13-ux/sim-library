@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "deal-dynasty",
+  "product": {
+    "title": "Deal Dynasty — Business Strategy Game",
+    "family": "track-301",
+    "pillar": "economics",
+    "summary": "Seven rounds, each teaching a different negotiation or game-theory idea.",
+    "whatStudentsDo": "Students pitch investors under signalling pressure, weigh competing offers against their walk-away, buy from a seller who knows more than they do, run a five-week pricing standoff with a rival, build a reputation, make a credible commitment, and close a three-party deal needing two of three to agree.",
+    "concepts": [
+      "econ.negotiation",
+      "econ.batna",
+      "econ.leverage",
+      "econ.reputation-risk",
+      "econ.competition-and-market-structure",
+      "econ.stakeholder-management",
+      "econ.entrepreneurship"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "EXPLORE",
+      "secondary": [
+        "PRACTICE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "negotiation",
+      "auction-and-bidding"
+    ],
+    "technology": "single-file HTML/CSS/JS, no build step",
+    "evidenceOutput": "none",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/301-M3-ECON",
+        "path": "index.html"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/301-M3-ECON/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/301-M3-ECON"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Complete and publicly reachable, with an explicit teaching note closing each round. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "minimal",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "301-M3-ECON/index.html subtitle 'Build your business empire in 7 high-stakes rounds'; each round object carries concept and teach fields covering signalling and screening, BATNA, information asymmetry, repeated games, reputation, commitment devices and multi-party bargaining."
+  }
+}

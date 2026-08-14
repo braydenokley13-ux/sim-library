@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "startup-tycoon",
+  "product": {
+    "title": "Startup Tycoon: Data-Driven Decisions",
+    "family": "track-301",
+    "pillar": "economics",
+    "summary": "Seven data-reasoning rounds under one startup scoreboard.",
+    "whatStudentsDo": "Students work through seven linked exercises — pricing risky deals by expected value, giving forecast ranges, avoiding an overfitted curve, updating on new evidence, combining models, choosing under ambiguity, and calibrating their own confidence — with one running score and a closing list of what they practised.",
+    "concepts": [
+      "econ.expected-value",
+      "econ.uncertainty",
+      "econ.model-risk",
+      "econ.signal-vs-noise",
+      "econ.entrepreneurship",
+      "econ.risk-and-reward"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "EXPLORE",
+      "secondary": [
+        "PRACTICE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "duration": {
+      "minutes": 15,
+      "basis": "stated-in-source"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "signal-vs-noise",
+      "investment-and-portfolio"
+    ],
+    "technology": "single-file HTML/CSS/JS, no build step",
+    "evidenceOutput": "none",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/301-M4-ECON",
+        "path": "index.html"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/301-M4-ECON/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/301-M4-ECON"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Complete and publicly reachable. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "minimal",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "301-M4-ECON/index.html states '7 rounds • ~15 minutes • Can you make Business Legend?' Rounds carry headings for expected value, confidence intervals, overfitting, Bayesian updating, ensembles, ambiguity and calibration. Recorded as one experience: shared shell, running score and single results screen."
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "id": "bow-sports-empire",
+  "product": {
+    "title": "Bow Sports Empire",
+    "family": "track-201",
+    "pillar": "economics",
+    "summary": "Five seasons of building a sports business, ending in an adaptive final round.",
+    "whatStudentsDo": "Students name an empire and play five seasons — First Recruit through Championship Run — each choosing one of three strategy cards that move revenue, morale, efficiency and risk, reading an insight that names the concept behind the result, then spending earned coins. A five-question adaptive round closes it out.",
+    "concepts": [
+      "econ.expected-value",
+      "econ.marginal-value",
+      "econ.opportunity-cost",
+      "econ.risk-and-reward",
+      "econ.uncertainty",
+      "econ.principal-agent"
+    ],
+    "gradeBands": [
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "track-convention",
+    "purpose": {
+      "primary": "SYNTHESIZE",
+      "secondary": [
+        "APPLY"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor",
+      "notes": "One experience in two media. The Sheets build records evidence and emails claim codes; the browser build keeps state in the session only."
+    },
+    "pattern": [
+      "business-operator",
+      "investment-and-portfolio"
+    ],
+    "technology": "single-file HTML/CSS/JS, no build step",
+    "evidenceOutput": "choices-recorded",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/201-M3-ECON",
+        "path": "index.html"
+      },
+      "additional": [
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/201-M3-ECON",
+          "path": "apps script"
+        }
+      ]
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/201-M3-ECON/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/201-M3-ECON"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Both builds complete; browser build is polished and publicly reachable. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "minimal",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "201-M3-ECON/js/game-data.js season titles ('First Recruit', 'Scaling Up', 'Building the Machine', 'Storm Season', 'Championship Run') match CHAPTER_NARRATIVES in the repo's 'apps script' verbatim."
+  }
+}

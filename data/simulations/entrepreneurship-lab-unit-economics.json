@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "id": "entrepreneurship-lab-unit-economics",
+  "product": {
+    "title": "Entrepreneurship Lab — Unit Economics",
+    "family": "entrepreneurship-lab",
+    "pillar": "cross-pillar",
+    "summary": "Set a price and a capacity, then watch ten periods decide whether the business survives.",
+    "whatStudentsDo": "Students set a price and a per-period capacity, then run ten periods in which a demand curve decides how much actually sells, while cash, runway, profit per period and demand against sales chart out. The goal is to reach period ten without running out of cash.",
+    "concepts": [
+      "econ.pricing-strategy",
+      "econ.marginal-value",
+      "econ.law-of-demand",
+      "econ.entrepreneurship",
+      "fin.viable-budget",
+      "fin.full-cost"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "PRACTICE"
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "business-operator",
+      "market-and-pricing"
+    ],
+    "technology": "static HTML/JS with charting",
+    "evidenceOutput": "none",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/entrepuernurship",
+        "path": "entrepeurneurship/index.html"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/entrepuernurship"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "EXPERIMENTAL",
+    "maturityBasis": "The underlying idea is sound and the engine is written, but the shipped build does not run and only one of three intended simulations was ever built.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "broken",
+      "technicalBasis": "The page throws on load: index.html never includes state.js, and the simulation's own dependency guard raises an error when the functions in that file are missing.",
+      "documentation": "missing",
+      "knownBlockers": [
+        "The page fails on load — state.js is never included, and the dependency check in sim1.js throws without it.",
+        "state.js is a malformed patch dump containing a second copy of index.html pasted in as a comment.",
+        "Only Sim 1 of an intended three-part module exists; sim2 and sim3 are referenced but absent."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    },
+    "notes": "Recorded rather than omitted because entrepreneurship and unit economics are otherwise thinly covered, and this is a repairable build rather than a bad idea."
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "entrepuernurship/entrepeurneurship/index.html contains no script tag for state.js, while sim1.js asserts on load: 'state.js not loaded. Ensure state.js is loaded before sim1.js.' state.js declares sim1Completed, sim2Completed and sim3Completed but no sim2.js or sim3.js exists in the repository."
+  }
+}

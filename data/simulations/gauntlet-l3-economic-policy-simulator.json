@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "gauntlet-l3-economic-policy-simulator",
+  "product": {
+    "title": "Gauntlet L3: Economic Policy Simulator",
+    "family": "gauntlet",
+    "pillar": "economics",
+    "summary": "Eight quarters of fiscal, monetary and trade policy for a city in crisis.",
+    "whatStudentsDo": "Students advise a city whose largest factory has closed, choosing fiscal, monetary and trade policy each quarter across two in-game years and balancing unemployment, inflation, growth and public approval. Policies take effect on a delay, and the engine models the trade-off between unemployment and inflation directly.",
+    "concepts": [
+      "econ.fiscal-policy",
+      "econ.monetary-policy",
+      "econ.inflation",
+      "econ.gdp-and-growth",
+      "econ.business-cycle",
+      "econ.multiplier-effect",
+      "econ.tradeoffs"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "APPLY",
+      "secondary": [
+        "SYNTHESIZE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "duration": {
+      "minutes": 35,
+      "basis": "stated-in-source"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "allocation-under-constraint",
+      "crisis-management"
+    ],
+    "technology": "single-file HTML/CSS/JS",
+    "evidenceOutput": "completion",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/GAUNTLET",
+        "path": "gauntlet-l3/index.html"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/GAUNTLET/gauntlet-l3/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/GAUNTLET"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "The deepest macroeconomics in the whole portfolio, complete and reachable, though evidence collection is manual. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "Reachable via the Gauntlet landing page on 2026-08-14. Reachability only.",
+      "documentation": "missing",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    },
+    "notes": "The only simulation in the account with substantial macroeconomics coverage — fiscal policy, monetary policy, inflation, the business cycle and the multiplier all appear here and almost nowhere else."
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "GAUNTLET/gauntlet-l3/index.html: 'You are the Chief Economic Advisor... largest factory just closed, laying off 2,000 workers', with an explicit Phillips-curve relationship in the engine and a manual claim code submitted through a separate BOW form."
+  }
+}

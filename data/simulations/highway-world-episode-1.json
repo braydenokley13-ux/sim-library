@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "id": "highway-world-episode-1",
+  "product": {
+    "title": "Highway World — Episode 1: Origin District",
+    "aliases": [
+      "Highway World",
+      "BSC · Highway World",
+      "Save The Franchise"
+    ],
+    "family": "highway-world",
+    "pillar": "economics",
+    "summary": "A 3D sports-business city where eleven missions each force one real front-office call.",
+    "whatStudentsDo": "Students drive between destinations in a stylised city as a basketball front-office decision-maker. Eleven missions — three venue rooms and eight career rooms — each present one forced trade-off on interactive boards: splitting development minutes, working the trade deadline, managing the sheet under the tax line, ranking a draft board where scouting and analytics disagree, negotiating with an agent, pricing the arena. Consequences ripple through six stakeholders and the run ends with a synthesised GM identity review.",
+    "concepts": [
+      "econ.opportunity-cost",
+      "econ.expected-value",
+      "econ.risk-and-reward",
+      "econ.uncertainty",
+      "econ.tradeoffs",
+      "econ.sunk-cost",
+      "econ.marginal-value",
+      "econ.scarcity",
+      "econ.incentives",
+      "econ.optionality",
+      "econ.portfolio-thinking",
+      "econ.time-horizon",
+      "econ.leadership-under-constraints",
+      "econ.negotiation",
+      "econ.batna",
+      "econ.leverage",
+      "econ.asset-valuation",
+      "econ.roster-construction",
+      "econ.salary-cap",
+      "econ.price-elasticity",
+      "econ.revenue-management",
+      "econ.customer-segmentation",
+      "econ.fan-engagement",
+      "econ.sponsorship-and-brand",
+      "econ.media-rights",
+      "econ.operations-tradeoffs",
+      "econ.stakeholder-management",
+      "econ.principal-agent",
+      "econ.crisis-management",
+      "econ.reputation-risk"
+    ],
+    "gradeBands": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "stated-in-source",
+    "purpose": {
+      "primary": "APPLY",
+      "secondary": [
+        "EXPLORE",
+        "SYNTHESIZE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided",
+        "facilitator-led"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one GPU-capable browser per student; WebGL required"
+    },
+    "duration": {
+      "minutes": 60,
+      "sessions": 1,
+      "basis": "stated-in-source"
+    },
+    "groupSize": "one student per device",
+    "facilitation": {
+      "required": false,
+      "founderDependence": "any-instructor",
+      "prep": "The documented classroom unit is a curated two-room hour, not the full eleven missions. An in-app instructor panel supplies a ten-segment run of show."
+    },
+    "pattern": [
+      "world-exploration",
+      "allocation-under-constraint",
+      "negotiation",
+      "market-and-pricing",
+      "draft-and-selection"
+    ],
+    "technology": "React + React Three Fiber (WebGL), Vite, pnpm turborepo",
+    "evidenceOutput": "facilitator-observation",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "no",
+      "thirdPartyServices": [],
+      "notes": "No account server, no email, no password. A local display name and progress are kept in browser localStorage. No telemetry pipeline exists. Descriptive only."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/BSC-HIGHWAY-WORLD"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/BSC-HIGHWAY-WORLD"
+      },
+      {
+        "kind": "facilitator-guide",
+        "label": "60-minute run guide",
+        "path": "docs/60-minute-run-guide.md"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Around 2,700 tests across 225 files, CI with typecheck, full suite, build and two guardrails, and a curriculum spine whose coverage is enforced as a build contract. Its own CTO report recommends shipping only as a supervised pilot, and no student has run it.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "needs-attention",
+      "technicalBasis": "No deployment of any kind: no hosting config and no publish step in CI. An instructor would have to clone the repository and run a dev server.",
+      "documentation": "complete",
+      "knownBlockers": [
+        "No deployment — an instructor cannot launch this today without a developer toolchain.",
+        "First-load weight of roughly 940 kB of eager JavaScript and 44 MB of 3D assets, which its own CTO report flags as the difference between a good first minute and a teacher giving up on a school network.",
+        "No telemetry or observability of any kind.",
+        "Some 3D source assets have unclear licensing, pending review."
+      ]
+    },
+    "validation": {
+      "studentValidation": "never",
+      "facilitatorValidation": "never",
+      "notes": "Every reference to a pilot in the repo describes recommended future work. The file named EPISODE0_PILOT_NOTES is a design audit of retired content, not student data."
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    },
+    "notes": "Rooms are individually addressable by URL and route-integrity tested, but only the curated two-room hour is documented, timed and scripted. Recorded as one experience for that reason. 'Gold master' here is an internal engineering milestone, not an external certification."
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "README.md: 'the audience is 5th–8th graders' and 'Episode 1 — eight career rooms with a validated curriculum spine — is at gold master.' docs/60-minute-run-guide.md budgets roughly 63 minutes across ten segments for a curated two-room session. packages/engine/src/curriculum/concepts.ts defines 33 concept ids whose coverage is enforced by curriculumSpineInvariantsHold().",
+    "openQuestions": [
+      "Total duration for the full eleven-mission campaign is not stated anywhere; only the curated hour is budgeted."
+    ]
+  }
+}

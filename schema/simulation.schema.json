@@ -1,0 +1,241 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bowsportscapital.com/schema/simulation.schema.json",
+  "title": "BOW Simulation Library entry",
+  "description": "One student-facing learning experience. NOT one repository. A repo may hold many entries; one entry may span several repos; an entry may have no code at all.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "product", "governance"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Stable forever. Never reused, never renamed. BOW OS and the public site reference this."
+    },
+
+    "product": {
+      "type": "object",
+      "description": "SELF-DESCRIBED metadata. Owned by whoever builds the simulation. A repo manifest may overwrite this block wholesale during sync.",
+      "additionalProperties": false,
+      "required": ["title", "pillar", "summary", "whatStudentsDo", "concepts", "purpose", "delivery", "source"],
+      "properties": {
+        "title": { "type": "string", "minLength": 2, "description": "Canonical title as the product actually presents itself." },
+        "aliases": { "type": "array", "items": { "type": "string" }, "default": [] },
+        "family": { "type": "string", "description": "Product family id, e.g. decision-challenges, highway-world, track-101. Optional." },
+        "pillar": { "enum": ["economics", "financial-literacy", "cross-pillar"] },
+        "summary": { "type": "string", "minLength": 10, "description": "One sentence. What this is." },
+        "whatStudentsDo": { "type": "string", "minLength": 20, "description": "Plain English. The actual decisions, resources and consequences." },
+
+        "concepts": {
+          "type": "array", "minItems": 1, "items": { "type": "string" },
+          "description": "Canonical concept ids from data/concepts.json. Validated."
+        },
+        "standards": {
+          "type": "array", "default": [],
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["framework", "objectiveId"],
+            "properties": {
+              "framework": { "type": "string" },
+              "objectiveId": { "type": "string" },
+              "strength": { "enum": ["primary", "supporting", "partial"] }
+            }
+          },
+          "description": "Preserved where a product already maps to standards. Never required."
+        },
+
+        "gradeBands": {
+          "type": "array", "items": { "enum": ["5", "6", "7", "8", "9", "10"] },
+          "description": "Omit entirely when unknown. Do not guess."
+        },
+        "gradeBandBasis": { "enum": ["stated-in-source", "track-convention", "unknown"] },
+
+        "purpose": {
+          "type": "object", "additionalProperties": false, "required": ["primary"],
+          "properties": {
+            "primary": { "enum": ["INTRODUCE", "PRACTICE", "APPLY", "EVIDENCE", "SYNTHESIZE", "EXPLORE"] },
+            "secondary": { "type": "array", "items": { "enum": ["INTRODUCE", "PRACTICE", "APPLY", "EVIDENCE", "SYNTHESIZE", "EXPLORE"] }, "default": [] }
+          }
+        },
+
+        "delivery": {
+          "type": "object", "additionalProperties": false, "required": ["setting", "grouping"],
+          "properties": {
+            "setting": { "type": "array", "minItems": 1, "items": { "enum": ["self-guided", "facilitator-led", "whole-class", "hybrid"] } },
+            "grouping": { "type": "array", "minItems": 1, "items": { "enum": ["individual", "pairs", "teams", "whole-class"] } },
+            "mode": { "type": "array", "items": { "enum": ["online", "in-person", "synchronous", "asynchronous"] }, "default": [] },
+            "devices": { "type": "string", "description": "e.g. 'one browser per student', 'projector only', 'none'." }
+          }
+        },
+
+        "duration": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "minutes": { "type": "integer", "minimum": 1, "maximum": 6000 },
+            "minMinutes": { "type": "integer", "minimum": 1 },
+            "maxMinutes": { "type": "integer", "minimum": 1 },
+            "sessions": { "type": "integer", "minimum": 1 },
+            "basis": { "enum": ["stated-in-source", "estimated-from-content", "unknown"] }
+          },
+          "description": "Omit minutes entirely rather than inventing one. basis is required whenever a number is given."
+        },
+
+        "groupSize": { "type": "string", "description": "e.g. '1', '2-4 per team', 'any class size'. Omit if unknown." },
+
+        "facilitation": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "required": { "type": "boolean" },
+            "founderDependence": { "enum": ["self-guided", "any-instructor", "bow-certified-instructor", "experienced-facilitator", "founder-required", "unknown"] },
+            "prep": { "type": "string" },
+            "notes": { "type": "string" }
+          }
+        },
+
+        "pattern": {
+          "type": "array", "default": [],
+          "items": { "enum": ["allocation-under-constraint", "market-and-pricing", "negotiation", "auction-and-bidding", "shock-and-adapt", "draft-and-selection", "business-operator", "investment-and-portfolio", "signal-vs-noise", "crisis-management", "world-exploration", "trade-and-exchange"] },
+          "description": "Mechanic taxonomy. Descriptive, never required, never used to reject a simulation."
+        },
+
+        "technology": { "type": "string", "description": "Descriptive only. e.g. 'single-file HTML/JS', 'React + Vite', 'R3F/WebGL turborepo', 'printable + spreadsheet'." },
+
+        "evidenceOutput": {
+          "enum": ["none", "completion", "choices-recorded", "reflections", "scored-outcomes", "structured-assessment", "facilitator-observation", "educator-report", "unknown"],
+          "description": "What the experience produces. Most BOW simulations legitimately produce 'none' — that is not a defect."
+        },
+
+        "studentDataProfile": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "storesStudentData": { "enum": ["yes", "no", "unknown"] },
+            "requiresLogin": { "enum": ["yes", "no", "unknown"] },
+            "usesClassCodes": { "enum": ["yes", "no", "unknown"] },
+            "freeTextEntry": { "enum": ["yes", "no", "unknown"] },
+            "thirdPartyServices": { "type": "array", "items": { "type": "string" }, "default": [] },
+            "notes": { "type": "string" }
+          },
+          "description": "Lightweight. Observational only — never a legal claim."
+        },
+
+        "source": {
+          "type": "object", "additionalProperties": false, "required": ["primary"],
+          "description": "Where this lives. Deliberately NOT 'repo' — a source may be non-code.",
+          "properties": {
+            "primary": { "$ref": "#/$defs/sourceRef" },
+            "additional": { "type": "array", "items": { "$ref": "#/$defs/sourceRef" }, "default": [] }
+          }
+        },
+
+        "runResources": {
+          "type": "array", "default": [],
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["kind", "label"],
+            "properties": {
+              "kind": { "enum": ["live-url", "facilitator-guide", "slides", "printable", "spreadsheet", "setup-checklist", "debrief-guide", "create-class-url", "repo", "doc"] },
+              "label": { "type": "string" },
+              "url": { "type": "string" },
+              "path": { "type": "string" },
+              "verified": { "type": "string", "format": "date", "description": "Date this resource was last confirmed reachable." }
+            }
+          },
+          "description": "Different simulations legitimately need different combinations. An absent guide is reported as absent, never fabricated."
+        },
+
+        "version": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "contentVersion": { "type": "string", "description": "Bumped when the student-facing experience materially changes." },
+            "sourceRef": { "type": "string", "description": "Commit sha or tag the record was built from." },
+            "asOf": { "type": "string", "format": "date" }
+          }
+        }
+      }
+    },
+
+    "governance": {
+      "type": "object",
+      "description": "BOW-OWNED. Never settable from a repo manifest. A maintainer does not get to declare their own product CORE.",
+      "additionalProperties": false,
+      "required": ["maturity", "visibility", "health"],
+      "properties": {
+        "maturity": { "enum": ["EXPERIMENTAL", "PLAYABLE", "TESTED", "BOW_APPROVED", "CORE"] },
+        "maturityBasis": { "type": "string", "description": "Why this level. Required reading for anyone changing it." },
+        "visibility": { "enum": ["active", "hidden", "archived", "superseded"] },
+        "supersededBy": { "type": "string", "description": "Simulation id that replaced this one." },
+        "publicListing": { "type": "boolean", "default": false, "description": "May appear on the public BOW website." },
+
+        "owner": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "productOwner": { "type": "string", "description": "Name, or UNOWNED. Never inferred from commit counts." },
+            "technicalMaintainer": { "type": "string" }
+          }
+        },
+
+        "health": {
+          "type": "object", "additionalProperties": false, "required": ["technical"],
+          "properties": {
+            "technical": { "enum": ["healthy", "needs-attention", "broken", "unknown"] },
+            "technicalBasis": { "type": "string" },
+            "documentation": { "enum": ["complete", "partial", "minimal", "missing"] },
+            "knownBlockers": { "type": "array", "items": { "type": "string" }, "default": [] }
+          }
+        },
+
+        "validation": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "studentValidation": { "enum": ["never", "once", "repeated", "unknown"] },
+            "facilitatorValidation": { "enum": ["never", "founder-only", "bow-instructor", "external-educator", "unknown"] },
+            "notes": { "type": "string" }
+          },
+          "description": "Defaults to unknown. GitHub cannot tell us this — only a human can."
+        },
+
+        "lastVerified": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "technical": { "type": "string", "format": "date" },
+            "studentRun": { "type": "string", "format": "date" },
+            "facilitatorRun": { "type": "string", "format": "date" },
+            "substantiveUpdate": { "type": "string", "format": "date" },
+            "testedContentVersion": { "type": "string", "description": "Which content version was actually student-tested. Guards against 'tested last year' on a since-rewritten product." }
+          }
+        },
+
+        "notes": { "type": "string", "description": "Leadership-facing. Internal only." }
+      }
+    },
+
+    "provenance": {
+      "type": "object", "additionalProperties": false,
+      "description": "How this record came to exist. Keeps the audit trail honest.",
+      "properties": {
+        "discoveredBy": { "type": "string" },
+        "discoveredOn": { "type": "string", "format": "date" },
+        "confidence": { "enum": ["VERIFIED", "INFERRED", "UNKNOWN"] },
+        "evidence": { "type": "string", "description": "File paths and quotes backing the record." },
+        "openQuestions": { "type": "array", "items": { "type": "string" }, "default": [] }
+      }
+    }
+  },
+
+  "$defs": {
+    "sourceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type"],
+      "properties": {
+        "type": { "enum": ["github", "live-site", "drive", "slides", "spreadsheet", "physical", "external"] },
+        "repo": { "type": "string", "description": "owner/name. github only." },
+        "branch": { "type": "string" },
+        "path": { "type": "string", "description": "Path within the source. Required for embedded simulations." },
+        "url": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "final-mastery-simulation-201",
+  "product": {
+    "title": "BOW Sports Capital — Final Mastery Simulation",
+    "family": "track-201",
+    "pillar": "economics",
+    "summary": "A planned Track 201 capstone that exists only as configuration.",
+    "whatStudentsDo": "Not established. The file defines a six-year structure with pass thresholds, a 65/35 knowledge-to-simulation weighting and grade bands, but no gameplay of any kind is implemented.",
+    "concepts": [
+      "econ.tradeoffs"
+    ],
+    "gradeBands": [
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "track-convention",
+    "purpose": {
+      "primary": "SYNTHESIZE"
+    },
+    "delivery": {
+      "setting": [
+        "facilitator-led"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "technology": "Google Apps Script (configuration only)",
+    "evidenceOutput": "none",
+    "studentDataProfile": {
+      "storesStudentData": "unknown",
+      "requiresLogin": "unknown"
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/201-M4-ECON",
+        "path": "apps script"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/201-M4-ECON"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "EXPERIMENTAL",
+    "maturityBasis": "Scaffolding only. Nothing a student could run exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "broken",
+      "technicalBasis": "The file contains 154 lines of constants and zero functions. Opening it in a spreadsheet produces no menu and no runnable activity.",
+      "documentation": "missing",
+      "knownBlockers": [
+        "No onOpen, no menu, no chapter content, no scoring logic — the simulation was never implemented.",
+        "Leaves Track 201 Module 4 without a working module final."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    },
+    "notes": "Recorded rather than omitted because a named, referenced capstone that does not exist is exactly the kind of gap the Library should make visible."
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "201-M4-ECON/apps script defines YEARS, PASS_REQUIRED_BY_YEAR, CLAIM_CODES, SHEET_* and MCQ_CONFIG constants; a count of function declarations returns 0."
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "id": "delivery-empire-strategy",
+  "product": {
+    "title": "Delivery Empire — Economic Strategy Game",
+    "family": "track-101",
+    "pillar": "economics",
+    "summary": "A strategy-layer sequel to the delivery business, focused on competition and scale.",
+    "whatStudentsDo": "Students make repeated strategic calls running a delivery operation — pricing against rivals, investing in capacity, absorbing demand shifts — and see the cumulative effect across rounds.",
+    "concepts": [
+      "econ.competition-and-market-structure",
+      "econ.pricing-strategy",
+      "econ.marginal-value",
+      "econ.operations-tradeoffs"
+    ],
+    "gradeBands": [
+      "5",
+      "6"
+    ],
+    "gradeBandBasis": "track-convention",
+    "purpose": {
+      "primary": "APPLY",
+      "secondary": [
+        "SYNTHESIZE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "business-operator",
+      "market-and-pricing"
+    ],
+    "technology": "single-file HTML/CSS/JS, no build step",
+    "evidenceOutput": "none",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/101-M3-ECON",
+        "path": "index.html"
+      },
+      "additional": [
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/101-M3-ECON",
+          "path": "apps script"
+        }
+      ]
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/101-M3-ECON/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/101-M3-ECON"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Runs end-to-end and is publicly reachable. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "missing",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "INFERRED",
+    "evidence": "101-M3-ECON/index.html <title>DELIVERY EMPIRE | Economic Strategy Game</title>. Repo also holds a 7-section Google Apps Script and a Track 101 xlsx.",
+    "openQuestions": [
+      "Relationship to deliverempire (101-M2-ECON) is unconfirmed — same business theme, possibly a deliberate sequel."
+    ]
+  }
+}

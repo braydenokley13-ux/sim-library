@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "id": "decision-room-memo",
+  "product": {
+    "title": "Decision Room (memo exercise)",
+    "family": "track-301",
+    "pillar": "economics",
+    "summary": "Annotate an analytics memo and name which assumption snapped first.",
+    "whatStudentsDo": "Students work an internal memo: tag two or three fragile assumptions and say where the risk lives, diagnose why the model worked before, then absorb an update where the model's output stays the same but the environment does not, choose a leadership action, and write a decision rationale.",
+    "concepts": [
+      "econ.model-risk",
+      "econ.uncertainty",
+      "econ.expected-value",
+      "econ.leadership-under-constraints"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "PRACTICE",
+      "secondary": [
+        "APPLY"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "facilitator-led"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "required": true,
+      "founderDependence": "bow-certified-instructor"
+    },
+    "pattern": [
+      "signal-vs-noise"
+    ],
+    "technology": "Google Apps Script + Sheets with free-text scoring",
+    "evidenceOutput": "scored-outcomes",
+    "studentDataProfile": {
+      "storesStudentData": "yes",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "yes",
+      "thirdPartyServices": [
+        "Google Workspace"
+      ],
+      "notes": "Writes to a submissions log with student name and email. This committed copy already contains real test data."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/301-M4-L1",
+        "path": "apps script"
+      },
+      "additional": [
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/301-M4-L1",
+          "path": "301_M4_L1-2.xlsx"
+        }
+      ]
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/301-M4-L1"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Complete and carefully written, with a 934-line script scoring free text by phrase detection. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "unknown",
+      "technicalBasis": "Not verifiable without the bound Google Sheet, which is not in the repo.",
+      "documentation": "minimal",
+      "knownBlockers": [
+        "The bound Google Sheet is not in the repository.",
+        "The committed workbook contains a real name and email address as leftover test data."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    },
+    "notes": "Shares a lesson slot and claim-code prefix with the WAR ROOM game but is a materially different design — a reflective writing exercise rather than a clickable game. Recorded separately for that reason. Whether both should occupy the same slot is a BOW call."
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "301-M4-L1 xlsx: 'Models are maps, not reality. Your job is to notice when the terrain moves.' and 'A precise output is not automatically a more accurate output... Decimals can create false confidence.'"
+  }
+}

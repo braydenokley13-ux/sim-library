@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "module-4-econ-final-101",
+  "product": {
+    "title": "Module 4 Econ Final — Track 101",
+    "family": "track-101",
+    "pillar": "economics",
+    "summary": "A spreadsheet-delivered end-of-module economics simulation, run from inside a Google Sheet.",
+    "whatStudentsDo": "Students work through a multi-section economics simulation delivered as a Google Sheet driven by Apps Script, making choices in cells and passing checks to advance.",
+    "concepts": [
+      "econ.scarcity",
+      "econ.tradeoffs",
+      "econ.cost-benefit-analysis"
+    ],
+    "gradeBands": [
+      "5",
+      "6"
+    ],
+    "gradeBandBasis": "track-convention",
+    "purpose": {
+      "primary": "EVIDENCE",
+      "secondary": [
+        "SYNTHESIZE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "facilitator-led"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "Google account and access to the bound spreadsheet"
+    },
+    "facilitation": {
+      "required": true,
+      "founderDependence": "bow-certified-instructor",
+      "prep": "The Apps Script must be bound to a copy of the workbook; the bound sheet is not in the repo."
+    },
+    "technology": "Google Apps Script + Google Sheets",
+    "evidenceOutput": "choices-recorded",
+    "studentDataProfile": {
+      "storesStudentData": "yes",
+      "requiresLogin": "yes",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [
+        "Google Workspace"
+      ],
+      "notes": "Apps Script simulations in this family write to a StudentData sheet and identify students by Google account. Descriptive only."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/101-M4-ECON",
+        "path": "apps script"
+      },
+      "additional": [
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/101-M4-ECON",
+          "path": "Module 4 Econ Final - Track 101-2.xlsx"
+        }
+      ]
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/101-M4-ECON"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "EXPERIMENTAL",
+    "maturityBasis": "Cannot be confirmed runnable from the repo alone — the workbook it drives is not present.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "unknown",
+      "technicalBasis": "No GitHub Pages deployment (404). Cannot be verified without the bound Google Sheet, which is not in the repo.",
+      "documentation": "missing",
+      "knownBlockers": [
+        "The bound Google Sheet is not in the repository, so the simulation cannot be launched or verified from source."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "INFERRED",
+    "evidence": "101-M4-ECON contains only 'apps script' (Module 4, sections 0/8 onward) and 'Module 4 Econ Final - Track 101-2.xlsx'. No index.html; GitHub Pages 404."
+  }
+}

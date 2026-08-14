@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "id": "front-office-build-the-roster",
+  "product": {
+    "title": "Front Office: Build the Roster",
+    "family": "track-101",
+    "pillar": "economics",
+    "summary": "Build a team under a salary cap, then absorb an owner's curveball.",
+    "whatStudentsDo": "Students pick a GM style that sets their budget, sign and release from a 16-player pool while four meters move, then a random Owner's Curveball changes the target mid-build and forces a repair. They finish with a GM score and a short written memo.",
+    "concepts": [
+      "econ.salary-cap",
+      "econ.scarcity",
+      "econ.opportunity-cost",
+      "econ.roster-construction",
+      "econ.tradeoffs"
+    ],
+    "gradeBands": [
+      "5",
+      "6"
+    ],
+    "gradeBandBasis": "stated-in-source",
+    "purpose": {
+      "primary": "PRACTICE",
+      "secondary": [
+        "APPLY"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor",
+      "notes": "plan.md is a build spec, not a teacher-facing guide. The repo also ships an interactive xlsx carrying the same claim code, so the lesson can run without browsers."
+    },
+    "pattern": [
+      "allocation-under-constraint",
+      "shock-and-adapt"
+    ],
+    "technology": "single-file HTML/CSS/JS, no build step",
+    "evidenceOutput": "choices-recorded",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/T101-M1-L1",
+        "path": "index.html"
+      },
+      "additional": [
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/T101-M1-L1",
+          "path": "Copy of Be The GM(Salary Cap)-101M1L1.xlsx"
+        }
+      ]
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/T101-M1-L1/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/T101-M1-L1"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Runs end-to-end, publicly reachable, and carries in-browser self-tests. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "partial",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "T101-M1-L1/plan.md: 'A single-file (index.html), framework-free sports-business simulation for 5th–6th graders.' Companion xlsx reveals the same claim code 'L1-101-M1-67' as the browser build, so the two are one experience in two media."
+  }
+}

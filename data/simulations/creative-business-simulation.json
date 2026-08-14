@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "id": "creative-business-simulation",
+  "product": {
+    "title": "Bow Sports Capital — Creative Business Simulation",
+    "family": "track-201",
+    "pillar": "cross-pillar",
+    "summary": "A young creative chooses between a salaried job, a contract, and going independent.",
+    "whatStudentsDo": "Students play a freelance creative choosing among a startup job, a six-month agency contract, or independence with a hire. Five chapters each lock in a strategy, show the consequence, and gate progress behind a quiz, ending in a ten-question final check.",
+    "concepts": [
+      "econ.opportunity-cost",
+      "econ.expected-value",
+      "econ.leverage",
+      "econ.capital-and-investment",
+      "fin.income-reliability",
+      "econ.entrepreneurship"
+    ],
+    "gradeBands": [
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "track-convention",
+    "purpose": {
+      "primary": "APPLY",
+      "secondary": [
+        "EVIDENCE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor",
+      "notes": "Ships as one experience in two media: a browser build and a Google Apps Script build of the same five-chapter narrative. The Sheets build is facilitator-run and records evidence; the browser build does not."
+    },
+    "pattern": [
+      "business-operator"
+    ],
+    "technology": "single-file HTML/CSS/JS, no build step",
+    "evidenceOutput": "choices-recorded",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/201-M2-ECON",
+        "path": "index.html"
+      },
+      "additional": [
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/201-M2-ECON",
+          "path": "apps script"
+        }
+      ]
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/201-M2-ECON/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/201-M2-ECON"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Both builds are complete and the browser build is publicly reachable. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "minimal",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "201-M2-ECON/index.html <title>Bow Sports Capital - Creative Business Simulation</title>. The 'apps script' file implements the same five-chapter freelance/agency narrative as a Sheets state machine.",
+    "openQuestions": [
+      "The browser build asks for a school email but no network call was found, so where that email goes is unresolved."
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "id": "front-office-the-homestand",
+  "product": {
+    "title": "Front Office: The Homestand",
+    "family": "track-101",
+    "pillar": "economics",
+    "summary": "Price a homestand and choose a sponsor, balancing fans against revenue.",
+    "whatStudentsDo": "Students act as team president over three fixed rounds — a fan strategy, a sponsor strategy, then a pitch to ownership — with every outcome driven by stated business logic rather than chance, and a synergy note linking the first two choices.",
+    "concepts": [
+      "econ.pricing-strategy",
+      "econ.law-of-demand",
+      "econ.sponsorship-and-brand",
+      "econ.fan-engagement",
+      "econ.revenue-management"
+    ],
+    "gradeBands": [
+      "5",
+      "6"
+    ],
+    "gradeBandBasis": "track-convention",
+    "purpose": {
+      "primary": "PRACTICE",
+      "secondary": [
+        "APPLY"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "duration": {
+      "minutes": 60,
+      "basis": "stated-in-source"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "market-and-pricing",
+      "business-operator"
+    ],
+    "technology": "single-file HTML/CSS/JS, no build step",
+    "evidenceOutput": "none",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/T101-M2-L1",
+        "path": "index.html"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/T101-M2-L1/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/T101-M2-L1"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Runs end-to-end and is publicly reachable, but is noticeably less finished than the Module 1 lessons: no tests, no persistence, and no completion record.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "missing",
+      "knownBlockers": [
+        "No persistence — a refresh loses all student progress.",
+        "Stylesheet still carries 'MLB MONEY MAKER' scaffolding from a different game it was reskinned from."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "T101-M2-L1/index.html states 'About a 60-minute case.' front-office.js: 'deterministic choose-your-own-adventure. No randomness.' mlb-redesign-game/css/style.css opens '/* MLB MONEY MAKER - OVERHAULED UI */'."
+  }
+}

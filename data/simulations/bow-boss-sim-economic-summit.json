@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "bow-boss-sim-economic-summit",
+  "product": {
+    "title": "BOW Boss Sim — Economic Summit",
+    "family": "gauntlet",
+    "pillar": "economics",
+    "summary": "Two students negotiate for one city against three AI cities over a recovery budget.",
+    "whatStudentsDo": "A pair of students represent one of five cities across six rounds — opening statements, forming coalitions, allocating a shared recovery budget, and a final negotiation — needing three of four votes to pass their plan while holding public approval above half.",
+    "concepts": [
+      "econ.negotiation",
+      "econ.stakeholder-management",
+      "econ.fiscal-policy",
+      "econ.leverage",
+      "econ.batna",
+      "econ.public-goods"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "SYNTHESIZE",
+      "secondary": [
+        "APPLY"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "facilitator-led"
+      ],
+      "grouping": [
+        "pairs"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "duration": {
+      "minutes": 50,
+      "basis": "stated-in-source"
+    },
+    "groupSize": "2 students sharing one device",
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "negotiation",
+      "allocation-under-constraint"
+    ],
+    "technology": "single-file HTML/CSS/JS",
+    "evidenceOutput": "completion",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/GAUNTLET",
+        "path": "Boss Sim/index.html"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/GAUNTLET/Boss%20Sim/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/GAUNTLET"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "The richest negotiation and coalition logic in the account, complete and reachable. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "Reachable via the Gauntlet landing page on 2026-08-14. Reachability only.",
+      "documentation": "missing",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    },
+    "notes": "The only genuinely two-student experience discovered in the account. Both students share one device — there is no networked multiplayer."
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "GAUNTLET/Boss Sim/index.html: 'Five cities in a regional alliance... negotiate with three AI-controlled cities', generating a claim code and a downloadable PDF certificate. The GAUNTLET landing card lists 50 minutes."
+  }
+}

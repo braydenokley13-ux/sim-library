@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "gauntlet-l1-market-master",
+  "product": {
+    "title": "Gauntlet L1: Market Master",
+    "family": "gauntlet",
+    "pillar": "economics",
+    "summary": "Five rounds of pricing and production against a moving market.",
+    "whatStudentsDo": "Students run a stand for five rounds, setting price and how much to make while covering fixed and variable costs, and absorbing a market event each round. The goal is total profit, and pricing too high or producing too much both cost them.",
+    "concepts": [
+      "econ.price-elasticity",
+      "econ.pricing-strategy",
+      "econ.law-of-demand",
+      "econ.marginal-value",
+      "econ.fan-engagement"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "PRACTICE"
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "duration": {
+      "minutes": 15,
+      "basis": "stated-in-source"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "market-and-pricing",
+      "business-operator"
+    ],
+    "technology": "single-file HTML/CSS/JS",
+    "evidenceOutput": "none",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/GAUNTLET",
+        "path": "gauntlet-l1/index.html"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/GAUNTLET/gauntlet-l1/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/GAUNTLET"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "EXPERIMENTAL",
+    "maturityBasis": "The game loop is complete but the submission integration was never finished, so the level cannot produce the evidence it is designed to produce.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "needs-attention",
+      "technicalBasis": "Reachable and playable, but its results-submission endpoint is still the placeholder string, so nothing is ever recorded.",
+      "documentation": "missing",
+      "knownBlockers": [
+        "The submission endpoint is still 'YOUR_WEB_APP_URL_HERE' — student results go nowhere."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "GAUNTLET/gauntlet-l1/index.html sets webAppUrl: 'YOUR_WEB_APP_URL_HERE' and states the goal is to 'maximize profit over 5 rounds'. The GAUNTLET landing card lists 15 minutes and 50–100 XP."
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "tank-commander",
+  "product": {
+    "title": "Tank Commander",
+    "family": "bonus-gm-sims",
+    "pillar": "economics",
+    "summary": "Compete or tank each month, against lottery odds that barely reward it.",
+    "whatStudentsDo": "Students choose to compete or tank month by month through a rebuilding season while real draft-lottery odds shift, discovering that the worst record buys only a small edge and that tanking too obviously invites investigation.",
+    "concepts": [
+      "econ.incentives",
+      "econ.expected-value",
+      "econ.uncertainty",
+      "econ.competition-and-market-structure",
+      "econ.risk-and-reward"
+    ],
+    "gradeBands": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "stated-in-source",
+    "purpose": {
+      "primary": "INTRODUCE",
+      "secondary": [
+        "PRACTICE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "duration": {
+      "minutes": 7,
+      "basis": "stated-in-source"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "signal-vs-noise"
+    ],
+    "technology": "single-file HTML/CSS/JS with a grade-band toggle",
+    "evidenceOutput": "none",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/BSC-anythingelse",
+        "path": "public/tank-commander.html"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/BSC-anythingelse"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "A complete short-format experience built around a genuine incentive-design idea. Not deployed, and no student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "unknown",
+      "technicalBasis": "No deployment found for this repo (GitHub Pages 404).",
+      "documentation": "missing",
+      "knownBlockers": [
+        "No deployment — an instructor cannot run it today."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "BSC-anythingelse/public/tank-commander.html notes the 'worst team only has 14% chance at #1' and 'The difference between 14% and 8% is small. Extreme tanking isn't guaranteed to pay off.'"
+  }
+}

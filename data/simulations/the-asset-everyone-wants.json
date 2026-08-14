@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "the-asset-everyone-wants",
+  "product": {
+    "title": "The Asset Everyone Wants",
+    "family": "bow-website",
+    "pillar": "economics",
+    "summary": "Three rounds of trade decisions with a live front-office index. The only simulation the public lesson catalog links.",
+    "whatStudentsDo": "Students make three GM trade decisions, each branching into consequence text covering what went right, what went wrong, how people reacted and what new problem appeared, while a four-part front-office index tracks win-now, future assets, cap flexibility and fan buzz. A strategic identity is computed from the pattern of their choices.",
+    "concepts": [
+      "econ.opportunity-cost",
+      "econ.asset-valuation",
+      "econ.roster-windows",
+      "econ.time-horizon",
+      "econ.tradeoffs"
+    ],
+    "gradeBands": [
+      "5",
+      "6"
+    ],
+    "gradeBandBasis": "stated-in-source",
+    "purpose": {
+      "primary": "INTRODUCE",
+      "secondary": [
+        "PRACTICE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "trade-and-exchange"
+    ],
+    "technology": "Next.js, server-authoritative decision logic",
+    "evidenceOutput": "none",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "no",
+      "thirdPartyServices": [],
+      "notes": "Public and login-free; stateless in the browser."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/BOW-WEBSITE",
+        "path": "components/site/Simulation.tsx"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play (public, no login)",
+        "url": "https://bowsportscapital.com/simulation",
+        "verified": "2026-08-14"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Live, public and login-free — the most accessible simulation BOW has. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "bowsportscapital.com/simulation returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "minimal",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "BOW-WEBSITE/lib/simulation.ts header: \"Track 101 · M1 · L2 · 'Opportunity Cost, in Trades'\". It is the only simulationUrl set on any of the 24 lessons in lib/lessons.ts."
+  }
+}

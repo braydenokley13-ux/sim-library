@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "eastfield-eagles",
+  "product": {
+    "title": "Front Office — Eastfield Eagles",
+    "family": "bow-website",
+    "pillar": "economics",
+    "summary": "The Track 201 counterpart: inherit a team already over the cap and dig out across eight turns.",
+    "whatStudentsDo": "Students take over a franchise starting in the red against the cap and work eight turns teaching Bird Rights, the mid-level exception, luxury tax, market-size economics, market inefficiency, roster windows, pick value under uncertainty and surplus value against risk, ending in a cap-efficiency score.",
+    "concepts": [
+      "econ.bird-rights",
+      "econ.mid-level-exception",
+      "econ.luxury-tax",
+      "econ.market-size",
+      "econ.market-inefficiency",
+      "econ.roster-windows",
+      "econ.pick-value-and-decay",
+      "econ.surplus-value",
+      "econ.salary-cap"
+    ],
+    "gradeBands": [
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "track-convention",
+    "purpose": {
+      "primary": "PRACTICE",
+      "secondary": [
+        "EVIDENCE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "allocation-under-constraint"
+    ],
+    "technology": "Next.js, server-authoritative decision logic",
+    "evidenceOutput": "scored-outcomes",
+    "studentDataProfile": {
+      "storesStudentData": "yes",
+      "requiresLogin": "yes",
+      "usesClassCodes": "no",
+      "freeTextEntry": "no",
+      "thirdPartyServices": [
+        "PostgreSQL"
+      ],
+      "notes": "Requires a student account and Track 201 Module 2 completion. Descriptive only."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/BOW-WEBSITE",
+        "path": "components/simulation/FrontOffice.tsx"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "create-class-url",
+        "label": "Student route (requires login and unlock)",
+        "url": "https://bowsportscapital.com/front-office"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Complete and server-scored, reusing the Westbrook decision engine. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "Route exists in a deployed site; gated, so end-to-end reachability was not probed anonymously.",
+      "documentation": "minimal",
+      "knownBlockers": [
+        "Gated behind a student account and prior module completion."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "BOW-WEBSITE/lib/sim-eastfield.ts starts the team below zero cap space across eight turns and reuses the SimChoice and SimDecision shapes from lib/sim-game.ts."
+  }
+}

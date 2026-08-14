@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "id": "gm-decision-game",
+  "product": {
+    "title": "BOW Sports Capital — GM Decision Game",
+    "family": "track-301",
+    "pillar": "economics",
+    "summary": "Nine branching front-office calls across three franchises.",
+    "whatStudentsDo": "Students run three franchises in turn, each presenting three scenarios on contracts, trades, cap space, arbitration and free agency. Every choice is tagged accelerate, smooth or rebuild, and the next scenario is picked from what they chose last, so the path genuinely branches.",
+    "concepts": [
+      "econ.time-horizon",
+      "econ.roster-windows",
+      "econ.salary-cap",
+      "econ.opportunity-cost",
+      "econ.optionality"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "PRACTICE"
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "business-operator"
+    ],
+    "technology": "single-file HTML/CSS/JS, no build step",
+    "evidenceOutput": "none",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/301-M1-L1",
+        "path": "index.html"
+      },
+      "additional": [
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/301-M1-L1",
+          "path": "bow_301_activity_overview.pdf"
+        }
+      ]
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/301-M1-L1/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/301-M1-L1"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Complete and publicly reachable, implementing a design spec that ships alongside it. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "minimal",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "301-M1-L1/js/teams-data.js defines TEAM_ORDER of three franchises and an unlock threshold of 33; js/game.js computes nine total scenarios and branches on choice type.",
+    "openQuestions": [
+      "The bundled PDF is a build instruction addressed to an AI assistant, not a statement of audience. It is not evidence of a grade band."
+    ]
+  }
+}

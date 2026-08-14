@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "id": "decision-room-simulator",
+  "product": {
+    "title": "Decision Room Simulator",
+    "family": "track-301",
+    "pillar": "economics",
+    "summary": "Two experts, the same data, opposite conclusions — and both are 90% confident.",
+    "whatStudentsDo": "Students take a trade-deadline or draft-day scenario in which two models reach opposite conclusions from the same injury data while both reporting high confidence. Across five phases they classify each model's claims and pick a posture — push, hold, hybrid or reframe — that moves sensitivity, rigidity and confidence.",
+    "concepts": [
+      "econ.model-risk",
+      "econ.uncertainty",
+      "econ.expected-value",
+      "econ.signal-vs-noise",
+      "econ.optionality"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "APPLY",
+      "secondary": [
+        "EVIDENCE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor",
+      "notes": "One experience in two builds: a browser build and a parallel Apps Script build whose sheet names and vocabulary match it closely."
+    },
+    "pattern": [
+      "signal-vs-noise",
+      "crisis-management"
+    ],
+    "technology": "single-file HTML/CSS/JS, no build step",
+    "evidenceOutput": "scored-outcomes",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/301-M4-L2",
+        "path": "index.html"
+      },
+      "additional": [
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/301-M4-L2",
+          "path": "apps script"
+        },
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/301-M4-L2",
+          "path": "Copy of 301_M4_L2.xlsx"
+        }
+      ]
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/301-M4-L2/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/301-M4-L2"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Both builds complete and the browser build is publicly reachable. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "minimal",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "301-M4-L2/index.html: 'Both models still show 90%+ confidence despite using the same injury data to reach opposite conclusions' — 'the clearest sign that the disagreement is philosophical, not analytical'."
+  }
+}

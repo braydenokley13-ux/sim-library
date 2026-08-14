@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "the-lebron-files",
+  "product": {
+    "title": "The LeBron Files",
+    "family": "bonus-gm-sims",
+    "pillar": "cross-pillar",
+    "summary": "Five career decisions where each choice narrows the next.",
+    "whatStudentsDo": "Students steer a career through team selection, a contract, endorsements, business investments and a final family decision, with each choice cascading into the options available at the next, ending in a legacy grade.",
+    "concepts": [
+      "econ.time-horizon",
+      "fin.income-reliability",
+      "econ.capital-and-investment",
+      "econ.sponsorship-and-brand",
+      "econ.reputation-risk",
+      "econ.negotiation"
+    ],
+    "gradeBands": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "stated-in-source",
+    "purpose": {
+      "primary": "APPLY",
+      "secondary": [
+        "SYNTHESIZE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "duration": {
+      "minutes": 20,
+      "basis": "stated-in-source"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "business-operator",
+      "investment-and-portfolio"
+    ],
+    "technology": "Next.js 16 + React 19 route, with a grade-band toggle",
+    "evidenceOutput": "completion",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/BSC-anythingelse",
+        "path": "app/lebron-files/page.tsx"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/BSC-anythingelse"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "The largest of the bonus simulations and fully built. Not deployed, and no student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "unknown",
+      "technicalBasis": "No GitHub Pages deployment (404) and no other live URL found. Requires a build to run.",
+      "documentation": "missing",
+      "knownBlockers": [
+        "No deployment — an instructor cannot run it today without building the app."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "BSC-anythingelse/app/page.tsx: '5 career decision points. Every choice cascades into the next.' A legacy grade is computed from a cumulative score."
+  }
+}

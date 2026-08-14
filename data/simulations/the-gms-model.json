@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "the-gms-model",
+  "product": {
+    "title": "The GM's Model",
+    "family": "track-301",
+    "pillar": "economics",
+    "summary": "Build a player-evaluation model, then meet it again three years later.",
+    "whatStudentsDo": "Students choose and weight evaluation factors, rank real players with the model they built, compare it against other GMs' models, then jump forward three years to see what their model could not have known — closing on why models do not know when they have gone stale.",
+    "concepts": [
+      "econ.model-risk",
+      "econ.asset-valuation",
+      "econ.signal-vs-noise",
+      "econ.uncertainty",
+      "econ.analytics-and-war"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "APPLY",
+      "secondary": [
+        "EXPLORE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "signal-vs-noise"
+    ],
+    "technology": "single-page React via in-browser Babel",
+    "evidenceOutput": "completion",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/scout-model",
+        "path": "index.html"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/scout-model/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/scout-model"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "EXPERIMENTAL",
+    "maturityBasis": "The experience itself is well built, but the repository around it is disordered enough that no one could safely tell which file is canonical.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "needs-attention",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14, but the repository is in poor order — the same application is duplicated across four files and the CI workflow file contains HTML instead of YAML.",
+      "documentation": "missing",
+      "knownBlockers": [
+        "The same application exists four times over in index.html, INDEX, a .rtf file and TRUE SIM — the canonical file is ambiguous.",
+        "The GitHub Actions workflow file contains HTML rather than YAML and cannot run."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    },
+    "notes": "Its claim code places it at Track 301 Module 2 Lesson 5 — a lesson slot no other repository covers. It teaches evaluation-model bias rather than named economics vocabulary, which puts it at the edge of the inclusion rule; it is included because the decisions and their delayed consequences are genuine."
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "scout-model defines CLAIM_MASTER with TRACK_ID '301', MODULE_ID '2', LESSON_ID '5' and prefix 'L5-301-M2', which is why it is filed under Track 301 despite the repository name."
+  }
+}

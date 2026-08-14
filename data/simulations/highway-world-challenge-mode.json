@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "highway-world-challenge-mode",
+  "product": {
+    "title": "Highway World — Challenge Mode: Game Night Pricing Crisis",
+    "family": "highway-world",
+    "pillar": "economics",
+    "summary": "A standalone two-round pricing crisis with a facilitator console, separate from the campaign.",
+    "whatStudentsDo": "Students work a revenue-mix board under a demand shock across two rounds, independent of the career campaign. A facilitator console on a separate device collects result codes by alias and produces a compare view for discussion.",
+    "concepts": [
+      "econ.price-elasticity",
+      "econ.revenue-management",
+      "econ.fan-engagement",
+      "econ.pricing-strategy"
+    ],
+    "gradeBands": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "track-convention",
+    "purpose": {
+      "primary": "APPLY",
+      "secondary": [
+        "EVIDENCE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "facilitator-led",
+        "whole-class"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one GPU-capable browser per student, plus a facilitator device"
+    },
+    "facilitation": {
+      "required": true,
+      "founderDependence": "any-instructor",
+      "prep": "Facilitator opens the console, collects result codes, then runs the compare view."
+    },
+    "pattern": [
+      "market-and-pricing",
+      "crisis-management"
+    ],
+    "technology": "same stack as the campaign, in its own lazily loaded chunk",
+    "evidenceOutput": "facilitator-observation",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "yes",
+      "thirdPartyServices": [],
+      "notes": "Aliases and result codes are typed by the facilitator and stay on that device; nothing syncs. Descriptive only."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/BSC-HIGHWAY-WORLD",
+        "path": "apps/highway-world/src/challenge"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/BSC-HIGHWAY-WORLD"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "EXPERIMENTAL",
+    "maturityBasis": "Shipped and tested code, but its own session report states the scoring bands are provisional pending playtest data, and it sits outside the campaign's gold-master claim.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "needs-attention",
+      "technicalBasis": "Shares the campaign's lack of any deployment.",
+      "documentation": "partial",
+      "knownBlockers": [
+        "No deployment.",
+        "Scoring bands are provisional and have not been playtested.",
+        "The facilitator console has never been run past a real facilitator for tone and appropriateness."
+      ]
+    },
+    "validation": {
+      "studentValidation": "never",
+      "facilitatorValidation": "never"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    },
+    "notes": "Recorded separately from the campaign because it is a different length, a different facilitation model and a different pedagogical unit. If BOW would never assign it independently, it should be folded into the campaign entry."
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "INFERRED",
+    "evidence": "docs/CHALLENGE_MODE_SESSION_2_REPORT.md states the scoring bands 'have not been playtested with real students'. Reachable in-app at ?scene=challengearena with its own facilitator and review rooms."
+  }
+}

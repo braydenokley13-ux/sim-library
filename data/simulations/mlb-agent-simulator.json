@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "mlb-agent-simulator",
+  "product": {
+    "title": "MLB Player Economics — Agent Simulator",
+    "family": "track-201",
+    "pillar": "economics",
+    "summary": "Take the guaranteed money, or bet on performance — eight times over.",
+    "whatStudentsDo": "Students agent for eight real MLB players, each carrying a guaranteed base, performance incentives and an injury risk. For each they take the guarantee or bet on performance; injury resolves at random, and a gold, silver or bronze rating compares their call to a model value.",
+    "concepts": [
+      "econ.expected-value",
+      "econ.risk-and-reward",
+      "econ.uncertainty",
+      "fin.income-reliability",
+      "econ.asset-valuation"
+    ],
+    "gradeBands": [
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "track-convention",
+    "purpose": {
+      "primary": "PRACTICE",
+      "secondary": [
+        "APPLY"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor",
+      "notes": "One experience in three artefacts: a browser build, an Apps Script build, and the workbook the script reads. All three share the claim code L2-201-M2-PLAYER."
+    },
+    "pattern": [
+      "negotiation",
+      "investment-and-portfolio"
+    ],
+    "technology": "single-file HTML/CSS/JS, no build step",
+    "evidenceOutput": "choices-recorded",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/201-M2-L2",
+        "path": "index.html"
+      },
+      "additional": [
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/201-M2-L2",
+          "path": "apps script"
+        },
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/201-M2-L2",
+          "path": "Contract Engine Track 201 M2 L2 .xlsx"
+        }
+      ]
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/201-M2-L2/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/201-M2-L2"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Both builds complete, browser build publicly reachable, README matches the implemented rating thresholds. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "partial",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "201-M2-L2/game.js line 2 carries claim code 'L2-201-M2-PLAYER'; the repo's 'apps script' writes outcomes into the Scenarios sheet of the bundled workbook using the same eight players."
+  }
+}

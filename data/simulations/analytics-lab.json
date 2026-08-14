@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "analytics-lab",
+  "product": {
+    "title": "Analytics Lab",
+    "family": "analytics-lab",
+    "pillar": "cross-pillar",
+    "summary": "Build a weighted metric, test it against the data, and write the scouting report.",
+    "whatStudentsDo": "Students pick a sport, explore a full statistical dataset, build a custom weighted metric with live sliders, examine percentiles, scatter plots and correlations, run what-if changes, then write and export a scouting report defending the metric they built.",
+    "concepts": [
+      "econ.analytics-and-war",
+      "econ.asset-valuation",
+      "econ.signal-vs-noise",
+      "econ.model-risk"
+    ],
+    "gradeBands": [
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "stated-in-source",
+    "purpose": {
+      "primary": "EXPLORE",
+      "secondary": [
+        "EVIDENCE",
+        "SYNTHESIZE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "signal-vs-noise"
+    ],
+    "technology": "Alpine.js static site with charting and PDF export",
+    "evidenceOutput": "structured-assessment",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "yes",
+      "thirdPartyServices": [],
+      "notes": "Student name is captured client-side and embedded in a share link and an exported PDF filename. No server storage observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/BSC-BUILDANALYTIC",
+        "path": "track201/index.html"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/BSC-BUILDANALYTIC/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/BSC-BUILDANALYTIC"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "The most sophisticated data-literacy build in the account, reachable and producing an exportable artefact. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "minimal",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "BSC-BUILDANALYTIC/index.html describes the Track 201 lane as 'Full dataset · percentile scores · scatter & stacked charts · What-If simulator · share & export' for 'Grades 7–8'."
+  }
+}

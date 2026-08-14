@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "westbrook-wolves",
+  "product": {
+    "title": "Simulation Room — Westbrook Wolves",
+    "family": "bow-website",
+    "pillar": "economics",
+    "summary": "Ten turns, each mapped to one named economics concept, ending in a graded report card.",
+    "whatStudentsDo": "Students manage a team through ten turns from a starting cap position, each turn tied to a specific concept — scarcity, opportunity cost, incentives, supply and demand, market failure, externalities, price elasticity, comparative advantage, budget deficit, and short against long term. Each choice carries a cap and wins impact and is judged sound or unsound, producing a GM score and a read on their spending pattern.",
+    "concepts": [
+      "econ.scarcity",
+      "econ.opportunity-cost",
+      "econ.incentives",
+      "econ.law-of-demand",
+      "econ.market-failure",
+      "econ.externalities",
+      "econ.price-elasticity",
+      "econ.comparative-advantage",
+      "econ.time-horizon",
+      "econ.salary-cap"
+    ],
+    "gradeBands": [
+      "5",
+      "6"
+    ],
+    "gradeBandBasis": "track-convention",
+    "purpose": {
+      "primary": "PRACTICE",
+      "secondary": [
+        "EVIDENCE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "allocation-under-constraint",
+      "business-operator"
+    ],
+    "technology": "Next.js, server-authoritative decision logic",
+    "evidenceOutput": "scored-outcomes",
+    "studentDataProfile": {
+      "storesStudentData": "yes",
+      "requiresLogin": "yes",
+      "usesClassCodes": "no",
+      "freeTextEntry": "no",
+      "thirdPartyServices": [
+        "PostgreSQL"
+      ],
+      "notes": "Requires a student account and Track 101 Module 2 completion. Turn state persists server-side in a simulations table. Descriptive only."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/BOW-WEBSITE",
+        "path": "components/simulation/SimulationRoom.tsx"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "create-class-url",
+        "label": "Student route (requires login and unlock)",
+        "url": "https://bowsportscapital.com/simulation-room"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Complete with server-authoritative scoring and a graded report card. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "Route exists in a deployed site; gated, so end-to-end reachability was not probed anonymously.",
+      "documentation": "minimal",
+      "knownBlockers": [
+        "Gated behind a student account and prior module completion, so it cannot be handed to a class as a link."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "BOW-WEBSITE/lib/sim-game.ts defines the team, a starting cap and ten turns, each mapped to a named concept; app/simulation-room/page.tsx requires the student role plus Track 101 Module 2 completion."
+  }
+}

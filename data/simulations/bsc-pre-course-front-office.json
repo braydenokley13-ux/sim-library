@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "id": "bsc-pre-course-front-office",
+  "product": {
+    "title": "BOW Sports Capital: Pre-Course",
+    "family": "pre-course",
+    "pillar": "cross-pillar",
+    "summary": "A live, team-based front-office mission chain with asymmetric roles, built for two grade bands.",
+    "whatStudentsDo": "A teacher opens a session and students join in teams. Across eight missions the team navigates an HQ floor map; within each mission up to four students hold different private information as Capologist, Team President, Head Scout or Marketing Director, and must vote across multiple rounds. Consequences carry forward and rewrite later missions, and concept checks gate progress.",
+    "concepts": [
+      "econ.salary-cap",
+      "econ.luxury-tax",
+      "econ.bird-rights",
+      "econ.mid-level-exception",
+      "econ.revenue-sharing",
+      "econ.roster-construction",
+      "econ.stakeholder-management",
+      "econ.tradeoffs"
+    ],
+    "gradeBands": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "stated-in-source",
+    "purpose": {
+      "primary": "APPLY",
+      "secondary": [
+        "SYNTHESIZE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "facilitator-led",
+        "whole-class"
+      ],
+      "grouping": [
+        "teams"
+      ],
+      "mode": [
+        "online",
+        "synchronous"
+      ],
+      "devices": "one device per team, plus a teacher device"
+    },
+    "groupSize": "up to 4 students per team",
+    "facilitation": {
+      "required": true,
+      "founderDependence": "bow-certified-instructor",
+      "prep": "Teacher creates a session, selects Track 101 or 201 content, and distributes join codes. Requires a deployed instance with Postgres."
+    },
+    "pattern": [
+      "allocation-under-constraint",
+      "negotiation",
+      "shock-and-adapt"
+    ],
+    "technology": "Next.js 14, Prisma + PostgreSQL, bcrypt teacher auth, iron-session",
+    "evidenceOutput": "structured-assessment",
+    "studentDataProfile": {
+      "storesStudentData": "yes",
+      "requiresLogin": "no",
+      "usesClassCodes": "yes",
+      "freeTextEntry": "yes",
+      "thirdPartyServices": [
+        "PostgreSQL"
+      ],
+      "notes": "Stores nickname, avatar, a per-student token and a hashed recovery code in Postgres. No email or legal-name field observed in the Prisma schema. Descriptive only, not a compliance assessment."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/BSC-pre-course"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/BSC-pre-course"
+      },
+      {
+        "kind": "doc",
+        "label": "Deploy and run guide (README)",
+        "path": "README.md"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Substantial content-quality tooling (glossary, readability, adaptive-coverage and balance checks) and a documented production preflight. Not verifiable as running without a deployment, and no student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "unknown",
+      "technicalBasis": "Requires a deployed Postgres instance; no live URL found. GitHub Pages serves the unrelated standalone game in this repo, not this app.",
+      "documentation": "complete",
+      "knownBlockers": [
+        "No live deployment found, so an instructor cannot run it today without standing up Postgres."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    },
+    "notes": "Spans both Track 101 and Track 201 from one codebase via a content-simplification overlay — the only BOW product that does this."
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "BSC-pre-course/lib/track101Content.ts: 'Track 101 is designed for 5th–6th grade students... Target reading level: Flesch-Kincaid Grade 6.' app/teacher/setup/page.tsx offers 'Track 201 — High School / Advanced' and 'Track 101 — 5th–6th Grade'. lib/missionGraph.ts MISSION_ORDER matches 101-pre-course exactly."
+  }
+}

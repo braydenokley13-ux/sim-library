@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "id": "front-office-challenge",
+  "product": {
+    "title": "Front Office Challenge",
+    "aliases": [
+      "Bow Sports Agency Challenge",
+      "BOW Financial Futures Simulator"
+    ],
+    "family": "sports-agency",
+    "pillar": "financial-literacy",
+    "summary": "Run a sports agency live across three sessions, absorbing two surprises the facilitator controls.",
+    "whatStudentsDo": "Students run an agency advising real players. In session one they split a payment across cash now, a safety net, future growth and a community promise, then a large payment arrives thirty days late while the bills still land, and they choose a recovery route. Session two builds a business: pick a sponsorship, design a camp, build an operating budget and close a funding gap. Session three raises money at an investor table, absorbs a supply-cost shock before opening week, and ends in a scored championship report.",
+    "concepts": [
+      "fin.viable-budget",
+      "fin.contingency-planning",
+      "fin.adaptation",
+      "fin.income-reliability",
+      "fin.full-cost",
+      "fin.financial-defense",
+      "econ.negotiation",
+      "econ.capital-and-investment",
+      "econ.entrepreneurship",
+      "econ.sponsorship-and-brand"
+    ],
+    "gradeBands": [
+      "5",
+      "6"
+    ],
+    "gradeBandBasis": "stated-in-source",
+    "purpose": {
+      "primary": "APPLY",
+      "secondary": [
+        "SYNTHESIZE",
+        "EVIDENCE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "facilitator-led",
+        "whole-class"
+      ],
+      "grouping": [
+        "teams"
+      ],
+      "mode": [
+        "online",
+        "synchronous"
+      ],
+      "devices": "one shared device per agency, plus a facilitator device"
+    },
+    "duration": {
+      "minutes": 45,
+      "sessions": 3,
+      "basis": "stated-in-source"
+    },
+    "groupSize": "2–5 students per agency",
+    "facilitation": {
+      "required": true,
+      "founderDependence": "founder-required",
+      "prep": "The founder creates the class, reads out one short code, and controls all seven phases and both surprise reveals from a dashboard."
+    },
+    "pattern": [
+      "allocation-under-constraint",
+      "shock-and-adapt",
+      "negotiation",
+      "business-operator"
+    ],
+    "technology": "React + Vite single-page app, Vercel serverless functions, Supabase Postgres",
+    "evidenceOutput": "educator-report",
+    "studentDataProfile": {
+      "storesStudentData": "yes",
+      "requiresLogin": "no",
+      "usesClassCodes": "yes",
+      "freeTextEntry": "yes",
+      "thirdPartyServices": [
+        "Supabase",
+        "Vercel"
+      ],
+      "notes": "Stores a self-chosen agency name, decisions, progress, feedback answers, a salted PIN hash and a hashed access token. The operating model document states that no email, legal name, password, IP-linked identity or click trail is stored. Row-level security is forced with no policies, so access is service-role only. Descriptive only."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/bow-finlit"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/bow-finlit"
+      },
+      {
+        "kind": "facilitator-guide",
+        "label": "Operating model and run-a-class walkthrough",
+        "path": "docs/OPERATING_MODEL.md"
+      },
+      {
+        "kind": "slides",
+        "label": "Original facilitator deck (superseded source material)",
+        "path": "source-materials/Bow_Sports_Capital_financial_literacy.pptx"
+      }
+    ],
+    "version": {
+      "contentVersion": "0.7.0",
+      "asOf": "2026-08-14"
+    }
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "309 unit tests and twelve browser tests pass under a five-job CI pipeline, and the founder dashboard is genuinely built. It stops short of TESTED because the repo states plainly that no real student has used this build.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "needs-attention",
+      "technicalBasis": "Deploy configuration is complete but neither Supabase migration has been applied to a real project, so the live path has never run.",
+      "documentation": "complete",
+      "knownBlockers": [
+        "Neither database migration has been applied to a real project — the first real deploy is still ahead.",
+        "Internal manifest and implementation docs are stale, still describing a pre-production state the code has long passed.",
+        "The master prompt specifies a different framework and session count than what shipped."
+      ]
+    },
+    "validation": {
+      "studentValidation": "never",
+      "facilitatorValidation": "founder-only",
+      "notes": "The QA log states 'No real student has used this build,' and the kid playtest plan is marked not yet run."
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    },
+    "notes": "Founder-dependent by design — the whole product assumes one person driving phases live. That is a legitimate R&D posture, but it means no other instructor can currently run it."
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "README.md: 'A founder-led live online classroom simulation for grades 5–6.' simulation-manifest.json: audience 'grades-5-6', three sessions of 45 minutes. shared/classroom.ts defines 35 steps across seven server-gated phases. SESSION1_QA_LOG.md: 'No real student has used this build.'",
+    "openQuestions": [
+      "The current build ships three sessions; the master prompt still specifies two. The shipped product is authoritative, but the discrepancy is unresolved in the repo."
+    ]
+  }
+}

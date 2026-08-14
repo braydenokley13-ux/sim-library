@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "fill-my-building",
+  "product": {
+    "title": "Fill My Building",
+    "family": "bonus-gm-sims",
+    "pillar": "economics",
+    "summary": "Price an arena for a season and watch the demand curve answer back.",
+    "whatStudentsDo": "Students set ticket prices, concession markup, parking and special events month by month across a season, watching attendance and revenue respond — raise prices too far and the building empties and revenue falls with it — ending in a season grade.",
+    "concepts": [
+      "econ.price-elasticity",
+      "econ.law-of-demand",
+      "econ.pricing-strategy",
+      "econ.revenue-management",
+      "econ.fan-engagement"
+    ],
+    "gradeBands": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "stated-in-source",
+    "purpose": {
+      "primary": "INTRODUCE",
+      "secondary": [
+        "PRACTICE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "duration": {
+      "minutes": 10,
+      "basis": "stated-in-source"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "market-and-pricing"
+    ],
+    "technology": "single-file HTML/CSS/JS with a grade-band toggle",
+    "evidenceOutput": "none",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/BSC-anythingelse",
+        "path": "public/fill-my-building.html"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/BSC-anythingelse"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "A complete short-format experience and one of the clearest demonstrations of elasticity in the portfolio. Not deployed, and no student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "unknown",
+      "technicalBasis": "No deployment found for this repo (GitHub Pages 404).",
+      "documentation": "missing",
+      "knownBlockers": [
+        "No deployment — an instructor cannot run it today."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "BSC-anythingelse/public/fill-my-building.html: 'the demand curve is real: raise prices too much → attendance drops → revenue drops', with a grade-band toggle."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "bow-simulation-library",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "BOW Sports Capital's canonical catalog of simulations and simulation-like learning experiences.",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "probe": "node scripts/probe-health.mjs",
+    "seed": "node scripts/seed.mjs",
+    "build": "node scripts/build-catalog.mjs",
+    "test": "node --test tests/"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "id": "bow-universe-sandbox",
+  "product": {
+    "title": "Sandbox Impact Model",
+    "family": "bow-universe",
+    "pillar": "economics",
+    "summary": "Change a league rule, run the model, and argue from what it shows.",
+    "whatStudentsDo": "Students draft a change to a league rule set — a cap growth rate, a tax bracket, a revenue-sharing rate — and run it against the baseline. The model returns parity, tax concentration, revenue inequality and small-market competitiveness, and students interpret the result inside a formal rule-change proposal.",
+    "concepts": [
+      "econ.revenue-sharing",
+      "econ.salary-cap",
+      "econ.luxury-tax",
+      "econ.market-size",
+      "econ.competition-and-market-structure",
+      "econ.fiscal-policy",
+      "econ.externalities"
+    ],
+    "gradeBands": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "stated-in-source",
+    "purpose": {
+      "primary": "EXPLORE",
+      "secondary": [
+        "EVIDENCE",
+        "SYNTHESIZE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "facilitator-led"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student, with an account"
+    },
+    "facilitation": {
+      "required": true,
+      "founderDependence": "any-instructor",
+      "prep": "A commissioner account manages class codes, invites and proposal review."
+    },
+    "pattern": [
+      "market-and-pricing",
+      "allocation-under-constraint"
+    ],
+    "technology": "Next.js, Prisma + PostgreSQL, NextAuth, server-side simulation",
+    "evidenceOutput": "structured-assessment",
+    "studentDataProfile": {
+      "storesStudentData": "yes",
+      "requiresLogin": "yes",
+      "usesClassCodes": "yes",
+      "freeTextEntry": "yes",
+      "thirdPartyServices": [
+        "PostgreSQL"
+      ],
+      "notes": "Requires account creation. Stores proposals, evidence and commissioner decisions. Descriptive only."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/bow-universe",
+        "path": "src/lib/sim.ts"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/bow-universe"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "A real simulation engine with unit tests behind a research-and-proposal workflow. No deployment and no student-run evidence.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "unknown",
+      "technicalBasis": "No live URL found; requires a Postgres deployment to run.",
+      "documentation": "partial",
+      "knownBlockers": [
+        "No deployment, so an instructor cannot run it today."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    },
+    "notes": "Deliberately rejects the arcade framing the other BOW platforms use, in favour of research and proposal writing. Whether that is an active direction or a parked experiment is not resolvable from the repository."
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "bow-universe/src/lib/sim.ts implements simulateSeason, calculateLuxuryTax and compareRuleOutcomes; prisma/schema.prisma declares GradeBand of GRADE_5_6 and GRADE_7_8; README describes 'a research-first fictional sports-economy league for grades 5 through 8'."
+  }
+}

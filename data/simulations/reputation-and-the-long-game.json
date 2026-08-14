@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "reputation-and-the-long-game",
+  "product": {
+    "title": "Reputation & the Long Game",
+    "family": "track-301",
+    "pillar": "economics",
+    "summary": "A two-round negotiation where round one's reputation sets round two's starting position.",
+    "whatStudentsDo": "Not yet runnable. As designed, students pick a role and a horizon, negotiate one round using a chosen signal and decide whether to follow through on a bluff, then open a second negotiation whose starting position reflects the trust and credibility they built or spent.",
+    "concepts": [
+      "econ.reputation-risk",
+      "econ.negotiation",
+      "econ.batna",
+      "econ.time-horizon"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "EXPLORE",
+      "secondary": [
+        "APPLY"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "facilitator-led"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "negotiation"
+    ],
+    "technology": "Google Sheets workbook; the Apps Script automation does not exist",
+    "evidenceOutput": "none",
+    "studentDataProfile": {
+      "storesStudentData": "unknown",
+      "requiresLogin": "unknown",
+      "freeTextEntry": "yes",
+      "notes": "The workbook defines student name and email ranges and this copy already contains real test data."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/301-M3-L3",
+        "path": "301 M3L3-2.xlsx"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/301-M3-L3"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "EXPERIMENTAL",
+    "maturityBasis": "The source describes itself as content and data model only, with automation deferred. It cannot be played.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "broken",
+      "technicalBasis": "The workbook states its own automation is not built. Nothing scores, and the results ranges have nothing to populate them.",
+      "documentation": "missing",
+      "knownBlockers": [
+        "The Apps Script that would run and score this does not exist in the repository.",
+        "The committed workbook contains a real name and email address as leftover test data."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    },
+    "notes": "Contains a real name and email address committed as test data. Worth clearing before any wider sharing."
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "INFERRED",
+    "evidence": "301-M3-L3/301 M3L3-2.xlsx: 'Simulator Workbook (2 rounds, 3 scenario packs). Content + data model; automation is added later via Apps Script.' Mechanics reconstructed from sheet schema and labels, not from a running engine."
+  }
+}

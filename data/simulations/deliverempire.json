@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "id": "deliverempire",
+  "product": {
+    "title": "DeliverEmpire — Build Your Food Delivery Dynasty",
+    "family": "track-101",
+    "pillar": "economics",
+    "summary": "Students build a food-delivery business and meet supply, demand and pricing through running it.",
+    "whatStudentsDo": "Students operate a delivery company, setting prices, managing capacity and responding to demand, then see revenue and customer response move against their choices.",
+    "concepts": [
+      "econ.law-of-demand",
+      "econ.law-of-supply",
+      "econ.pricing-strategy",
+      "econ.operations-tradeoffs"
+    ],
+    "gradeBands": [
+      "5",
+      "6"
+    ],
+    "gradeBandBasis": "track-convention",
+    "purpose": {
+      "primary": "APPLY",
+      "secondary": [
+        "PRACTICE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "business-operator",
+      "market-and-pricing"
+    ],
+    "technology": "single-file HTML/CSS/JS, no build step",
+    "evidenceOutput": "none",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/101-M2-ECON",
+        "path": "index.html"
+      },
+      "additional": [
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/101-M2-ECON",
+          "path": "apps script"
+        }
+      ]
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/101-M2-ECON/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/101-M2-ECON"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Runs end-to-end and is publicly reachable. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "missing",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "INFERRED",
+    "evidence": "101-M2-ECON/index.html <title>DeliverEmpire - Build Your Food Delivery Dynasty!</title>. Repo also holds a Google Apps Script (Module 2) and a Track 101 xlsx workbook.",
+    "openQuestions": [
+      "Whether the Apps Script version is the same experience in a second medium was not verified."
+    ]
+  }
+}

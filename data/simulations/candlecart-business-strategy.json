@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "candlecart-business-strategy",
+  "product": {
+    "title": "BOW Business Strategy Simulator — CandleCart.com",
+    "family": "track-201",
+    "pillar": "economics",
+    "summary": "Run an online candle store across five months, with a knowledge gate between each.",
+    "whatStudentsDo": "Students choose a launch plan that sets demand and marginal cost, then run each month against randomised demand — ordering inventory, setting ad spend and price, absorbing a progressive tax in month five — and must pass a five-question check before the next month opens.",
+    "concepts": [
+      "econ.marginal-value",
+      "econ.pricing-strategy",
+      "econ.law-of-demand",
+      "econ.fiscal-policy",
+      "econ.optionality",
+      "econ.opportunity-cost"
+    ],
+    "gradeBands": [
+      "8",
+      "9",
+      "10"
+    ],
+    "gradeBandBasis": "stated-in-source",
+    "purpose": {
+      "primary": "PRACTICE",
+      "secondary": [
+        "APPLY"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "facilitator-led"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "required": true,
+      "founderDependence": "bow-certified-instructor",
+      "prep": "Apps Script must be bound to a copy of the workbook. The bound sheet is not in the repo."
+    },
+    "pattern": [
+      "business-operator",
+      "market-and-pricing"
+    ],
+    "technology": "Google Apps Script + Google Sheets",
+    "evidenceOutput": "educator-report",
+    "studentDataProfile": {
+      "storesStudentData": "yes",
+      "requiresLogin": "yes",
+      "usesClassCodes": "no",
+      "freeTextEntry": "yes",
+      "thirdPartyServices": [
+        "Google Workspace"
+      ],
+      "notes": "The Apps Script build writes to a StudentData sheet and identifies the student by Google account or a typed email, and emails a claim code. The browser build of the same experience stores nothing. Descriptive only."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/201-M1-ECON",
+        "path": "apps script"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/201-M1-ECON"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "2,211 lines implementing all five chapters, checks and email delivery. Cannot be launched from the repo alone.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "unknown",
+      "technicalBasis": "No GitHub Pages deployment (404). Not verifiable without the bound Google Sheet.",
+      "documentation": "minimal",
+      "knownBlockers": [
+        "The bound Google Sheet is not in the repository."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    },
+    "notes": "Its own header states Grades 8–10, which sits outside the Track 201 convention of Grades 7–8. Recorded as stated rather than reconciled."
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "201-M1-ECON/apps script header: 'BOW BUSINESS STRATEGY SIMULATOR v5.0 — Online Candle Store: CandleCart.com · Grades 8–10'. Collects student email and name via ui.prompt and emails a claim code from a CLAIM_CODES array."
+  }
+}

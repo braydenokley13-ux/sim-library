@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "id": "structural-leverage-sim",
+  "product": {
+    "title": "Structural Leverage SIM",
+    "family": "track-301",
+    "pillar": "economics",
+    "summary": "Leverage is alternatives, not arguments — worked through three negotiations.",
+    "whatStudentsDo": "Students read three negotiation scenarios and, across four phases, identify who holds leverage, how it shifts as the market and the deadline move, what actually creates it, and finally who could credibly walk away and what it would cost them.",
+    "concepts": [
+      "econ.leverage",
+      "econ.batna",
+      "econ.negotiation",
+      "econ.optionality"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "PRACTICE",
+      "secondary": [
+        "APPLY"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "facilitator-led"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "required": true,
+      "founderDependence": "bow-certified-instructor",
+      "prep": "Each student works in their own copy of the spreadsheet."
+    },
+    "pattern": [
+      "negotiation"
+    ],
+    "technology": "Google Apps Script + Sheets; a browser build exists but has no entry point",
+    "evidenceOutput": "scored-outcomes",
+    "studentDataProfile": {
+      "storesStudentData": "yes",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "yes",
+      "thirdPartyServices": [
+        "Google Workspace"
+      ],
+      "notes": "The Apps Script reads configured student name and email cells and writes claim codes to an instructor master sheet. Descriptive only."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/301-M3-L1",
+        "path": "apps script"
+      },
+      "additional": [
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/301-M3-L1",
+          "path": "html-activity"
+        },
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/301-M3-L1",
+          "path": "301 M3L1.xlsx"
+        }
+      ]
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/301-M3-L1"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "EXPERIMENTAL",
+    "maturityBasis": "One of two delivery channels is definitively broken; the other cannot be launched from the repo.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "broken",
+      "technicalBasis": "The browser build has no HTML entry point — the repo's only commit is titled 'Delete index.html' and none exists in the tree. The spreadsheet build appears complete but cannot be verified without the bound sheet.",
+      "documentation": "missing",
+      "knownBlockers": [
+        "The browser activity cannot be opened: css and js exist but index.html was deleted.",
+        "The bound Google Sheet is not in the repository."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "301-M3-L1 contains html-activity/css and html-activity/js but no HTML file anywhere in git ls-tree. js/app.js header names 'Structural Leverage SIM'; the xlsx carries 'Structural Leverage Lab — Leverage is alternatives, not arguments.'"
+  }
+}

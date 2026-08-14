@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "id": "plan-under-pressure",
+  "product": {
+    "title": "Plan Under Pressure",
+    "aliases": [
+      "BOW Decision Challenges: Plan Under Pressure",
+      "Basketball — Eight Weeks to the Showcase"
+    ],
+    "family": "decision-challenges",
+    "pillar": "financial-literacy",
+    "summary": "Build an eight-week plan for someone else's money, then repair it when week five breaks it.",
+    "whatStudentsDo": "Students plan Avery Reyes's eight-week season: read a contract separating dependable income from money that depends on a condition, cost out housing, and build a plan across a savings goal, a reserve and flexible cash. Week five cancels the showcase and adds a required cost, and the plan must be repaired first with what is already there and then with two new decisions. Finally students defend the plan in their own words, citing their own numbers.",
+    "concepts": [
+      "fin.income-reliability",
+      "fin.full-cost",
+      "fin.viable-budget",
+      "fin.contingency-planning",
+      "fin.adaptation",
+      "fin.financial-defense",
+      "fin.saving",
+      "econ.opportunity-cost"
+    ],
+    "standards": [
+      {
+        "framework": "NYSED Personal Finance",
+        "objectiveId": "1.1",
+        "strength": "supporting"
+      },
+      {
+        "framework": "NYSED Personal Finance",
+        "objectiveId": "1.2",
+        "strength": "primary"
+      },
+      {
+        "framework": "NYSED Personal Finance",
+        "objectiveId": "1.3",
+        "strength": "primary"
+      },
+      {
+        "framework": "NYSED Personal Finance",
+        "objectiveId": "4.1",
+        "strength": "supporting"
+      },
+      {
+        "framework": "NYSED Personal Finance",
+        "objectiveId": "5.1",
+        "strength": "supporting"
+      }
+    ],
+    "gradeBands": [
+      "6",
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "stated-in-source",
+    "purpose": {
+      "primary": "EVIDENCE",
+      "secondary": [
+        "APPLY",
+        "SYNTHESIZE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "facilitator-led"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student; no sound needed"
+    },
+    "duration": {
+      "minMinutes": 12,
+      "maxMinutes": 15,
+      "sessions": 1,
+      "basis": "stated-in-source"
+    },
+    "groupSize": "one student per seat code",
+    "facilitation": {
+      "required": true,
+      "founderDependence": "any-instructor",
+      "prep": "Teach the concepts first — this is an application task, not a lesson. Then share the link, a class code and a seat number. No accounts, no roster upload."
+    },
+    "pattern": [
+      "allocation-under-constraint",
+      "shock-and-adapt"
+    ],
+    "technology": "React + Vite single-page app, no backend",
+    "evidenceOutput": "structured-assessment",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "yes",
+      "freeTextEntry": "yes",
+      "thirdPartyServices": [],
+      "notes": "Class code, seat code and the written defence persist in browser localStorage only; a search of the source found no network calls. In-app copy reads 'No name, no email, nothing about your real money. These codes stay on this computer.' Descriptive only — the product's own V2 spec states a formal privacy and security review is still required before a real classroom pilot."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/bow-decision-challenges"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/bow-decision-challenges"
+      },
+      {
+        "kind": "facilitator-guide",
+        "label": "Educator challenge brief (in app)",
+        "path": "src/educator/EducatorPages.tsx"
+      }
+    ],
+    "version": {
+      "contentVersion": "2.1.0-mvp",
+      "asOf": "2026-08-14"
+    }
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "The most rigorously built product in the account: twelve unit suites including adversarial, neutrality and support-suppression tests, a seventeen-test browser suite with accessibility scans, and a screenshot walkthrough. It stops short of TESTED for one reason — the repo states plainly that no student has used it.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "unknown",
+      "technicalBasis": "Configured to deploy to Vercel but no live URL appears anywhere in the repo, so reachability could not be probed.",
+      "documentation": "complete",
+      "knownBlockers": [
+        "No live URL found, so an instructor cannot launch it without deploying it first.",
+        "No CI workflow — the test suites run only when someone runs them."
+      ]
+    },
+    "validation": {
+      "studentValidation": "never",
+      "facilitatorValidation": "never",
+      "notes": "The repo is explicit that the only class data in the app is a hypothetical demo fixture, and that a pilot is required future work."
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    },
+    "notes": "Owns its own registry, stable ids and scoring model. The Library references challengeId 'plan-under-pressure' and must never restate its worlds or evidence model. A second world ('fashion') is reserved in the type system and fully specced but not implemented — when it ships it is a variant of this entry, not a new one."
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "index.html: 'An applied financial-literacy challenge for Grades 6–8.' EducatorPages.tsx: '12–15 minutes for most students. One sitting, one device, no sound.' registry.ts defines challengeId 'plan-under-pressure'; blueprint/concepts.ts defines C1–C6; blueprint/standards.ts maps micro-skills to five NYSED objectives verified 2026-08-11."
+  }
+}

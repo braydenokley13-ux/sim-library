@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "id": "front-office-draft",
+  "product": {
+    "title": "Front Office Draft",
+    "family": "track-201",
+    "pillar": "economics",
+    "summary": "Build an analytics department for ten million dollars.",
+    "whatStudentsDo": "Students hire from seven candidates and buy from three tools inside a fixed budget. Score combines the analytics value added, a culture multiplier, a risk penalty and a scalability bonus, and clearing the threshold reveals a claim code.",
+    "concepts": [
+      "econ.opportunity-cost",
+      "econ.marginal-value",
+      "econ.capital-and-investment",
+      "econ.operations-tradeoffs"
+    ],
+    "gradeBands": [
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "track-convention",
+    "purpose": {
+      "primary": "APPLY",
+      "secondary": [
+        "EVIDENCE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor",
+      "notes": "The README directs students to submit the claim code through a BOW Finish Form, which is not in this repo."
+    },
+    "pattern": [
+      "allocation-under-constraint"
+    ],
+    "technology": "single-file HTML/CSS/JS, no build step",
+    "evidenceOutput": "completion",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/201-M3-L3",
+        "path": "index.html"
+      },
+      "additional": [
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/201-M3-L3",
+          "path": "BOW_201_M3_L3_Front_Office_Draft.xlsx"
+        }
+      ]
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/201-M3-L3/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/201-M3-L3"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Complete and publicly reachable, with a genuine v2 engineering plan whose first item is already implemented in the shipped code. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "complete",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "201-M3-L3/js/data.js SUCCESS_THRESHOLD 7.0 and claim code 'BOW-201-M3-EDGE-01', which the bundled xlsx also carries — the workbook is a parallel implementation of the same activity."
+  }
+}

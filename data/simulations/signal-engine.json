@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "signal-engine",
+  "product": {
+    "title": "Signal Engine — Sports Agent Negotiation Sim",
+    "family": "track-301",
+    "pillar": "economics",
+    "summary": "Negotiate by managing what the other side believes, not what is true.",
+    "whatStudentsDo": "Students represent a restricted free agent across five negotiation rounds, choosing from twenty-four signals that shift the opposing GM's beliefs about alternatives, urgency and fairness while spending credibility and risking backlash. Contradictory sequences and unsupported bluffs are penalised, and a film review replays every turn.",
+    "concepts": [
+      "econ.negotiation",
+      "econ.batna",
+      "econ.leverage",
+      "econ.reputation-risk",
+      "econ.principal-agent",
+      "econ.uncertainty"
+    ],
+    "gradeBandBasis": "unknown",
+    "purpose": {
+      "primary": "APPLY",
+      "secondary": [
+        "EVIDENCE"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "negotiation"
+    ],
+    "technology": "single-file HTML/CSS/JS, no build step",
+    "evidenceOutput": "scored-outcomes",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "yes",
+      "thirdPartyServices": [],
+      "notes": "Asks for full name and school email before play, but no network call was found — the values stay in the browser."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/301-M3-L2",
+        "path": "index.html"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/301-M3-L2/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/301-M3-L2"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "The most mechanically sophisticated single-file simulation in the account, modelling opponent belief state and generating counterfactuals. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "minimal",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "301-M3-L2/index.html <title>Signal Engine — Sports Agent Negotiation Sim</title>, with the closing line 'in negotiation, leverage is about managing what the other side believes, not what's actually true.'"
+  }
+}

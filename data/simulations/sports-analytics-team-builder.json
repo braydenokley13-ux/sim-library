@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "id": "sports-analytics-team-builder",
+  "product": {
+    "title": "Sports Analytics Team Builder",
+    "family": "track-201",
+    "pillar": "economics",
+    "summary": "Three struggling franchises, one mission — rebuild each within its budget using the numbers.",
+    "whatStudentsDo": "Students rebuild an MLB roster within budget against stated statistical thresholds, then unlock an NBA scenario, then an NFL one, each with its own metrics and cap. One progress bar tracks all three, and finishing all three opens a shared victory screen.",
+    "concepts": [
+      "econ.analytics-and-war",
+      "econ.market-inefficiency",
+      "econ.surplus-value",
+      "econ.roster-construction",
+      "econ.scarcity"
+    ],
+    "gradeBands": [
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "track-convention",
+    "purpose": {
+      "primary": "PRACTICE",
+      "secondary": [
+        "APPLY"
+      ]
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "one browser per student"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "draft-and-selection",
+      "allocation-under-constraint"
+    ],
+    "technology": "multi-page static site with shared JS state, seeded from a spreadsheet via a Python extraction script",
+    "evidenceOutput": "choices-recorded",
+    "studentDataProfile": {
+      "storesStudentData": "no",
+      "requiresLogin": "no",
+      "usesClassCodes": "no",
+      "freeTextEntry": "unknown",
+      "thirdPartyServices": [],
+      "notes": "State kept in browser localStorage only; no server call observed."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/201-M3-L2",
+        "path": "index.html"
+      },
+      "additional": [
+        {
+          "type": "github",
+          "repo": "braydenokley13-ux/201-M3-L2",
+          "path": "Track 201 Module 3 Lesson 2- Analytics Matrix.xlsx"
+        }
+      ]
+    },
+    "runResources": [
+      {
+        "kind": "live-url",
+        "label": "Play in browser (GitHub Pages)",
+        "url": "https://braydenokley13-ux.github.io/201-M3-L2/",
+        "verified": "2026-08-14"
+      },
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/201-M3-L2"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "PLAYABLE",
+    "maturityBasis": "Complete and publicly reachable, with an earlier prototype retained in-repo showing a finished refactor. No student-run evidence exists.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "healthy",
+      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "documentation": "partial",
+      "knownBlockers": []
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    }
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "201-M3-L2/league-select.html gates NBA behind MLB completion ('🔒 Complete MLB First') and NFL behind NBA; all three share js/game-state.js and redirect to one victory.html. Recorded as one experience, not three."
+  }
+}

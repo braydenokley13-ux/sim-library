@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "front-office-city-district-a",
+  "product": {
+    "title": "Front Office City — District A",
+    "family": "front-office-city",
+    "pillar": "economics",
+    "summary": "A 3D walk-around city where eight mission zones each hold a cap decision.",
+    "whatStudentsDo": "Students steer an avatar through a stylised 3D city to eight sequential mission zones, opening each to make a decision on Bird Rights, the mid-level exception, trade exceptions or dead money, with legality checks and payroll and flexibility consequences, ending in a tier and claim code.",
+    "concepts": [
+      "econ.salary-cap",
+      "econ.bird-rights",
+      "econ.mid-level-exception",
+      "econ.luxury-tax",
+      "econ.optionality",
+      "econ.roster-construction"
+    ],
+    "gradeBands": [
+      "7",
+      "8"
+    ],
+    "gradeBandBasis": "track-convention",
+    "purpose": {
+      "primary": "APPLY"
+    },
+    "delivery": {
+      "setting": [
+        "self-guided"
+      ],
+      "grouping": [
+        "individual"
+      ],
+      "mode": [
+        "online"
+      ],
+      "devices": "browser with WebGL; needs a build step to run"
+    },
+    "facilitation": {
+      "founderDependence": "any-instructor"
+    },
+    "pattern": [
+      "world-exploration",
+      "allocation-under-constraint"
+    ],
+    "technology": "Vite + 3D world, with a serverless attempt-lock API",
+    "evidenceOutput": "choices-recorded",
+    "studentDataProfile": {
+      "storesStudentData": "yes",
+      "requiresLogin": "no",
+      "usesClassCodes": "yes",
+      "freeTextEntry": "no",
+      "thirdPartyServices": [
+        "Vercel KV or Redis-compatible store"
+      ],
+      "notes": "An exam-integrity attempt lock keys records by class profile and needs durable storage in production. Descriptive only."
+    },
+    "source": {
+      "primary": {
+        "type": "github",
+        "repo": "braydenokley13-ux/M1-201-FINAL"
+      }
+    },
+    "runResources": [
+      {
+        "kind": "repo",
+        "label": "Source",
+        "url": "https://github.com/braydenokley13-ux/M1-201-FINAL"
+      },
+      {
+        "kind": "doc",
+        "label": "Deploy guide",
+        "path": "DEPLOY.md"
+      }
+    ]
+  },
+  "governance": {
+    "maturity": "EXPERIMENTAL",
+    "maturityBasis": "Substantial infrastructure — signed attempt locks, teacher strict-lock, audit history — with no automated tests behind it. Ambition outruns verification.",
+    "visibility": "active",
+    "publicListing": false,
+    "owner": {
+      "productOwner": "UNOWNED"
+    },
+    "health": {
+      "technical": "needs-attention",
+      "technicalBasis": "No GitHub Pages deployment (404) and no confirmed live instance. Requires a build and a signed-key deployment to run.",
+      "documentation": "partial",
+      "knownBlockers": [
+        "No deployment, so an instructor cannot run it today.",
+        "Attempt-lock infrastructure requires durable KV storage and is unverified end to end.",
+        "No automated test suite."
+      ]
+    },
+    "validation": {
+      "studentValidation": "unknown",
+      "facilitatorValidation": "unknown"
+    },
+    "lastVerified": {
+      "technical": "2026-08-14"
+    },
+    "notes": "Despite the name, this is not a 'final' version of T201-M1-L1. It is a separate 3D product line that predates the T201 lessons, which appear to have superseded it for classroom use."
+  },
+  "provenance": {
+    "discoveredBy": "account-wide discovery, August 2026",
+    "discoveredOn": "2026-08-14",
+    "confidence": "VERIFIED",
+    "evidence": "M1-201-FINAL/README.md: '8 mission zones in linear unlock order'; src/data/missions.js includes 'Mission 2 - Bird Rights Call'. Only syntax, schema and TODO-audit scripts exist — no tests."
+  }
+}

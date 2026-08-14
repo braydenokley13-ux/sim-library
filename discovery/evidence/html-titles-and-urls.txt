@@ -1,0 +1,122 @@
+101-M1-ECON                        TITLES: MEGA CITY TYCOON - Economics Adventure! 
+                                   URLS: 
+101-M2-ECON                        TITLES: DeliverEmpire - Build Your Food Delivery Dynasty! 
+                                   URLS: 
+101-M2-L2                          TITLES: Small Markets, Big Money — Bow Sports Capital Front Office 
+                                   URLS: 
+101-M3-ECON                        TITLES: DELIVERY EMPIRE | Economic Strategy Game 
+                                   URLS: 
+101-M3-L1                          TITLES: ⚾ Moneyball Draft Challenge 
+                                   URLS: 
+101-M3-L2                          TITLES: Stats vs Scouts - Basketball Decision Lab 
+                                   URLS: 
+101-M3-L3                          TITLES: 🏈 Process vs Results Lab v2 - Football Edition 
+                                   URLS: 
+101-M4-L1                          TITLES: Module 4 Lesson 1 — Why the Draft Isn't a Ranking 
+                                   URLS: 
+101-M4-L3                          TITLES: Draft Room Challenge — Fit vs BPA 
+                                   URLS: 
+201-M1-L2-Luxury-Tax-              TITLES: Luxury Tax in Action — Bow Sports Capital (Scenario Simulation) 
+                                   URLS: 
+201-M2-ECON                        TITLES: Bow Sports Capital - Creative Business Simulation 
+                                   URLS: 
+201-M2-L2                          TITLES: MLB Player Economics - Agent Simulator v2 
+                                   URLS: 
+201-M3-ECON                        TITLES: Bow Sports Empire 
+                                   URLS: 
+201-M3-L1                          TITLES: The Front Office Dashboard | Data to Decisions 
+                                   URLS: 
+201-M3-L2                          TITLES: MLB Challenge | Sports Analytics Team Builder NBA Challenge | Sports Analytics Team Builder NFL Challenge | Sports Analytics Team Builder Select Your Challenge | Sports Analytics Team Builder Sports Analytics Team Builder | BOW Sports Capital Sports Analytics Team Builder | Build Your Dream Team 
+                                   URLS: 
+201-M3-L3                          TITLES: Front Office Draft — 201 · M3 · L3 
+                                   URLS: 
+201-M4-L2                          TITLES: NBA Surplus Value Championship 
+                                   URLS: 
+201-M4-L3                          TITLES: GM Trade Challenge - The 5-Minute Decision Maker 
+                                   URLS: 
+301-M1-ECON                        TITLES: Venture Capital Tycoon 
+                                   URLS: 
+301-M1-L1                          TITLES: BOW Sports Capital - GM Decision Game 
+                                   URLS: 
+301-M1-L2                          TITLES: The Curve Room 2.0 - Salary Cap Simulation 
+                                   URLS: https://braydenokley13-ux.github.io/301-M1-L2/ https://braydenokley13-ux.github.io/301-M1-L2/` 
+301-M1-L3                          TITLES: Challenge Complete - The GM Challenge Draft - The GM Challenge Results - The GM Challenge The GM Challenge - Master the Efficiency Frontier 
+                                   URLS: 
+301-M2-ECON                        TITLES: 301-M2-ECON | Business Economics Challenge 
+                                   URLS: https://braydenokley13-ux.github.io/301-M2-ECON/` 
+301-M2-L1                          TITLES: ESPN Crisis Manager: The Salary Cap Leak 
+                                   URLS: 
+301-M2-L2                          TITLES: React App 
+                                   URLS: https://braydenokley13-ux.github.io/301-M2-L2 https://facebook.github.io/create-react-app/docs/deployment https://facebook.github.io/create-react-app/docs/getting-started https://facebook.github.io/create-react-app/docs/running-tests 
+301-M2-L3                          TITLES: NFL System Stress Test - BOW Sports Capital Track 301 Real Mode - NFL System Stress Test Tutorial Mode - NFL System Stress Test 
+                                   URLS: 
+301-M3-ECON                        TITLES: Deal Dynasty — Business Strategy Game 
+                                   URLS: 
+301-M3-L2                          TITLES: Signal Engine — Sports Agent Negotiation Sim 
+                                   URLS: 
+301-M4-ECON                        TITLES: Startup Tycoon: Data-Driven Decisions 
+                                   URLS: 
+301-M4-L1                          TITLES: WAR ROOM | NBA Decision Simulator 
+                                   URLS: 
+301-M4-L2                          TITLES: Decision Room Simulator | BOW 301-M4-L2 
+                                   URLS: 
+301-M4-L3                          TITLES: Model Risk & False Confidence | BOW Sports Capital 
+                                   URLS: 
+Adaptability-Model-NBA             TITLES: 
+                                   URLS: https://adapt-or-fade.vercel.app 
+BOW-WEBSITE                        TITLES: 
+                                   URLS: https://bowsportscapital.com https://bowsportscapital.com/about https://bowsportscapital.com/simulation 
+BSC-201-Capstone                   TITLES: The Front Office | BOW Sports Capital Track 201 
+                                   URLS: 
+BSC-BUILDANALYTIC                  TITLES: Analytics Lab — Sports Analytics Lab Sports Analytics Lab — BSC Stat Inventor — Sports Analytics Lab Teacher Collector — Sports Analytics Lab 
+                                   URLS: 
+BSC-anythingelse                   TITLES: Endorsement Empire — BSC Fill My Building — BSC Tank Commander — BSC 
+                                   URLS: 
+BSC-pre-course                     TITLES: BOW Sports Capital: Pregame 
+                                   URLS: 
+Bow-Sports-Capital-Full-APP        TITLES: 
+                                   URLS: https://bowsportscapital.com/shim/bsc-shim.js https://braydenokley13-ux.github.io/T201-M1-L2/ https://braydenokley13-ux.github.io/gauntlet-l1/ https://braydenokley13-ux.github.io/gauntlet-l2/ https://braydenokley13-ux.github.io/gauntlet-l3/ 
+CourtIQ                            TITLES: CourtIQ — MVP Prototype 
+                                   URLS: https://court-9gbc678g3-brayden-whites-projects-9b00092f.vercel.app/train` 
+Franchise-Sim                      TITLES: The Front Office | BOW Sports Capital Track 201 
+                                   URLS: 
+GAUNTLET                           TITLES: BOW Boss Sim - Economic Summit BOW Mastery - Gauntlet L1: Market Master BOW Mastery - Gauntlet L2: Supply Chain Crisis BOW Mastery - Gauntlet L3: Economic Policy Simulator BOW Mastery Layer 
+                                   URLS: 
+M1-201-FINAL                       TITLES: Front Office City - District A Final 
+                                   URLS: 
+M2-201-FINAL                       TITLES: Front Office City: NFL Capital Run 
+                                   URLS: 
+Rookie-Performance-Prediction-Model TITLES: NBA Rookie Bust Predictor 
+                                   URLS: 
+T101-M1-L1                         TITLES: Front Office: Build the Roster | Bow Sports Capital 
+                                   URLS: 
+T101-M1-L2                         TITLES: Trade Deadline War Room · BOW Sports Capital 
+                                   URLS: 
+T101-M2-L1                         TITLES: BOW Sports Capital Presents — Front Office: The Homestand 
+                                   URLS: 
+T201-M1-L1                         TITLES: Cap Crash — Front Office | Bow Sports Capital Cap Crash — Mission Briefing | Bow Sports Capital 
+                                   URLS: 
+T201-M1-L2                         TITLES: Trade Deadline War Room — Bow Sports Capital 
+                                   URLS: 
+T201-M2-L1                         TITLES: BOW Sports Capital Presents - MLB Money Maker 
+                                   URLS: 
+bernath-test-5                     TITLES: Sabrina's Math Dungeon 
+                                   URLS: 
+bow-decision-challenges            TITLES: Plan Under Pressure — BOW Decision Challenges 
+                                   URLS: 
+bow-prospect-builder               TITLES: BOW Prospect Builder 
+                                   URLS: 
+entrepuernurship                   TITLES: BOW — Step 3 — Entrepreneurship Lab (Sim 1) 
+                                   URLS: 
+league-in-a-box                    TITLES: The League in a Box | BOW Sports Capital league-in-a-box 
+                                   URLS: 
+scout-model                        TITLES: The GM's Model - BOW Sports Capital 
+                                   URLS: 
+upticklocal                        TITLES: Bundled Page 
+                                   URLS: 
+what-counts-as-best                TITLES: What Counts as Best? — Student Ranking Investigation 
+                                   URLS: 
+bow-finlit                         TITLES: Bow Sports Agency Challenge 
+                                   URLS: 
+bsc-highway-world                  TITLES: BOW Sports Capital — Basketball Career Drive HUD (preview) BSC Highway World City Kit Commercial City Kit Roads Emergence — placeholder Framework Doc — placeholder 
+                                   URLS: 
