@@ -16,6 +16,19 @@
    it, `UNKNOWN` if you did not establish it. Put file paths in `evidence`.
 6. `npm run validate` then `npm run build`.
 
+### If the concept you need does not exist
+
+`product.concepts` must resolve against `data/concepts.json`, so a simulation
+teaching something new is blocked until the taxonomy has it. That is deliberate —
+the taxonomy is the one centrally-owned layer — but it is not meant to be a wall.
+
+Open a change to `data/concepts.json` adding the concept with an id, a display
+name, a pillar, a one-line definition and its aliases, and say which simulation
+needs it. **BOW owns this file**, so it is a review, not a self-serve edit. The
+`gapsAcknowledged` block already names four concepts BOW's own vocabulary uses
+but nothing teaches — credit, debt, interest and insurance — and each will need
+exactly this when the first simulation covering it arrives.
+
 The rule that matters: **an honest gap beats a confident guess.** A blank
 duration tells an instructor "we do not know". A guessed one wastes their period.
 

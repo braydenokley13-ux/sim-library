@@ -109,6 +109,24 @@ worst outcome here would be a second name for something that already had one.
 
 ---
 
+## The public boundary is a build, not a label
+
+`app/index.html` inlines the entire registry so it can run from disk with no
+server. That makes it a complete internal document, and publishing it would
+publish every blocker, owner gap and leadership note in it.
+
+So the boundary is enforced by a separate build rather than by care.
+`scripts/build-public.mjs` emits `public/simulations.json` from an explicit
+field allowlist, only for records that are both `visibility: active` and
+`publicListing: true`, and refuses to write if any internal key appears in the
+output. A field added to the schema later is excluded by default rather than
+published by accident.
+
+The validator refuses `publicListing: true` on anything below `TESTED`, and on
+anything not `active`. Since nothing has reached TESTED, nothing can currently
+be published at all — which is the correct answer for a portfolio that has not
+been used with students.
+
 ## Drift control
 
 The registry goes stale in three ways. Each has a specific answer.

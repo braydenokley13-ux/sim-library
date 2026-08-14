@@ -83,11 +83,15 @@ schema/
 scripts/
   validate.mjs           integrity, including earned-maturity gates
   probe-health.mjs       reachability, the one automatable health signal
-  build-catalog.mjs      regenerates the UI and CATALOG.md
+  build-catalog.mjs      regenerates the internal UI and CATALOG.md
+  build-public.mjs       the public-safe payload, allowlisted field by field
   seed*.mjs              the August 2026 discovery, as reproducible code
 discovery/
   REPORT.md              the findings
   evidence/              raw audit output, ~290 KB, so this need not be redone
+tests/
+  registry.test.mjs      the data is clean
+  validator.test.mjs     bad data cannot get in — 16 adversarial cases
 docs/
   inclusion-rule.md      what counts, tested against the awkward cases
   source-of-truth.md     who owns which field, and what happens on conflict

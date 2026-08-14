@@ -6,8 +6,8 @@
 <title>BOW Simulation Library</title>
 <style>
   :root{
-    --bg:#fbfbfa; --panel:#fff; --ink:#16181d; --ink-2:#4a505c; --ink-3:#767d8c;
-    --line:#e4e5e9; --line-2:#eeeff2; --accent:#1c4e8a; --accent-soft:#eef3fa;
+    --bg:#fbfbfa; --panel:#fff; --ink:#16181d; --ink-2:#454b57; --ink-3:#5f6673;
+    --line:#e4e5e9; --line-2:#eeeff2; --accent:#17457c; --accent-soft:#eef3fa;
     --ok:#14614a; --ok-bg:#e6f2ee; --warn:#8a5a12; --warn-bg:#fbf1e0;
     --bad:#8f2b28; --bad-bg:#fbeceb; --neutral-bg:#f0f1f4;
     --radius:10px; --shadow:0 1px 2px rgba(20,22,28,.05), 0 4px 14px rgba(20,22,28,.045);
@@ -70,14 +70,14 @@
   .count{color:var(--ink-3); font-size:13px; padding:8px 0 0; width:100%}
   .clear{font:inherit; font-size:13px; border:0; background:none; color:var(--accent); cursor:pointer; padding:8px 2px; text-decoration:underline}
 
-  .grid{display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(310px,1fr)); padding:14px 0 44px}
+  .grid{display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(min(310px,100%),1fr)); padding:14px 0 44px}
   .card{
     background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
     padding:16px 16px 14px; text-align:left; font:inherit; color:inherit; cursor:pointer;
     display:flex; flex-direction:column; gap:9px; box-shadow:var(--shadow);
   }
   .card:hover{border-color:var(--ink-3)}
-  .card h3{font-size:15.5px}
+  .card .card-title{font-size:15.5px; font-weight:640; letter-spacing:-.012em; line-height:1.25}
   .card .sum{color:var(--ink-2); font-size:13.5px; margin:0; flex:1}
   .meta{display:flex; gap:6px; flex-wrap:wrap; align-items:center; color:var(--ink-3); font-size:12.5px}
   .dot::before{content:"·"; margin-right:6px}
@@ -182,6 +182,26 @@
   td.n{font-variant-numeric:tabular-nums}
   footer{border-top:1px solid var(--line); padding:22px 0 40px; color:var(--ink-3); font-size:12.8px}
   .hidden{display:none !important}
+  .sr-only{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;
+  }
+  .runnable-toggle{
+    display:flex; align-items:center; gap:8px; font-size:13.5px; color:var(--ink-2);
+    padding:6px 0; cursor:pointer;
+  }
+  .runnable-toggle input{width:15px; height:15px; accent-color:var(--accent); cursor:pointer}
+  .status{font-size:12.5px; font-weight:560; display:inline-flex; align-items:center; gap:5px}
+  .status.ready{color:var(--ok)}
+  .status.blocked{color:var(--warn)}
+  .lede .caveat{
+    margin-top:10px; font-size:13.6px; color:var(--ink-2);
+    border-left:3px solid var(--warn); padding-left:12px;
+  }
+  .untested{
+    background:var(--warn-bg); color:var(--warn); border-radius:8px; padding:10px 13px;
+    font-size:13.6px; margin:10px 0 4px;
+  }
   @media (max-width:640px){
     .modes{width:100%; margin-left:0}
     .lede h1{font-size:22px}
@@ -208,17 +228,18 @@
     <div class="lede">
       <h1>What can I run?</h1>
       <p>Every BOW simulation we could find, with what it teaches, how long it takes, and whether an instructor can actually open it today.</p>
+      <p class="caveat">None of these has been run with students yet. Anything you run, you run first — the Portfolio view has the full picture.</p>
     </div>
     <div class="controls">
-      <label class="hidden" for="q">Search</label>
+      <label class="sr-only" for="q">Search</label>
       <input type="search" id="q" placeholder="Search titles, concepts, what students do…" autocomplete="off">
-      <label class="hidden" for="f-pillar">Pillar</label>
+      <label class="sr-only" for="f-pillar">Pillar</label>
       <select id="f-pillar"><option value="">Any pillar</option></select>
-      <label class="hidden" for="f-grade">Grade</label>
+      <label class="sr-only" for="f-grade">Grade</label>
       <select id="f-grade"><option value="">Any grade</option></select>
-      <label class="hidden" for="f-concept">Concept</label>
+      <label class="sr-only" for="f-concept">Concept</label>
       <select id="f-concept"><option value="">Any concept</option></select>
-      <label class="hidden" for="f-time">Duration</label>
+      <label class="sr-only" for="f-time">Duration</label>
       <select id="f-time">
         <option value="">Any length</option>
         <option value="lt15">Under 15 min</option>
@@ -227,7 +248,7 @@
         <option value="gt60">60 min or multi-session</option>
         <option value="unk">Not recorded</option>
       </select>
-      <label class="hidden" for="f-format">Format</label>
+      <label class="sr-only" for="f-format">Format</label>
       <select id="f-format">
         <option value="">Any format</option>
         <option value="self-guided">Self-guided</option>
@@ -235,7 +256,7 @@
         <option value="teams">Teams</option>
         <option value="whole-class">Whole class</option>
       </select>
-      <label class="hidden" for="f-ready">Readiness</label>
+      <label class="sr-only" for="f-ready">Readiness</label>
       <select id="f-ready">
         <option value="">Any readiness</option>
         <option value="launch">Launchable from a link</option>
@@ -243,6 +264,10 @@
         <option value="EXPERIMENTAL">Experimental</option>
       </select>
       <button class="clear" id="clear">Reset</button>
+      <label class="runnable-toggle" for="only-runnable">
+        <input type="checkbox" id="only-runnable" checked>
+        Only what opens today
+      </label>
       <div class="count" id="count"></div>
     </div>
     <div class="grid" id="grid"></div>
@@ -308,11 +333,18 @@ $("#gen").textContent = "Generated " + DATA.generated + " from " + DATA.sims.len
 
 const HEALTH_TONE = { healthy: "ok", "needs-attention": "warn", broken: "bad", unknown: "" };
 const MATURITY_LABEL = { EXPERIMENTAL: "Experimental", PLAYABLE: "Playable", TESTED: "Tested", BOW_APPROVED: "BOW Approved", CORE: "Core" };
+const READINESS = {
+  EXPERIMENTAL: "Experimental — incomplete or unstable",
+  PLAYABLE: "Playable — runs end to end; not yet used with students",
+  TESTED: "Tested — has run with real students",
+  BOW_APPROVED: "BOW Approved — another instructor can run it",
+  CORE: "Core — repeatedly run, and transferred beyond the founder",
+};
 const PURPOSE_LABEL = { INTRODUCE: "Introduce", PRACTICE: "Practice", APPLY: "Apply", EVIDENCE: "Evidence", SYNTHESIZE: "Synthesize", EXPLORE: "Explore" };
 const gradeText = (s) => s.grades.length ? "Grades " + (s.grades.length > 1 ? s.grades[0] + "–" + s.grades[s.grades.length - 1] : s.grades[0]) : "Grade not recorded";
 
 /* ── filters ── */
-const F = { q: "", pillar: "", grade: "", concept: "", time: "", format: "", ready: "" };
+const F = { q: "", pillar: "", grade: "", concept: "", time: "", format: "", ready: "", onlyRunnable: true };
 {
   const pill = [...new Set(ACTIVE.map((s) => s.pillar))].sort();
   for (const p of pill) $("#f-pillar").append(new Option(p.replace(/-/g, " ").replace(/^\w/, (c) => c.toUpperCase()), p));
@@ -348,38 +380,68 @@ function matches(s) {
 
 function card(s) {
   const b = el("button", "card");
-  b.setAttribute("aria-label", "Open " + s.title);
-  const tags = el("div", "tags");
-  tags.append(el("span", "tag c", s.pillar === "financial-literacy" ? "Financial literacy" : s.pillar === "cross-pillar" ? "Cross-pillar" : "Economics"));
-  tags.append(el("span", "tag", MATURITY_LABEL[s.maturity]));
-  if (!s.launch) tags.append(el("span", "tag warn", "Not launchable"));
-  b.append(tags, el("h3", null, s.title), el("p", "sum", s.summary));
+  const st = el("div", "tags");
+  const status = el("span", "status " + (s.launch ? "ready" : "blocked"));
+  status.textContent = s.launch ? "Opens in a browser" : "Needs a developer to run";
+  st.append(status);
+  b.append(st, el("div", "card-title", displayTitle(s)), el("p", "sum", s.summary));
   const meta = el("div", "meta");
   meta.append(el("span", null, gradeText(s)));
-  if (s.durText) { const d = el("span", "dot"); d.textContent = s.durText; meta.append(d); }
-  const p = el("span", "dot"); p.textContent = PURPOSE_LABEL[s.purpose]; meta.append(p);
+  const bit = (t) => { const d = el("span", "dot"); d.textContent = t; meta.append(d); };
+  if (s.durText) bit(s.durText);
+  bit(formatText(s));
+  if (s.deviceNote) bit(s.deviceNote);
   b.append(meta);
   const ct = el("div", "tags");
-  for (const n of s.conceptNames.slice(0, 3)) ct.append(el("span", "tag", n));
+  for (const n of s.conceptNames.slice(0, 3)) ct.append(el("span", "tag c", n));
   if (s.conceptNames.length > 3) ct.append(el("span", "tag", "+" + (s.conceptNames.length - 3)));
   b.append(ct);
   b.onclick = () => open(s);
   return b;
 }
 
+/* Titles repeat a long house prefix; the family is already in the data. */
+function displayTitle(s) {
+  return s.title.replace(/^(BOW|Bow)\s+Sports\s+Capital\s*[—:-]\s*/i, "");
+}
+function formatText(s) {
+  if (s.grouping.includes("teams")) return "Teams";
+  if (s.grouping.includes("pairs")) return "Pairs";
+  if (s.setting.includes("facilitator-led") || s.setting.includes("whole-class")) return "Facilitator-led";
+  return "Self-guided";
+}
+
+/* Runnable first, then by whether we can even tell how long it takes, then shortest.
+   Alphabetical order on a prefix-heavy naming convention is the worst default. */
+function rank(a, b) {
+  if (!!b.launch - !!a.launch) return !!b.launch - !!a.launch;
+  if ((b.mins != null) - (a.mins != null)) return (b.mins != null) - (a.mins != null);
+  if (a.mins != null && b.mins != null && a.mins !== b.mins) return a.mins - b.mins;
+  return displayTitle(a).localeCompare(displayTitle(b));
+}
+
 function render() {
-  const list = ACTIVE.filter(matches);
+  const matched = ACTIVE.filter(matches);
+  const list = (F.onlyRunnable ? matched.filter((s) => s.launch) : matched).sort(rank);
   const g = $("#grid"); g.textContent = "";
   list.forEach((s) => g.append(card(s)));
   $("#empty").classList.toggle("hidden", list.length > 0);
+  const hiddenCount = matched.length - list.length;
   $("#count").textContent = list.length + " of " + ACTIVE.length + " experiences" +
-    (list.length ? " · " + list.filter((s) => s.launch).length + " launchable from a link" : "");
+    (hiddenCount ? " · " + hiddenCount + " hidden that cannot be opened today" : "");
+  writeHash();
 }
 
 const bind = (sel, key) => $(sel).addEventListener("input", (e) => { F[key] = e.target.value; render(); });
 bind("#q", "q"); bind("#f-pillar", "pillar"); bind("#f-grade", "grade"); bind("#f-concept", "concept");
 bind("#f-time", "time"); bind("#f-format", "format"); bind("#f-ready", "ready");
-const reset = () => { Object.keys(F).forEach((k) => F[k] = ""); document.querySelectorAll("#view-run input, #view-run select").forEach((n) => n.value = ""); render(); };
+$("#only-runnable").addEventListener("change", (e) => { F.onlyRunnable = e.target.checked; render(); });
+const reset = () => {
+  Object.keys(F).forEach((k) => F[k] = k === "onlyRunnable" ? true : "");
+  document.querySelectorAll("#view-run input[type=search], #view-run select").forEach((n) => n.value = "");
+  $("#only-runnable").checked = true;
+  render();
+};
 $("#clear").onclick = reset; $("#clear2").onclick = reset;
 
 /* ── detail ── */
@@ -391,21 +453,27 @@ function open(s) {
   const gl = $("#d-glance"); gl.textContent = "";
   const item = (k, v) => { const d = el("div"); d.append(el("dt", null, k), el("dd", null, v)); gl.append(d); };
   item("Grades", s.grades.length ? s.grades.join(", ") : "Not recorded");
-  item("Duration", s.durText ? s.durText + (s.sessions > 1 ? "" : "") : "Not recorded");
+  item("Duration", s.durText ? (s.sessions > 1 ? s.durText + " (" + s.sessions + " sessions)" : s.durText) : "Not recorded");
   item("Format", [...new Set([...s.grouping, ...s.setting])].join(", "));
   item("Purpose", s.purposeAll.map((p) => PURPOSE_LABEL[p]).join(", "));
-  item("Readiness", MATURITY_LABEL[s.maturity]);
+  item("Readiness", READINESS[s.maturity] || MATURITY_LABEL[s.maturity]);
   item("Health", s.health.replace("-", " "));
 
   /* RUN */
   const run = $("#p-run"); run.textContent = "";
   const sec = (title, node) => { const x = el("section"); x.append(el("h4", null, title)); x.append(node); return x; };
-  if (s.launch) {
-    const a = el("a", "launch", "Open the simulation"); a.href = s.launch; a.target = "_blank"; a.rel = "noopener";
-    const w = el("div"); w.append(a);
+  {
+    const w = el("div");
+    if (s.launch) {
+      const a = el("a", "launch", "Open the simulation"); a.href = s.launch; a.target = "_blank"; a.rel = "noopener";
+      w.append(a);
+    } else {
+      w.append(el("p", "note warn", "No live link. " + s.healthBasis));
+    }
+    if (!["once", "repeated"].includes(s.studentVal)) {
+      w.append(el("p", "untested", "Not yet run with students. If you run it, you will be the first — please record how it went."));
+    }
     run.append(sec("Launch", w));
-  } else {
-    run.append(sec("Launch", el("p", "note warn", "No live link. " + s.healthBasis)));
   }
   run.append(sec("What students do", el("p", "ink", s.does)));
   const ct = el("div", "tags"); s.conceptNames.forEach((n) => ct.append(el("span", "tag c", n)));
@@ -481,6 +549,12 @@ function open(s) {
     src.append(el("dt", null, "Repository"), dd);
   }
   if (srcRef.path) { const dd = el("dd"); dd.append(el("code", null, srcRef.path)); src.append(el("dt", null, "Path"), dd); }
+  if (srcRef.url) {
+    const dd = el("dd"); const a = el("a", null, srcRef.url);
+    a.href = srcRef.url; a.target = "_blank"; a.rel = "noopener"; dd.append(a);
+    src.append(el("dt", null, "Location"), dd);
+  }
+  if (srcRef.note) src.append(el("dt", null, "Access note"), el("dd", null, srcRef.note));
   (s.source.additional || []).forEach((a, i) => {
     const dd = el("dd"); dd.append(el("code", null, (a.repo ? a.repo + " " : "") + (a.path || a.url || "")));
     src.append(el("dt", null, i === 0 ? "Also in" : ""), dd);
@@ -504,15 +578,30 @@ function open(s) {
   bd.append(sec("Record confidence", el("p", null, s.confidence === "VERIFIED" ? "Verified — read directly from the source." : s.confidence === "INFERRED" ? "Inferred — reasonable from evidence but not stated outright." : "Unknown.")));
 
   showTab("run");
+  if (!suppressHash) history.replaceState(null, "", "#sim=" + encodeURIComponent(s.id));
   dlg.showModal();
 }
-function showTab(which) {
-  for (const k of ["run", "review", "build"]) {
-    $("#t-" + k).setAttribute("aria-selected", String(k === which));
+dlg.addEventListener("close", () => writeHash());
+const TABS = ["run", "review", "build"];
+function showTab(which, focus) {
+  for (const k of TABS) {
+    const t = $("#t-" + k);
+    t.setAttribute("aria-selected", String(k === which));
+    t.tabIndex = k === which ? 0 : -1;
     $("#p-" + k).classList.toggle("hidden", k !== which);
   }
+  if (focus) $("#t-" + which).focus();
 }
-["run", "review", "build"].forEach((k) => $("#t-" + k).onclick = () => showTab(k));
+TABS.forEach((k, i) => {
+  const t = $("#t-" + k);
+  t.onclick = () => showTab(k);
+  t.addEventListener("keydown", (e) => {
+    const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : e.key === "Home" ? -i : e.key === "End" ? TABS.length - 1 - i : 0;
+    if (!d) return;
+    e.preventDefault();
+    showTab(TABS[(i + d + TABS.length) % TABS.length], true);
+  });
+});
 $("#d-close").onclick = () => dlg.close();
 dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
 
@@ -648,13 +737,67 @@ function conceptTable() {
     const td4 = el("td", "n");
     const n = counts[c.id] || 0;
     if (n === 0) td4.append(el("span", "tag warn", "none"));
-    else td4.append(document.createTextNode(String(n)));
+    else {
+      const a = el("a", null, String(n));
+      a.href = "#concept=" + encodeURIComponent(c.id);
+      a.onclick = (e) => {
+        e.preventDefault();
+        reset(); F.concept = c.id; $("#f-concept").value = c.id;
+        $("#m-run").click(); render();
+      };
+      td4.append(a);
+    }
     tr.append(td4);
     tb.append(tr);
   }
   t.append(tb);
 }
 
+/* ── addressable state ──────────────────────────────────────────────────────
+   A record with no URL cannot be sent to a colleague or linked from an issue. */
+let suppressHash = false;
+function writeHash() {
+  if (suppressHash) return;
+  const parts = [];
+  if (F.q) parts.push("q=" + encodeURIComponent(F.q));
+  for (const k of ["pillar", "grade", "concept", "time", "format", "ready"]) if (F[k]) parts.push(k + "=" + encodeURIComponent(F[k]));
+  if (!F.onlyRunnable) parts.push("all=1");
+  const h = parts.join("&");
+  history.replaceState(null, "", h ? "#" + h : location.pathname);
+}
+function readHash() {
+  const h = location.hash.replace(/^#/, "");
+  if (!h) return;
+  suppressHash = true;
+  const p = new URLSearchParams(h);
+  const sim = p.get("sim");
+  if (p.has("all")) { F.onlyRunnable = false; $("#only-runnable").checked = false; }
+  for (const k of ["q", "pillar", "grade", "concept", "time", "format", "ready"]) {
+    const v = p.get(k);
+    if (!v) continue;
+    F[k] = v;
+    const node = k === "q" ? $("#q") : $("#f-" + k);
+    if (node) node.value = v;
+  }
+  suppressHash = false;
+  if (sim) {
+    const found = DATA.sims.find((x) => x.id === sim);
+    if (found) setTimeout(() => open(found), 0);
+  }
+}
+
+/* A hash-only navigation does not reload the page, so without this the back
+   button and any pasted link into an already-open tab would do nothing. */
+window.addEventListener("hashchange", () => {
+  if (dlg.open) dlg.close();
+  Object.keys(F).forEach((k) => F[k] = k === "onlyRunnable" ? true : "");
+  document.querySelectorAll("#view-run input[type=search], #view-run select").forEach((n) => n.value = "");
+  $("#only-runnable").checked = true;
+  readHash();
+  render();
+});
+
+readHash();
 render();
 </script>
 </body>

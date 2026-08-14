@@ -128,6 +128,10 @@ for (const { file, rec } of records) {
       fail(file, `${where}: repo "${s.repo}" is not owner/name`);
     if ((s.type === "live-site" || s.type === "external") && !s.url)
       fail(file, `${where}: ${s.type} source needs url`);
+    // Every source must say where the thing actually is. A Drive or physical
+    // source with no locator looks complete and points nowhere.
+    if (!s.repo && !s.url && !s.path && !s.note)
+      fail(file, `${where}: ${s.type} source has no locator — give a url, path or note`);
     if (s.url && !/^https?:\/\//.test(s.url)) fail(file, `${where}: malformed url "${s.url}"`);
   };
   checkSource(p.source.primary, "source.primary");
@@ -165,9 +169,11 @@ for (const { file, rec } of records) {
   if (g.supersededBy && g.visibility !== "superseded")
     warn(file, "supersededBy set but visibility is not superseded");
 
-  // 11. public listing must not leak internal-only judgement
-  if (g.publicListing && g.maturity === "EXPERIMENTAL")
-    fail(file, "an EXPERIMENTAL simulation must not be publicly listed");
+  // 11. public listing must not advertise something BOW cannot stand behind
+  if (g.publicListing && !["TESTED", "BOW_APPROVED", "CORE"].includes(g.maturity))
+    fail(file, `maturity ${g.maturity} must not be publicly listed — nothing untested goes on the public site`);
+  if (g.publicListing && g.visibility !== "active")
+    fail(file, `visibility "${g.visibility}" must not be publicly listed`);
 
   // 12. dated fields must be real dates, not in the future
   const today = new Date().toISOString().slice(0, 10);
@@ -178,18 +184,30 @@ for (const { file, rec } of records) {
   }
 
   // 13. tested-version guard — stops "tested last year" on a since-rewritten product
-  if (g.lastVerified?.studentRun && p.version?.contentVersion && !g.lastVerified.testedContentVersion)
-    warn(file, "a student run is recorded but testedContentVersion is not — the Library cannot say which version was tested");
+  if (["once", "repeated"].includes(v.studentValidation) && !g.lastVerified?.testedContentVersion)
+    fail(file, "a student run is claimed but testedContentVersion is not recorded — the Library could not say which version was actually tested");
 
   // 14. provenance honesty
-  if (rec.provenance?.confidence === "VERIFIED" && !rec.provenance.evidence)
-    fail(file, "provenance claims VERIFIED with no evidence");
+  if (rec.provenance?.confidence === "VERIFIED" && !(rec.provenance.evidence?.length > 20))
+    fail(file, "provenance claims VERIFIED without substantive evidence");
 }
 
 // ── cross-record checks ──────────────────────────────────────────────────────
 for (const { file, rec } of records) {
   const sb = rec.governance?.supersededBy;
   if (sb && !idToFile.has(sb)) fail(file, `supersededBy "${sb}" is not a known simulation id`);
+}
+
+// family values are free text; a near-duplicate silently splits a bucket in the catalog
+{
+  const fams = new Map();
+  for (const { file, rec } of records) {
+    const f = rec.product?.family;
+    if (!f) continue;
+    const norm = f.toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (fams.has(norm) && fams.get(norm) !== f) warn(file, `family "${f}" looks like a variant of "${fams.get(norm)}"`);
+    else fams.set(norm, f);
+  }
 }
 
 // concepts with no active simulation — reported, never fatal (this is the gap map)

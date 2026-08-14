@@ -1,0 +1,29 @@
+name: registry
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci || npm install
+      - name: Validate the registry
+        run: npm run validate
+      - name: Registry integrity tests
+        run: npm test
+      - name: Public payload carries nothing internal
+        run: npm run build:public
+      - name: Catalog and interface are in sync with the data
+        run: |
+          npm run build
+          if ! git diff --quiet -- CATALOG.md app/index.html; then
+            echo "::error::CATALOG.md or app/index.html is stale. Run 'npm run build' and commit the result."
+            git --no-pager diff --stat -- CATALOG.md app/index.html
+            exit 1
+          fi
