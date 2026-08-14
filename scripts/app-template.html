@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BOW Simulation Library</title>
+<style>
+  :root{
+    --bg:#fbfbfa; --panel:#fff; --ink:#16181d; --ink-2:#4a505c; --ink-3:#767d8c;
+    --line:#e4e5e9; --line-2:#eeeff2; --accent:#1c4e8a; --accent-soft:#eef3fa;
+    --ok:#14614a; --ok-bg:#e6f2ee; --warn:#8a5a12; --warn-bg:#fbf1e0;
+    --bad:#8f2b28; --bad-bg:#fbeceb; --neutral-bg:#f0f1f4;
+    --radius:10px; --shadow:0 1px 2px rgba(20,22,28,.05), 0 4px 14px rgba(20,22,28,.045);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#111318; --panel:#181b22; --ink:#eceef2; --ink-2:#b0b6c2; --ink-3:#858c9a;
+      --line:#282c36; --line-2:#20242c; --accent:#87b4e8; --accent-soft:#1a2434;
+      --ok:#7fd3b6; --ok-bg:#132a24; --warn:#e5b970; --warn-bg:#2c2314;
+      --bad:#f0a29d; --bad-bg:#2e1917; --neutral-bg:#20242c;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 4px 14px rgba(0,0,0,.25);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#111318; --panel:#181b22; --ink:#eceef2; --ink-2:#b0b6c2; --ink-3:#858c9a;
+    --line:#282c36; --line-2:#20242c; --accent:#87b4e8; --accent-soft:#1a2434;
+    --ok:#7fd3b6; --ok-bg:#132a24; --warn:#e5b970; --warn-bg:#2c2314;
+    --bad:#f0a29d; --bad-bg:#2e1917; --neutral-bg:#20242c;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 4px 14px rgba(0,0,0,.25);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:400 15px/1.55 ui-sans-serif,-apple-system,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent)}
+  h1,h2,h3{margin:0; font-weight:640; letter-spacing:-.012em; line-height:1.25}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 22px}
+
+  header.top{border-bottom:1px solid var(--line); background:var(--panel); position:sticky; top:0; z-index:20}
+  .top-in{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; padding:15px 0}
+  .brand{font-size:16.5px; font-weight:660; letter-spacing:-.02em}
+  .brand span{color:var(--ink-3); font-weight:450}
+  .modes{margin-left:auto; display:flex; gap:2px; background:var(--neutral-bg); padding:3px; border-radius:8px}
+  .modes button{
+    font:inherit; font-size:13px; font-weight:550; border:0; background:transparent; color:var(--ink-2);
+    padding:6px 13px; border-radius:6px; cursor:pointer;
+  }
+  .modes button[aria-pressed="true"]{background:var(--panel); color:var(--ink); box-shadow:var(--shadow)}
+  .modes button:focus-visible{outline:2px solid var(--accent); outline-offset:1px}
+
+  .lede{padding:26px 0 6px; max-width:70ch}
+  .lede h1{font-size:26px}
+  .lede p{color:var(--ink-2); margin:9px 0 0; font-size:15px}
+
+  .controls{display:flex; gap:10px; flex-wrap:wrap; align-items:center; padding:18px 0 6px}
+  input[type=search]{
+    font:inherit; padding:9px 12px; min-width:270px; flex:1 1 270px;
+    border:1px solid var(--line); border-radius:8px; background:var(--panel); color:var(--ink);
+  }
+  select{
+    font:inherit; font-size:13.5px; padding:8px 10px; border:1px solid var(--line);
+    border-radius:8px; background:var(--panel); color:var(--ink); max-width:210px;
+  }
+  input:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible, summary:focus-visible{
+    outline:2px solid var(--accent); outline-offset:2px;
+  }
+  .count{color:var(--ink-3); font-size:13px; padding:8px 0 0; width:100%}
+  .clear{font:inherit; font-size:13px; border:0; background:none; color:var(--accent); cursor:pointer; padding:8px 2px; text-decoration:underline}
+
+  .grid{display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(310px,1fr)); padding:14px 0 44px}
+  .card{
+    background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    padding:16px 16px 14px; text-align:left; font:inherit; color:inherit; cursor:pointer;
+    display:flex; flex-direction:column; gap:9px; box-shadow:var(--shadow);
+  }
+  .card:hover{border-color:var(--ink-3)}
+  .card h3{font-size:15.5px}
+  .card .sum{color:var(--ink-2); font-size:13.5px; margin:0; flex:1}
+  .meta{display:flex; gap:6px; flex-wrap:wrap; align-items:center; color:var(--ink-3); font-size:12.5px}
+  .dot::before{content:"·"; margin-right:6px}
+
+  .tag{
+    display:inline-block; font-size:11.5px; font-weight:560; padding:2.5px 8px; border-radius:999px;
+    background:var(--neutral-bg); color:var(--ink-2); letter-spacing:.005em; white-space:nowrap;
+  }
+  .tag.c{background:var(--accent-soft); color:var(--accent)}
+  .tag.ok{background:var(--ok-bg); color:var(--ok)}
+  .tag.warn{background:var(--warn-bg); color:var(--warn)}
+  .tag.bad{background:var(--bad-bg); color:var(--bad)}
+  .tags{display:flex; gap:5px; flex-wrap:wrap}
+
+  .empty{padding:56px 0; text-align:center; color:var(--ink-3)}
+
+  /* detail */
+  dialog{
+    border:0; padding:0; background:transparent; max-width:860px; width:calc(100% - 28px);
+    max-height:92vh; color:var(--ink);
+  }
+  dialog::backdrop{background:rgba(16,18,24,.5); backdrop-filter:blur(2px)}
+  .sheet{
+    background:var(--panel); border:1px solid var(--line); border-radius:14px;
+    max-height:92vh; overflow:auto; box-shadow:0 20px 60px rgba(0,0,0,.22);
+  }
+  .sheet-head{padding:22px 26px 0; position:relative}
+  .sheet-head h2{font-size:21px; padding-right:44px}
+  .sheet-head .sum{color:var(--ink-2); margin:8px 0 0; font-size:14.5px}
+  .close{
+    position:absolute; top:16px; right:18px; width:32px; height:32px; border-radius:8px;
+    border:1px solid var(--line); background:var(--panel); color:var(--ink-2); font-size:17px;
+    cursor:pointer; line-height:1;
+  }
+  .glance{
+    display:flex; flex-wrap:wrap; border:1px solid var(--line-2); border-radius:10px;
+    margin:18px 26px 0; overflow:hidden;
+  }
+  .glance div{
+    background:var(--panel); padding:10px 12px; flex:1 1 140px;
+    border-right:1px solid var(--line-2); border-bottom:1px solid var(--line-2);
+  }
+  .glance div:last-child{border-right:0}
+  .glance dt{font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-3); margin:0 0 3px}
+  .glance dd{margin:0; font-size:13.5px; font-weight:520}
+
+  .tabs{display:flex; gap:2px; padding:20px 26px 0; border-bottom:1px solid var(--line); margin-bottom:0}
+  .tabs button{
+    font:inherit; font-size:13.5px; font-weight:560; border:0; background:none; color:var(--ink-3);
+    padding:9px 13px; cursor:pointer; border-bottom:2px solid transparent; margin-bottom:-1px;
+  }
+  .tabs button[aria-selected="true"]{color:var(--ink); border-bottom-color:var(--accent)}
+  .panel{padding:20px 26px 26px}
+  .panel h4{margin:0 0 7px; font-size:12px; text-transform:uppercase; letter-spacing:.055em; color:var(--ink-3); font-weight:620}
+  .panel section{margin-bottom:20px}
+  .panel p{margin:0 0 8px; font-size:14.2px; color:var(--ink-2)}
+  .panel p.ink{color:var(--ink)}
+  ul.plain{margin:0; padding-left:18px; font-size:14px; color:var(--ink-2)}
+  ul.plain li{margin-bottom:4px}
+  .kv{display:grid; grid-template-columns:auto 1fr; gap:5px 16px; font-size:13.7px; align-items:baseline}
+  .kv dt{color:var(--ink-3)}
+  .kv dd{margin:0; color:var(--ink-2); word-break:break-word}
+  code{font:500 12.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; background:var(--neutral-bg); padding:1.5px 5px; border-radius:4px}
+  .launch{
+    display:inline-block; background:var(--accent); color:#fff; text-decoration:none; font-weight:580; font-size:14px;
+    padding:9px 17px; border-radius:8px; margin:2px 0 4px;
+  }
+  :root[data-theme="dark"] .launch, :root:not([data-theme="light"]) .launch{color:#0d1017}
+  @media (prefers-color-scheme: light){ :root:not([data-theme="dark"]) .launch{color:#fff} }
+  .note{
+    border-left:3px solid var(--line); padding:2px 0 2px 13px; margin:0 0 10px;
+    color:var(--ink-2); font-size:13.7px;
+  }
+  .note.bad{border-left-color:var(--bad)}
+  .note.warn{border-left-color:var(--warn)}
+
+  /* portfolio */
+  .stats{display:grid; gap:13px; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); padding:6px 0 8px}
+  .stat{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:15px 16px; box-shadow:var(--shadow)}
+  .stat .n{font-size:29px; font-weight:660; letter-spacing:-.02em; line-height:1.1}
+  .stat .l{color:var(--ink-3); font-size:12.7px; margin-top:4px}
+  .stat .s{color:var(--ink-2); font-size:12.5px; margin-top:7px}
+  .bars{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:18px; margin:16px 0; box-shadow:var(--shadow)}
+  .bars h3{font-size:14.5px; margin-bottom:3px}
+  .bars .cap{color:var(--ink-3); font-size:12.8px; margin:0 0 14px}
+  .bar{display:grid; grid-template-columns:minmax(96px,190px) 1fr auto; gap:11px; align-items:center; margin-bottom:7px; font-size:13.2px}
+  .bar .t{color:var(--ink-2); overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .bar .track{background:var(--neutral-bg); border-radius:999px; height:8px; overflow:hidden}
+  .bar .fill{background:var(--accent); height:100%; border-radius:999px; min-width:2px}
+  .bar .fill.ok{background:var(--ok)} .bar .fill.warn{background:var(--warn)} .bar .fill.bad{background:var(--bad)}
+  .bar .v{color:var(--ink-3); font-variant-numeric:tabular-nums; font-size:12.5px}
+  details.gap{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:0; margin-bottom:11px; box-shadow:var(--shadow)}
+  details.gap summary{padding:14px 18px; cursor:pointer; font-weight:580; font-size:14.2px; list-style:none; display:flex; gap:10px; align-items:center}
+  details.gap summary::-webkit-details-marker{display:none}
+  details.gap summary::before{content:"▸"; color:var(--ink-3); font-size:11px}
+  details.gap[open] summary::before{content:"▾"}
+  details.gap .body{padding:0 18px 16px; font-size:14px; color:var(--ink-2)}
+  .scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse; width:100%; font-size:13.4px; min-width:520px}
+  th,td{text-align:left; padding:8px 11px; border-bottom:1px solid var(--line-2)}
+  th{color:var(--ink-3); font-weight:590; font-size:12px; text-transform:uppercase; letter-spacing:.045em}
+  td.n{font-variant-numeric:tabular-nums}
+  footer{border-top:1px solid var(--line); padding:22px 0 40px; color:var(--ink-3); font-size:12.8px}
+  .hidden{display:none !important}
+  @media (max-width:640px){
+    .modes{width:100%; margin-left:0}
+    .lede h1{font-size:22px}
+    .glance,.tabs,.panel,.sheet-head{padding-left:18px; padding-right:18px}
+    .glance{margin-left:18px; margin-right:18px}
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <div class="brand">BOW Simulation Library <span>· internal</span></div>
+    <div class="modes" role="group" aria-label="View">
+      <button id="m-run" aria-pressed="true">Find</button>
+      <button id="m-portfolio" aria-pressed="false">Portfolio</button>
+      <button id="m-concepts" aria-pressed="false">Concepts</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- FIND -->
+  <div id="view-run">
+    <div class="lede">
+      <h1>What can I run?</h1>
+      <p>Every BOW simulation we could find, with what it teaches, how long it takes, and whether an instructor can actually open it today.</p>
+    </div>
+    <div class="controls">
+      <label class="hidden" for="q">Search</label>
+      <input type="search" id="q" placeholder="Search titles, concepts, what students do…" autocomplete="off">
+      <label class="hidden" for="f-pillar">Pillar</label>
+      <select id="f-pillar"><option value="">Any pillar</option></select>
+      <label class="hidden" for="f-grade">Grade</label>
+      <select id="f-grade"><option value="">Any grade</option></select>
+      <label class="hidden" for="f-concept">Concept</label>
+      <select id="f-concept"><option value="">Any concept</option></select>
+      <label class="hidden" for="f-time">Duration</label>
+      <select id="f-time">
+        <option value="">Any length</option>
+        <option value="lt15">Under 15 min</option>
+        <option value="15-30">15–30 min</option>
+        <option value="30-60">30–60 min</option>
+        <option value="gt60">60 min or multi-session</option>
+        <option value="unk">Not recorded</option>
+      </select>
+      <label class="hidden" for="f-format">Format</label>
+      <select id="f-format">
+        <option value="">Any format</option>
+        <option value="self-guided">Self-guided</option>
+        <option value="facilitator-led">Facilitator-led</option>
+        <option value="teams">Teams</option>
+        <option value="whole-class">Whole class</option>
+      </select>
+      <label class="hidden" for="f-ready">Readiness</label>
+      <select id="f-ready">
+        <option value="">Any readiness</option>
+        <option value="launch">Launchable from a link</option>
+        <option value="PLAYABLE">Playable</option>
+        <option value="EXPERIMENTAL">Experimental</option>
+      </select>
+      <button class="clear" id="clear">Reset</button>
+      <div class="count" id="count"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="empty hidden" id="empty">
+      <p>Nothing matches those filters.</p>
+      <button class="clear" id="clear2">Reset filters</button>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO -->
+  <div id="view-portfolio" class="hidden">
+    <div class="lede">
+      <h1>What do we have, and where are the gaps?</h1>
+      <p>Counted from the registry, not estimated. Where the account could not tell us something, this says so rather than guessing.</p>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div id="charts"></div>
+    <h2 style="font-size:17px; margin:26px 0 12px">What needs attention</h2>
+    <div id="gaps"></div>
+  </div>
+
+  <!-- CONCEPTS -->
+  <div id="view-concepts" class="hidden">
+    <div class="lede">
+      <h1>What do we teach?</h1>
+      <p>BOW's canonical concept list, crosswalked from the four vocabularies that already existed across the products. A concept with no simulation is a real gap, not a modelling artefact.</p>
+    </div>
+    <div class="scroll"><table id="concept-table"></table></div>
+  </div>
+</main>
+
+<footer class="wrap">
+  <span id="gen"></span> · Internal catalog. Health and ownership fields are not for public publication.
+</footer>
+
+<dialog id="detail" aria-labelledby="d-title">
+  <div class="sheet">
+    <div class="sheet-head">
+      <button class="close" id="d-close" aria-label="Close">&times;</button>
+      <h2 id="d-title"></h2>
+      <p class="sum" id="d-sum"></p>
+    </div>
+    <dl class="glance" id="d-glance"></dl>
+    <div class="tabs" role="tablist">
+      <button role="tab" id="t-run" aria-selected="true" aria-controls="p-run">Run</button>
+      <button role="tab" id="t-review" aria-selected="false" aria-controls="p-review">Review</button>
+      <button role="tab" id="t-build" aria-selected="false" aria-controls="p-build">Build</button>
+    </div>
+    <div class="panel" id="p-run" role="tabpanel" aria-labelledby="t-run"></div>
+    <div class="panel hidden" id="p-review" role="tabpanel" aria-labelledby="t-review"></div>
+    <div class="panel hidden" id="p-build" role="tabpanel" aria-labelledby="t-build"></div>
+  </div>
+</dialog>
+
+<script>
+const DATA = /*__DATA__*/null;
+const $ = (s) => document.querySelector(s);
+const el = (t, c, txt) => { const n = document.createElement(t); if (c) n.className = c; if (txt != null) n.textContent = txt; return n; };
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (m) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[m]));
+const ACTIVE = DATA.sims.filter((s) => s.visibility === "active");
+const TITLE = Object.fromEntries(DATA.sims.map((s) => [s.id, s.title]));
+$("#gen").textContent = "Generated " + DATA.generated + " from " + DATA.sims.length + " records";
+
+const HEALTH_TONE = { healthy: "ok", "needs-attention": "warn", broken: "bad", unknown: "" };
+const MATURITY_LABEL = { EXPERIMENTAL: "Experimental", PLAYABLE: "Playable", TESTED: "Tested", BOW_APPROVED: "BOW Approved", CORE: "Core" };
+const PURPOSE_LABEL = { INTRODUCE: "Introduce", PRACTICE: "Practice", APPLY: "Apply", EVIDENCE: "Evidence", SYNTHESIZE: "Synthesize", EXPLORE: "Explore" };
+const gradeText = (s) => s.grades.length ? "Grades " + (s.grades.length > 1 ? s.grades[0] + "–" + s.grades[s.grades.length - 1] : s.grades[0]) : "Grade not recorded";
+
+/* ── filters ── */
+const F = { q: "", pillar: "", grade: "", concept: "", time: "", format: "", ready: "" };
+{
+  const pill = [...new Set(ACTIVE.map((s) => s.pillar))].sort();
+  for (const p of pill) $("#f-pillar").append(new Option(p.replace(/-/g, " ").replace(/^\w/, (c) => c.toUpperCase()), p));
+  for (const g of ["5", "6", "7", "8", "9", "10"]) if (ACTIVE.some((s) => s.grades.includes(g))) $("#f-grade").append(new Option("Grade " + g, g));
+  const used = DATA.concepts.filter((c) => c.covered).sort((a, b) => a.name.localeCompare(b.name));
+  for (const c of used) $("#f-concept").append(new Option(c.name, c.id));
+}
+
+function matches(s) {
+  if (F.pillar && s.pillar !== F.pillar) return false;
+  if (F.grade && !s.grades.includes(F.grade)) return false;
+  if (F.concept && !s.concepts.includes(F.concept)) return false;
+  if (F.format) {
+    const all = [...s.setting, ...s.grouping];
+    if (!all.includes(F.format)) return false;
+  }
+  if (F.ready === "launch" && !s.launch) return false;
+  if (F.ready && F.ready !== "launch" && s.maturity !== F.ready) return false;
+  if (F.time) {
+    const m = s.mins, multi = s.sessions && s.sessions > 1;
+    if (F.time === "unk" && m != null) return false;
+    if (F.time === "lt15" && !(m != null && m < 15 && !multi)) return false;
+    if (F.time === "15-30" && !(m != null && m >= 15 && m <= 30 && !multi)) return false;
+    if (F.time === "30-60" && !(m != null && m > 30 && m <= 60 && !multi)) return false;
+    if (F.time === "gt60" && !((m != null && m > 60) || multi)) return false;
+  }
+  if (F.q) {
+    const hay = (s.title + " " + s.aliases.join(" ") + " " + s.summary + " " + s.does + " " + s.conceptNames.join(" ") + " " + (s.family || "") + " " + s.purposeAll.join(" ")).toLowerCase();
+    if (!F.q.toLowerCase().split(/\s+/).every((t) => hay.includes(t))) return false;
+  }
+  return true;
+}
+
+function card(s) {
+  const b = el("button", "card");
+  b.setAttribute("aria-label", "Open " + s.title);
+  const tags = el("div", "tags");
+  tags.append(el("span", "tag c", s.pillar === "financial-literacy" ? "Financial literacy" : s.pillar === "cross-pillar" ? "Cross-pillar" : "Economics"));
+  tags.append(el("span", "tag", MATURITY_LABEL[s.maturity]));
+  if (!s.launch) tags.append(el("span", "tag warn", "Not launchable"));
+  b.append(tags, el("h3", null, s.title), el("p", "sum", s.summary));
+  const meta = el("div", "meta");
+  meta.append(el("span", null, gradeText(s)));
+  if (s.durText) { const d = el("span", "dot"); d.textContent = s.durText; meta.append(d); }
+  const p = el("span", "dot"); p.textContent = PURPOSE_LABEL[s.purpose]; meta.append(p);
+  b.append(meta);
+  const ct = el("div", "tags");
+  for (const n of s.conceptNames.slice(0, 3)) ct.append(el("span", "tag", n));
+  if (s.conceptNames.length > 3) ct.append(el("span", "tag", "+" + (s.conceptNames.length - 3)));
+  b.append(ct);
+  b.onclick = () => open(s);
+  return b;
+}
+
+function render() {
+  const list = ACTIVE.filter(matches);
+  const g = $("#grid"); g.textContent = "";
+  list.forEach((s) => g.append(card(s)));
+  $("#empty").classList.toggle("hidden", list.length > 0);
+  $("#count").textContent = list.length + " of " + ACTIVE.length + " experiences" +
+    (list.length ? " · " + list.filter((s) => s.launch).length + " launchable from a link" : "");
+}
+
+const bind = (sel, key) => $(sel).addEventListener("input", (e) => { F[key] = e.target.value; render(); });
+bind("#q", "q"); bind("#f-pillar", "pillar"); bind("#f-grade", "grade"); bind("#f-concept", "concept");
+bind("#f-time", "time"); bind("#f-format", "format"); bind("#f-ready", "ready");
+const reset = () => { Object.keys(F).forEach((k) => F[k] = ""); document.querySelectorAll("#view-run input, #view-run select").forEach((n) => n.value = ""); render(); };
+$("#clear").onclick = reset; $("#clear2").onclick = reset;
+
+/* ── detail ── */
+const dlg = $("#detail");
+function open(s) {
+  $("#d-title").textContent = s.title;
+  $("#d-sum").textContent = s.summary;
+
+  const gl = $("#d-glance"); gl.textContent = "";
+  const item = (k, v) => { const d = el("div"); d.append(el("dt", null, k), el("dd", null, v)); gl.append(d); };
+  item("Grades", s.grades.length ? s.grades.join(", ") : "Not recorded");
+  item("Duration", s.durText ? s.durText + (s.sessions > 1 ? "" : "") : "Not recorded");
+  item("Format", [...new Set([...s.grouping, ...s.setting])].join(", "));
+  item("Purpose", s.purposeAll.map((p) => PURPOSE_LABEL[p]).join(", "));
+  item("Readiness", MATURITY_LABEL[s.maturity]);
+  item("Health", s.health.replace("-", " "));
+
+  /* RUN */
+  const run = $("#p-run"); run.textContent = "";
+  const sec = (title, node) => { const x = el("section"); x.append(el("h4", null, title)); x.append(node); return x; };
+  if (s.launch) {
+    const a = el("a", "launch", "Open the simulation"); a.href = s.launch; a.target = "_blank"; a.rel = "noopener";
+    const w = el("div"); w.append(a);
+    run.append(sec("Launch", w));
+  } else {
+    run.append(sec("Launch", el("p", "note warn", "No live link. " + s.healthBasis)));
+  }
+  run.append(sec("What students do", el("p", "ink", s.does)));
+  const ct = el("div", "tags"); s.conceptNames.forEach((n) => ct.append(el("span", "tag c", n)));
+  run.append(sec("What it teaches", ct));
+
+  const how = el("dl", "kv");
+  const kv = (k, v) => { if (!v) return; how.append(el("dt", null, k), el("dd", null, v)); };
+  kv("Devices", s.devices); kv("Group size", s.groupSize);
+  kv("Facilitator", s.facRequired === true ? "Required" : s.facRequired === false ? "Optional" : "Not recorded");
+  kv("Preparation", s.prep);
+  kv("Produces", s.output === "none" ? "Nothing recorded — this is a discussion experience" : s.output.replace(/-/g, " "));
+  run.append(sec("How it runs", how));
+  if (s.facNotes) run.append(sec("Notes", el("p", null, s.facNotes)));
+
+  const other = s.run.filter((r) => r.kind !== "live-url" && r.kind !== "repo");
+  if (other.length) {
+    const ul = el("ul", "plain");
+    other.forEach((r) => {
+      const li = el("li");
+      if (r.url) { const a = el("a", null, r.label); a.href = r.url; a.target = "_blank"; a.rel = "noopener"; li.append(a); }
+      else { li.append(r.label + (r.path ? " — " : "")); if (r.path) li.append(el("code", null, r.path)); }
+      ul.append(li);
+    });
+    run.append(sec("Materials", ul));
+  } else {
+    run.append(sec("Materials", el("p", null, "No facilitator guide, slides or printables were found for this simulation.")));
+  }
+
+  /* REVIEW */
+  const rev = $("#p-review"); rev.textContent = "";
+  rev.append(sec("Readiness", (() => {
+    const d = el("div");
+    const t = el("div", "tags");
+    t.append(el("span", "tag", MATURITY_LABEL[s.maturity]));
+    t.append(el("span", "tag " + (HEALTH_TONE[s.health] || ""), "Health: " + s.health.replace("-", " ")));
+    d.append(t);
+    if (s.maturityBasis) d.append(el("p", null, s.maturityBasis));
+    return d;
+  })()));
+  const val = el("dl", "kv");
+  val.append(el("dt", null, "Student-tested"), el("dd", null, s.studentVal === "never" ? "No — stated in the source" : s.studentVal === "unknown" ? "Unknown — the account cannot tell us" : s.studentVal));
+  val.append(el("dt", null, "Facilitator transfer"), el("dd", null, s.facVal === "unknown" ? "Unknown" : s.facVal.replace(/-/g, " ")));
+  val.append(el("dt", null, "Founder dependence"), el("dd", null, s.founder.replace(/-/g, " ")));
+  val.append(el("dt", null, "Owner"), el("dd", null, s.owner === "UNOWNED" ? "Unowned" : s.owner));
+  val.append(el("dt", null, "Documentation"), el("dd", null, s.docs));
+  if (s.lastVerified.technical) val.append(el("dt", null, "Link last checked"), el("dd", null, s.lastVerified.technical));
+  rev.append(sec("Validation", val));
+  if (s.valNotes) rev.append(sec("Validation notes", el("p", null, s.valNotes)));
+  if (s.blockers.length) {
+    const ul = el("ul", "plain"); s.blockers.forEach((b) => ul.append(el("li", null, b)));
+    const w = el("div"); w.append(ul);
+    rev.append(sec("Known blockers", w));
+  }
+  if (s.govNotes) rev.append(sec("Notes", el("p", null, s.govNotes)));
+  if (s.open.length) {
+    const ul = el("ul", "plain"); s.open.forEach((b) => ul.append(el("li", null, b)));
+    rev.append(sec("Open questions", ul));
+  }
+  if (s.standards.length) {
+    const ul = el("ul", "plain");
+    s.standards.forEach((st) => ul.append(el("li", null, st.framework + " " + st.objectiveId + (st.strength ? " (" + st.strength + ")" : ""))));
+    rev.append(sec("Standards", ul));
+  }
+
+  /* BUILD */
+  const bd = $("#p-build"); bd.textContent = "";
+  const src = el("dl", "kv");
+  const srcRef = s.source.primary;
+  src.append(el("dt", null, "Source type"), el("dd", null, srcRef.type));
+  if (srcRef.repo) {
+    const dd = el("dd"); const a = el("a", null, srcRef.repo);
+    a.href = "https://github.com/" + srcRef.repo; a.target = "_blank"; a.rel = "noopener"; dd.append(a);
+    src.append(el("dt", null, "Repository"), dd);
+  }
+  if (srcRef.path) { const dd = el("dd"); dd.append(el("code", null, srcRef.path)); src.append(el("dt", null, "Path"), dd); }
+  (s.source.additional || []).forEach((a, i) => {
+    const dd = el("dd"); dd.append(el("code", null, (a.repo ? a.repo + " " : "") + (a.path || a.url || "")));
+    src.append(el("dt", null, i === 0 ? "Also in" : ""), dd);
+  });
+  if (s.tech) src.append(el("dt", null, "Stack"), el("dd", null, s.tech));
+  if (s.version) src.append(el("dt", null, "Version"), el("dd", null, [s.version.contentVersion, s.version.asOf].filter(Boolean).join(" · ")));
+  src.append(el("dt", null, "Library id"), (() => { const d = el("dd"); d.append(el("code", null, s.id)); return d; })());
+  bd.append(sec("Where it lives", src));
+
+  const dp = el("dl", "kv");
+  const D = s.data || {};
+  const yn = (v) => v === "yes" ? "Yes" : v === "no" ? "No" : "Unknown";
+  dp.append(el("dt", null, "Stores student data"), el("dd", null, yn(D.storesStudentData)));
+  dp.append(el("dt", null, "Requires login"), el("dd", null, yn(D.requiresLogin)));
+  if (D.usesClassCodes) dp.append(el("dt", null, "Class codes"), el("dd", null, yn(D.usesClassCodes)));
+  if (D.freeTextEntry) dp.append(el("dt", null, "Free text"), el("dd", null, yn(D.freeTextEntry)));
+  if ((D.thirdPartyServices || []).length) dp.append(el("dt", null, "Third parties"), el("dd", null, D.thirdPartyServices.join(", ")));
+  bd.append(sec("Student data — observed, not a compliance assessment", dp));
+  if (D.notes) bd.append(sec("Data notes", el("p", null, D.notes)));
+  if (s.evidence) bd.append(sec("Evidence for this record", el("p", null, s.evidence)));
+  bd.append(sec("Record confidence", el("p", null, s.confidence === "VERIFIED" ? "Verified — read directly from the source." : s.confidence === "INFERRED" ? "Inferred — reasonable from evidence but not stated outright." : "Unknown.")));
+
+  showTab("run");
+  dlg.showModal();
+}
+function showTab(which) {
+  for (const k of ["run", "review", "build"]) {
+    $("#t-" + k).setAttribute("aria-selected", String(k === which));
+    $("#p-" + k).classList.toggle("hidden", k !== which);
+  }
+}
+["run", "review", "build"].forEach((k) => $("#t-" + k).onclick = () => showTab(k));
+$("#d-close").onclick = () => dlg.close();
+dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
+
+/* ── modes ── */
+const MODES = { run: "#view-run", portfolio: "#view-portfolio", concepts: "#view-concepts" };
+for (const m of Object.keys(MODES)) {
+  $("#m-" + m).onclick = () => {
+    for (const k of Object.keys(MODES)) {
+      $("#m-" + k).setAttribute("aria-pressed", String(k === m));
+      $(MODES[k]).classList.toggle("hidden", k !== m);
+    }
+    if (m === "portfolio") portfolio();
+    if (m === "concepts") conceptTable();
+  };
+}
+
+/* ── portfolio ── */
+let builtPortfolio = false;
+function portfolio() {
+  if (builtPortfolio) return; builtPortfolio = true;
+  const n = ACTIVE.length;
+  const launch = ACTIVE.filter((s) => s.launch).length;
+  const tested = ACTIVE.filter((s) => ["once", "repeated"].includes(s.studentVal)).length;
+  const owned = ACTIVE.filter((s) => s.owner !== "UNOWNED").length;
+  const timed = ACTIVE.filter((s) => s.durText).length;
+  const stats = [
+    [n, "active experiences", DATA.sims.length - n + " more superseded"],
+    [launch + " / " + n, "launchable from a link", (n - launch) + " need a build or a deploy first"],
+    [tested, "confirmed student-tested", "nothing in the account records a student run"],
+    [owned, "have a named owner", "ownership is not inferable from commits"],
+    [timed + " / " + n, "have a recorded duration", "the rest are not stated in the source"],
+  ];
+  const wrap = $("#stats");
+  for (const [nn, l, s] of stats) {
+    const d = el("div", "stat");
+    d.append(el("div", "n", String(nn)), el("div", "l", l), el("div", "s", s));
+    wrap.append(d);
+  }
+
+  const charts = $("#charts");
+  const chart = (title, cap, rows, toneFor) => {
+    const box = el("div", "bars");
+    box.append(el("h3", null, title), el("p", "cap", cap));
+    const max = Math.max(...rows.map((r) => r[1]), 1);
+    for (const [label, v] of rows) {
+      const b = el("div", "bar");
+      b.append(el("div", "t", label));
+      const tr = el("div", "track"); const f = el("div", "fill " + (toneFor ? toneFor(label) : ""));
+      // a zero must render as nothing at all — a stub bar reads as "some"
+      f.style.width = v === 0 ? "0" : Math.max(2, (v / max) * 100) + "%"; tr.append(f);
+      b.append(tr, el("div", "v", String(v)));
+      box.append(b);
+    }
+    return box;
+  };
+  const tally = (fn) => { const m = {}; for (const s of ACTIVE) { const v = fn(s); (Array.isArray(v) ? v : [v]).forEach((x) => m[x] = (m[x] || 0) + 1); } return Object.entries(m).sort((a, b) => b[1] - a[1]); };
+
+  charts.append(chart("Maturity", "Nothing has reached Tested, because nothing in the account records a student run.",
+    [["Playable", ACTIVE.filter((s) => s.maturity === "PLAYABLE").length], ["Experimental", ACTIVE.filter((s) => s.maturity === "EXPERIMENTAL").length], ["Tested", 0], ["BOW Approved", 0], ["Core", 0]],
+    (l) => l === "Playable" ? "ok" : l === "Experimental" ? "warn" : ""));
+  charts.append(chart("Technical health", "Reachability of the live link, checked automatically. Not a judgement of quality.",
+    tally((s) => s.health.replace("-", " ")), (l) => l === "healthy" ? "ok" : l === "broken" ? "bad" : l === "needs attention" ? "warn" : ""));
+  charts.append(chart("Pillar", "Economics dominates. Financial literacy is thin, and that is the clearest strategic gap in the portfolio.",
+    tally((s) => s.pillar === "financial-literacy" ? "Financial literacy" : s.pillar === "cross-pillar" ? "Cross-pillar" : "Economics")));
+  charts.append(chart("Grade coverage", "A simulation counts once per grade it states. Twenty-three record no grade at all.",
+    ["5", "6", "7", "8", "9", "10"].map((g) => ["Grade " + g, ACTIVE.filter((s) => s.grades.includes(g)).length])
+      .concat([["Not recorded", ACTIVE.filter((s) => !s.grades.length).length]]),
+    (l) => l === "Not recorded" ? "warn" : ""));
+  charts.append(chart("Product family", "Where the work actually sits.", tally((s) => s.family || "unfiled")));
+  charts.append(chart("Educational job", "The primary purpose each experience performs.", tally((s) => PURPOSE_LABEL[s.purpose])));
+
+  const gaps = $("#gaps");
+  const gap = (title, body, items) => {
+    const d = el("details", "gap");
+    const sm = el("summary"); sm.append(document.createTextNode(title));
+    d.append(sm);
+    const b = el("div", "body");
+    b.append(el("p", null, body));
+    if (items && items.length) {
+      const ul = el("ul", "plain");
+      items.forEach((i) => {
+        const li = el("li");
+        li.append(document.createTextNode(i.title + (i.why ? " — " + i.why : "")));
+        ul.append(li);
+      });
+      b.append(ul);
+    }
+    d.append(b); gaps.append(d);
+  };
+  const uncovered = DATA.concepts.filter((c) => !c.covered);
+  gap("Concepts with no simulation (" + uncovered.length + ")",
+    "These sit in BOW's own concept list but no active experience teaches them.",
+    uncovered.map((c) => ({ title: c.name, why: c.pillar })));
+  const fin = DATA.concepts.filter((c) => c.pillar === "financial-literacy");
+  gap("Financial literacy is thin (" + ACTIVE.filter((s) => s.pillar === "financial-literacy").length + " of " + ACTIVE.length + ")",
+    "BOW describes Economics and Financial Literacy as co-equal pillars. The portfolio does not reflect that: the financial-literacy work is concentrated in two flagship products, and neither has been run with students.",
+    ACTIVE.filter((s) => s.pillar === "financial-literacy").map((s) => ({ title: s.title, why: MATURITY_LABEL[s.maturity] })));
+  gap("Cannot be launched today (" + ACTIVE.filter((s) => !s.launch).length + ")",
+    "These have no live link. An instructor would need a developer to run them, which in practice means they do not exist for teaching.",
+    ACTIVE.filter((s) => !s.launch).map((s) => ({ title: s.title, why: s.health })));
+  gap("Broken or blocked (" + ACTIVE.filter((s) => s.health === "broken" || s.blockers.length).length + ")",
+    "Recorded blockers, from a deleted entry point to an unfinished submission endpoint.",
+    ACTIVE.filter((s) => s.health === "broken" || s.blockers.length).map((s) => ({ title: s.title, why: s.blockers[0] || s.healthBasis })));
+  gap("No recorded duration (" + ACTIVE.filter((s) => !s.durText).length + ")",
+    "An instructor with a fixed period cannot filter these. Recording a real duration is among the cheapest improvements available.",
+    ACTIVE.filter((s) => !s.durText).map((s) => ({ title: s.title })));
+  gap("Unowned (" + ACTIVE.filter((s) => s.owner === "UNOWNED").length + ")",
+    "Ownership was deliberately not inferred from commit history — the person who committed most is often not the person accountable. Every one of these needs a human decision.",
+    []);
+}
+
+/* ── concepts ── */
+let builtConcepts = false;
+function conceptTable() {
+  if (builtConcepts) return; builtConcepts = true;
+  const t = $("#concept-table");
+  const counts = {};
+  for (const s of ACTIVE) for (const c of s.concepts) counts[c] = (counts[c] || 0) + 1;
+  const head = el("thead"); const hr = el("tr");
+  ["Concept", "Pillar", "Group", "Simulations"].forEach((h) => hr.append(el("th", null, h)));
+  head.append(hr); t.append(head);
+  const tb = el("tbody");
+  const sorted = [...DATA.concepts].sort((a, b) => (counts[b.id] || 0) - (counts[a.id] || 0) || a.name.localeCompare(b.name));
+  for (const c of sorted) {
+    const tr = el("tr");
+    const td1 = el("td");
+    const def = el("div", null, c.definition);
+    def.style.cssText = "color:var(--ink-3);font-size:12.5px;margin-top:2px";
+    td1.append(el("strong", null, c.name), def);
+    tr.append(td1);
+    tr.append(el("td", null, c.pillar === "financial-literacy" ? "Financial literacy" : "Economics"));
+    tr.append(el("td", null, (c.group || "").replace(/-/g, " ")));
+    const td4 = el("td", "n");
+    const n = counts[c.id] || 0;
+    if (n === 0) td4.append(el("span", "tag warn", "none"));
+    else td4.append(document.createTextNode(String(n)));
+    tr.append(td4);
+    tb.append(tr);
+  }
+  t.append(tb);
+}
+
+render();
+</script>
+</body>
+</html>
