@@ -15,7 +15,10 @@ import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const SIM_DIR = join(ROOT, "data", "simulations");
+// Overridable so the adversarial suite can validate a throwaway registry rather
+// than writing probe records into the real one. Tests that mutate shared data
+// are a race waiting to happen, and did in fact become one.
+const SIM_DIR = process.env.BOW_SIM_DIR ?? join(ROOT, "data", "simulations");
 
 const errors = [];
 const warnings = [];

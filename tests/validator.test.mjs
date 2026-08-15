@@ -4,18 +4,23 @@
  * The integrity tests check that today's data is clean. These check that a
  * careless author CANNOT get bad data in — which is the property that actually
  * keeps the registry honest as it grows. Each case writes a deliberately bad
- * record into the real registry, runs the validator, and asserts it fails.
+ * record into a throwaway registry, runs the validator, and asserts it fails.
  */
 import { test, afterEach } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync, writeFileSync, unlinkSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, unlinkSync, existsSync, mkdtempSync } from "node:fs";
+import { tmpdir } from "node:os";
 import { execFileSync } from "node:child_process";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const PROBE_ID = "zz-validator-probe";
-const PROBE = join(ROOT, "data", "simulations", `${PROBE_ID}.json`);
+// A throwaway registry directory. The suite used to write its probe records into
+// data/simulations, which meant every other test file could observe a synthetic
+// record mid-run depending on scheduling.
+const PROBE_DIR = mkdtempSync(join(tmpdir(), "bow-validator-"));
+const PROBE = join(PROBE_DIR, `${PROBE_ID}.json`);
 
 const base = () => ({
   schemaVersion: 1,
@@ -35,7 +40,6 @@ const base = () => ({
     maturity: "PLAYABLE",
     maturityBasis: "synthetic",
     visibility: "active",
-    publicListing: false,
     owner: { productOwner: "UNOWNED" },
     health: { technical: "healthy", knownBlockers: [] },
     validation: { studentValidation: "unknown", facilitatorValidation: "unknown" },
@@ -46,7 +50,7 @@ const base = () => ({
 function accepts(record) {
   writeFileSync(PROBE, JSON.stringify(record, null, 2));
   try {
-    execFileSync("node", [join(ROOT, "scripts", "validate.mjs")], { cwd: ROOT, stdio: "pipe" });
+    execFileSync("node", [join(ROOT, "scripts", "validate.mjs")], { cwd: ROOT, stdio: "pipe", env: { ...process.env, BOW_SIM_DIR: PROBE_DIR } });
     return true;
   } catch {
     return false;
@@ -114,19 +118,30 @@ test("rejects a VERIFIED claim propped up by token evidence", () => {
   assert.equal(accepts(r), false);
 });
 
-test("rejects public listing of anything untested", () => {
+test("rejects a public-release hold with no stated reason", () => {
+  const r = base();
+  r.governance.publicRelease = { hold: true };
+  assert.equal(accepts(r), false);
+});
+
+test("accepts a public-release hold that states its reason", () => {
+  const r = base();
+  r.governance.publicRelease = { hold: true, holdReason: "Submission endpoint is a placeholder." };
+  assert.equal(accepts(r), true);
+});
+
+test("rejects publicListing, the field the maturity gate used to live on", () => {
+  // The old model let a record declare itself public. Readiness is computed now,
+  // and the schema is additionalProperties:false so the dead field cannot linger
+  // in a record and quietly mean nothing.
   const r = base();
   r.governance.publicListing = true;
   assert.equal(accepts(r), false);
 });
 
-test("rejects public listing of an archived record", () => {
+test("rejects contexts asserted without a basis", () => {
   const r = base();
-  r.governance.maturity = "TESTED";
-  r.governance.validation = { studentValidation: "once", facilitatorValidation: "bow-instructor" };
-  r.governance.lastVerified = { testedContentVersion: "1.0" };
-  r.governance.visibility = "archived";
-  r.governance.publicListing = true;
+  r.product.contexts = ["basketball"];
   assert.equal(accepts(r), false);
 });
 

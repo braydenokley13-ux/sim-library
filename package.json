@@ -10,8 +10,9 @@
     "seed": "node scripts/seed.mjs",
     "build": "node scripts/build-catalog.mjs",
     "test": "node --test tests/*.test.mjs",
-    "build:public": "node scripts/build-public.mjs",
-    "check": "npm run validate && npm test && npm run build:public"
+    "build:public": "node scripts/build-public.mjs && node scripts/build-library.mjs",
+    "check": "npm run validate && npm test && npm run build:public",
+    "fonts": "node scripts/fetch-fonts.mjs"
   },
   "dependencies": {
     "ajv": "^8.17.1",
