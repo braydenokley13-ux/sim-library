@@ -52,13 +52,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/201-M4-ECON"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "EXPERIMENTAL",
     "maturityBasis": "Scaffolding only. Nothing a student could run exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

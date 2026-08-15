@@ -71,13 +71,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/BSC-BUILDANALYTIC"
       }
-    ]
+    ],
+    "contexts": [
+      "multi-sport"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Complete and reachable, with a share-link path into the facilitator collector. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

@@ -81,13 +81,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/T101-M1-L1"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Runs end-to-end, publicly reachable, and carries in-browser self-tests. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

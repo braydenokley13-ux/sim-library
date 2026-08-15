@@ -61,13 +61,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/entrepuernurship"
       }
-    ]
+    ],
+    "contexts": [
+      "business"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "EXPERIMENTAL",
     "maturityBasis": "The underlying idea is sound and the engine is written, but the shipped build does not run and only one of three intended simulations was ever built.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

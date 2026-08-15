@@ -70,13 +70,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/BSC-anythingelse"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Fully built across a draft phase, a free-agency phase and a simulated season. Not deployed, and no student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

@@ -70,13 +70,17 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/301-M2-L1"
       }
-    ]
+    ],
+    "contexts": [
+      "media-and-brand",
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Complete and publicly reachable with full path branching. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

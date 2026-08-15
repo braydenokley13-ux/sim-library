@@ -79,13 +79,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/201-M3-L3"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Complete and publicly reachable, with a genuine v2 engineering plan whose first item is already implemented in the shipped code. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

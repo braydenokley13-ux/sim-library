@@ -73,13 +73,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/BSC-anythingelse"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "A complete multi-stage negotiation state machine with a working grade-band toggle. Not deployed, and no student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

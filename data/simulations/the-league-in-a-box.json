@@ -77,13 +77,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/league-in-a-box"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Complete and reachable in two implementations, with a committed build output. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

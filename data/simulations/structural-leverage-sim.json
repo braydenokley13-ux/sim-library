@@ -77,13 +77,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/301-M3-L1"
       }
-    ]
+    ],
+    "contexts": [
+      "business"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "EXPERIMENTAL",
     "maturityBasis": "One of two delivery channels is definitively broken; the other cannot be launched from the repo.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

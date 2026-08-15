@@ -82,6 +82,13 @@
           "description": "Omit minutes entirely rather than inventing one. basis is required whenever a number is given."
         },
 
+        "contexts": {
+          "type": "array", "default": [],
+          "items": { "enum": ["basketball", "football", "baseball", "multi-sport", "sports-front-office", "business", "city-and-policy", "investing", "media-and-brand", "personal-finance"] },
+          "description": "The WORLD the simulation is set in — the single most intuitive filter for a teacher ('show me the football ones'). Editorial, assigned by reading the product's own title and description. Never a claim about content quality."
+        },
+        "contextBasis": { "enum": ["stated-in-source", "editorial", "unknown"], "description": "Required whenever contexts is non-empty." },
+
         "groupSize": { "type": "string", "description": "e.g. '1', '2-4 per team', 'any class size'. Omit if unknown." },
 
         "facilitation": {
@@ -165,7 +172,14 @@
         "maturityBasis": { "type": "string", "description": "Why this level. Required reading for anyone changing it." },
         "visibility": { "enum": ["active", "hidden", "archived", "superseded"] },
         "supersededBy": { "type": "string", "description": "Simulation id that replaced this one." },
-        "publicListing": { "type": "boolean", "default": false, "description": "May appear on the public BOW website." },
+        "publicRelease": {
+          "type": "object", "additionalProperties": false,
+          "description": "BOW's VETO over the public site. Eligibility itself is computed in scripts/public-readiness.mjs from observable facts — a record cannot be hand-promoted onto the public site, only held back from it.",
+          "properties": {
+            "hold": { "type": "boolean", "default": false, "description": "Keep this off the public site even though it otherwise qualifies." },
+            "holdReason": { "type": "string", "description": "Required whenever hold is true. Internal only — never published." }
+          }
+        },
 
         "owner": {
           "type": "object", "additionalProperties": false,

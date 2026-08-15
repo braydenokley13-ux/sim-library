@@ -1,0 +1,160 @@
+{
+  "generated": "2026-08-15",
+  "totals": {
+    "records": 76,
+    "included": 46,
+    "excluded": 30
+  },
+  "excluded": [
+    {
+      "id": "bow-universe-sandbox",
+      "title": "Sandbox Impact Model",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "bow-zoom-discovery-game",
+      "title": "BOW Sports Capital Zoom Game",
+      "reason": "not-active"
+    },
+    {
+      "id": "bsc-pre-course-front-office",
+      "title": "BOW Sports Capital: Pre-Course",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "candlecart-business-strategy",
+      "title": "BOW Business Strategy Simulator — CandleCart.com",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "decision-room-memo",
+      "title": "Decision Room (memo exercise)",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "eastfield-eagles",
+      "title": "Front Office — Eastfield Eagles",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "endorsement-empire",
+      "title": "Endorsement Empire",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "entrepreneurship-lab-unit-economics",
+      "title": "Entrepreneurship Lab — Unit Economics",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "fill-my-building",
+      "title": "Fill My Building",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "final-mastery-simulation-201",
+      "title": "BOW Sports Capital — Final Mastery Simulation",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "front-office-challenge",
+      "title": "Front Office Challenge",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "front-office-city-district-a",
+      "title": "Front Office City — District A",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "front-office-city-nfl-capital-run",
+      "title": "Front Office City: NFL Capital Run",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "gauntlet-l1-market-master",
+      "title": "Gauntlet L1: Market Master",
+      "reason": "health-not-confirmed"
+    },
+    {
+      "id": "ground-zero",
+      "title": "Ground Zero",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "highway-world-challenge-mode",
+      "title": "Highway World — Challenge Mode: Game Night Pricing Crisis",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "highway-world-episode-1",
+      "title": "Highway World — Episode 1: Origin District",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "luxury-tax-in-action",
+      "title": "Luxury Tax in Action — Scenario Simulation",
+      "reason": "not-active"
+    },
+    {
+      "id": "module-4-econ-final-101",
+      "title": "Module 4 Econ Final — Track 101",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "plan-under-pressure",
+      "title": "Plan Under Pressure",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "reputation-and-the-long-game",
+      "title": "Reputation & the Long Game",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "structural-leverage-sim",
+      "title": "Structural Leverage SIM",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "tank-commander",
+      "title": "Tank Commander",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "the-blockbuster",
+      "title": "The Blockbuster",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "the-dumpster-fire",
+      "title": "The Dumpster Fire",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "the-front-office-early-build",
+      "title": "The Front Office (early build)",
+      "reason": "not-active"
+    },
+    {
+      "id": "the-gms-model",
+      "title": "The GM's Model",
+      "reason": "health-not-confirmed"
+    },
+    {
+      "id": "the-lebron-files",
+      "title": "The LeBron Files",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "the-rookie-deal",
+      "title": "The Rookie Deal",
+      "reason": "no-launch-url"
+    },
+    {
+      "id": "westbrook-wolves",
+      "title": "Simulation Room — Westbrook Wolves",
+      "reason": "no-launch-url"
+    }
+  ]
+}

@@ -116,13 +116,17 @@
         "label": "60-minute run guide",
         "path": "docs/60-minute-run-guide.md"
       }
-    ]
+    ],
+    "contexts": [
+      "city-and-policy",
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Around 2,700 tests across 225 files, CI with typecheck, full suite, build and two guardrails, and a curriculum spine whose coverage is enforced as a build contract. Its own CTO report recommends shipping only as a supervised pilot, and no student has run it.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

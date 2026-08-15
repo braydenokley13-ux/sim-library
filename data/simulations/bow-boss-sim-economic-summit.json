@@ -75,13 +75,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/GAUNTLET"
       }
-    ]
+    ],
+    "contexts": [
+      "city-and-policy"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "The richest negotiation and coalition logic in the account, complete and reachable. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

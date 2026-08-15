@@ -67,14 +67,17 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/201-M1-L2-Luxury-Tax-"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "EXPERIMENTAL",
     "maturityBasis": "An early, untested prototype of the Module 1 Lesson 2 luxury-tax slot, superseded five months later by a tested, documented build.",
     "visibility": "superseded",
     "supersededBy": "trade-deadline-war-room-201",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

@@ -71,13 +71,17 @@
         "label": "Deploy guide",
         "path": "DEPLOY.md"
       }
-    ]
+    ],
+    "contexts": [
+      "city-and-policy",
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "EXPERIMENTAL",
     "maturityBasis": "Substantial infrastructure — signed attempt locks, teacher strict-lock, audit history — with no automated tests behind it. Ambition outruns verification.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

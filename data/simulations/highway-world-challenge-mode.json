@@ -71,13 +71,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/BSC-HIGHWAY-WORLD"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "EXPERIMENTAL",
     "maturityBasis": "Shipped and tested code, but its own session report states the scoring bands are provisional pending playtest data, and it sits outside the campaign's gold-master claim.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

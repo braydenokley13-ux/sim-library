@@ -73,13 +73,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/201-M1-ECON"
       }
-    ]
+    ],
+    "contexts": [
+      "business"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "2,211 lines implementing all five chapters, checks and email delivery. Cannot be launched from the repo alone.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

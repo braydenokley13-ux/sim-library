@@ -86,13 +86,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/201-M2-L2"
       }
-    ]
+    ],
+    "contexts": [
+      "baseball"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Both builds complete, browser build publicly reachable, README matches the implemented rating thresholds. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

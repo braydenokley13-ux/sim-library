@@ -79,13 +79,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/BSC-201-Capstone"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "The most complete capstone in the account, publicly reachable, with a teacher dashboard and PDF and CSV export. No tests, and no student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

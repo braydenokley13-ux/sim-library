@@ -66,13 +66,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/BSC-pre-course"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "EXPERIMENTAL",
     "maturityBasis": "The file's own header carries an unfinished polish checklist, and the product is undocumented — its own repo README never mentions it.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

@@ -73,13 +73,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/301-M2-ECON"
       }
-    ]
+    ],
+    "contexts": [
+      "business"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Complete, documented and publicly reachable. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

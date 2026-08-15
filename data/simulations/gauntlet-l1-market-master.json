@@ -70,13 +70,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/GAUNTLET"
       }
-    ]
+    ],
+    "contexts": [
+      "business"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "EXPERIMENTAL",
     "maturityBasis": "The game loop is complete but the submission integration was never finished, so the level cannot produce the evidence it is designed to produce.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

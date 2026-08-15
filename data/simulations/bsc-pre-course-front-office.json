@@ -84,13 +84,16 @@
         "label": "Deploy and run guide (README)",
         "path": "README.md"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Substantial content-quality tooling (glossary, readability, adaptive-coverage and balance checks) and a documented production preflight. Not verifiable as running without a deployment, and no student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

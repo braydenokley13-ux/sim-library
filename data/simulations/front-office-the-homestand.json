@@ -77,13 +77,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/T101-M2-L1"
       }
-    ]
+    ],
+    "contexts": [
+      "baseball"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Runs end-to-end and is publicly reachable, but is noticeably less finished than the Module 1 lessons: no tests, no persistence, and no completion record.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

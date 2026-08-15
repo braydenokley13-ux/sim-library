@@ -68,14 +68,17 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/Franchise-Sim"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "EXPERIMENTAL",
     "maturityBasis": "An incomplete earlier snapshot of a product that has a finished successor. Retained for history, not for classroom use.",
     "visibility": "superseded",
     "supersededBy": "the-front-office",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

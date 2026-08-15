@@ -120,13 +120,16 @@
     "version": {
       "contentVersion": "2.1.0-mvp",
       "asOf": "2026-08-14"
-    }
+    },
+    "contexts": [
+      "personal-finance"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "The most rigorously built product in the account: twelve unit suites including adversarial, neutrality and support-suppression tests, a seventeen-test browser suite with accessibility scans, and a screenshot walkthrough. It stops short of TESTED for one reason — the repo states plainly that no student has used it.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

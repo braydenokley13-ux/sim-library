@@ -82,13 +82,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/301-M4-L2"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Both builds complete and the browser build is publicly reachable. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

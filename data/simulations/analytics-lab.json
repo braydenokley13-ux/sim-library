@@ -72,13 +72,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/BSC-BUILDANALYTIC"
       }
-    ]
+    ],
+    "contexts": [
+      "multi-sport"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "The most sophisticated data-literacy build in the account, reachable and producing an exportable artefact. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },
