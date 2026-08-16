@@ -26,13 +26,16 @@ lines of configuration with no gameplay behind it.
 
 ```bash
 npm install
-npm run validate     # check every record
-npm test             # registry integrity tests
-npm run build        # regenerate CATALOG.md and app/index.html
-npm run probe        # re-check every live link
+npm run validate      # check every record
+npm test              # registry integrity tests
+npm run build         # regenerate CATALOG.md and app/index.html
+npm run build:public  # regenerate the public payload and public/index.html
+npm run verify        # open every launch URL and prove it is playable
+npm run check         # all of the above that can fail a release
 ```
 
-Then open **`app/index.html`** in a browser. No server needed.
+Then open **`app/index.html`** (internal) or **`public/index.html`** (the public
+library) in a browser. No server needed for either.
 
 - **Find** — the instructor view. Filter by grade, concept, duration, format.
 - **Portfolio** — the leadership view. Coverage, maturity, health, gaps.
@@ -50,11 +53,12 @@ words — *"No real student has used this build"*, *"No child has used this buil
 yet"*. Everything therefore sits at PLAYABLE or below, and the maturity model
 is built so that cannot be quietly upgraded.
 
-**2. 48 working simulations are invisible.** 47 are live on GitHub Pages and one
-on the public site. The website's own 24-lesson catalog links none of the 47 —
-23 of those lessons default to "coming soon" pointing nowhere, and the site
-contains no reference to `github.io` anywhere. **The gap is a linking problem,
-not a building problem**, and it is the cheapest, largest win available.
+**2. Working simulations were invisible.** Live on GitHub Pages, linked from
+nowhere. The website's lesson catalog has since been retired — `/lessons` now
+redirects to `/programs` — so there was nothing left to fix, only something to
+add. **The gap was a linking problem, not a building problem**, and it was the
+cheapest, largest win available. `public/index.html` and the `/simulations`
+route in the website repo close it: see `docs/public-library.md`.
 
 **3. 23 experiences cannot be launched at all.** No link of any kind. That includes
 Highway World, the largest product in the account: it has roughly 2,700 tests
@@ -84,18 +88,25 @@ scripts/
   validate.mjs           integrity, including earned-maturity gates
   probe-health.mjs       reachability, the one automatable health signal
   build-catalog.mjs      regenerates the internal UI and CATALOG.md
+  public-readiness.mjs   what a stranger may click — computed, never declared
   build-public.mjs       the public-safe payload, allowlisted field by field
+  build-library.mjs      renders public/index.html from that payload
+  verify-launch.mjs      proves a Launch button opens something playable
+  build-queue.mjs        regenerates docs/work-queue.md
   seed*.mjs              the August 2026 discovery, as reproducible code
 discovery/
   REPORT.md              the findings
   evidence/              raw audit output, ~290 KB, so this need not be redone
 tests/
   registry.test.mjs      the data is clean
-  validator.test.mjs     bad data cannot get in — 16 adversarial cases
+  validator.test.mjs     bad data cannot get in — adversarial cases
+  public.test.mjs        the public site cannot tell a visitor something untrue
 docs/
   inclusion-rule.md      what counts, tested against the awkward cases
   source-of-truth.md     who owns which field, and what happens on conflict
   maturity-and-health.md two different questions, kept apart
+  public-library.md      what a stranger sees, and why each thing is there
+  work-queue.md          everything not yet playable, grouped by what it needs
   manifest-spec.md       the file, and why most repos should not get one
   adding-a-simulation.md the workflow
 ```
@@ -141,7 +152,10 @@ consume the same source without any of them owning it.
   GitHub cannot answer those questions. They need a human, not a script.
 - **20 of 73 have a recorded duration.** The rest do not state one, and none was
   invented.
-- **23 have no grade band.** Track 301 is contested: two repositories say
-  Grades 9–10, the website calls it "executive level", most say nothing.
+- **Some records have no grade band.** Track 301's audience is contested: two
+  repositories say Grades 9–10, the website calls it "executive level", most say
+  nothing. Track 301 itself is not in doubt — it is a real, active BOW product,
+  the largest family in the registry, and 13 of its experiences can be played
+  today.
 - **This is a GitHub audit.** Materials in Drive, Slides or physical form are not
   represented, and the source model is built to accept them later.

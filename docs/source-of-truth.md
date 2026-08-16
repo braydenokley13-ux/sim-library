@@ -47,7 +47,7 @@ Never settable from a repo. A sync must not touch it.
 | --- | --- |
 | `maturity`, `maturityBasis` | `CORE` is a portfolio judgement about strategic value. A repo cannot promote itself. |
 | `visibility`, `supersededBy` | Which of five near-identical builds instructors see is a BOW call, not a repo's. |
-| `publicListing` | What appears on the public site is an editorial decision. |
+| `publicRelease` | A VETO over the public site. BOW can hold something back; nothing can push itself forward, because eligibility is computed rather than declared. |
 | `owner` | Assigned by BOW. Never inferred from commit counts — the most-committing person is often not the one accountable. |
 | `health.*` | Includes `knownBlockers`, which a maintainer has an obvious incentive to leave empty. |
 | `validation.*` | Whether real students ran it. Only a human who was in the room knows. |
@@ -117,15 +117,31 @@ publish every blocker, owner gap and leadership note in it.
 
 So the boundary is enforced by a separate build rather than by care.
 `scripts/build-public.mjs` emits `public/simulations.json` from an explicit
-field allowlist, only for records that are both `visibility: active` and
-`publicListing: true`, and refuses to write if any internal key appears in the
-output. A field added to the schema later is excluded by default rather than
-published by accident.
+field allowlist and refuses to write if any internal key appears in the output.
+A field added to the schema later is excluded by default rather than published
+by accident.
 
-The validator refuses `publicListing: true` on anything below `TESTED`, and on
-anything not `active`. Since nothing has reached TESTED, nothing can currently
-be published at all — which is the correct answer for a portfolio that has not
-been used with students.
+Eligibility is decided in `scripts/public-readiness.mjs` and nowhere else, from
+observable facts: active, a probe-verified live URL, healthy, and enough copy
+for a visitor to know what they are opening. It is computed rather than
+declared, so **no record can promote itself onto the public site** — the only
+thing a human may write is `governance.publicRelease.hold`, which can only ever
+remove something and must state a reason.
+
+That gate is deliberately NOT maturity. The two answer different questions:
+
+| Question | Answered by |
+| --- | --- |
+| How much does BOW vouch for this? | `maturity` — earned, slow, strict |
+| Is this safe and sensible for a stranger to click? | public readiness — mechanical |
+
+Collapsing them produced an empty public library: nothing has reached `TESTED`
+because no student run has ever been recorded, so a maturity-gated public site
+could never list anything however well the simulations run. A visitor clicking
+Launch is not asking whether BOW has validated the pedagogy. They are asking
+whether a page opens. Because the first question genuinely has no good answer
+yet, everything public is labelled **Beta**, and the words Tested, Validated,
+Proven and Core are refused in public output by the build itself.
 
 ## Drift control
 

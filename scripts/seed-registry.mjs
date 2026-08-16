@@ -65,7 +65,6 @@ function rec(s) {
     maturityBasis: s.maturityBasis,
     visibility: s.visibility ?? "active",
     ...(s.supersededBy ? { supersededBy: s.supersededBy } : {}),
-    publicListing: false,
     owner: { productOwner: s.owner ?? "UNOWNED" },
     health: {
       technical: s.health,
