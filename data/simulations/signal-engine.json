@@ -86,7 +86,9 @@
       "technical": "healthy",
       "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "Asks the student for an email address before play begins."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
@@ -94,6 +96,10 @@
     },
     "lastVerified": {
       "technical": "2026-08-14"
+    },
+    "publicRelease": {
+      "hold": true,
+      "holdReason": "Asks for full name and school email before play. No network call was observed, but a public Launch button is an unsupervised link and that is not a call to make automatically."
     }
   },
   "provenance": {

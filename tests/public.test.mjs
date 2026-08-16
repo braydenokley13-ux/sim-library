@@ -95,6 +95,37 @@ test("nothing can be hand-promoted onto the public site", () => {
   assert.equal(assess(r).eligible, false);
 });
 
+test("a simulation that records student data is never published automatically", () => {
+  // A public Launch button is an unsupervised link. Whether a child may follow
+  // it to something that keeps their data is a human decision, and the default
+  // has to be no.
+  for (const value of ["yes", "unknown", undefined]) {
+    const r = anEligible();
+    if (value === undefined) delete r.product.studentDataProfile;
+    else r.product.studentDataProfile = { ...r.product.studentDataProfile, storesStudentData: value };
+    assert.equal(assess(r).eligible, false, String(value));
+  }
+});
+
+test("nothing a visitor can LAUNCH records or transmits student data", () => {
+  // The gate above, asserted against the real registry rather than a fixture.
+  //
+  // Scoped to launchable cards on purpose. An in-development card carries no
+  // link of any kind, so there is no unsupervised route to the experience and
+  // nothing for a child to reach — the risk this rule exists to prevent is
+  // created by the Launch button, not by the record appearing in a list.
+  const launchable = new Set(
+    build().simulations.filter((s) => s.availability === "available").map((s) => s.id),
+  );
+  for (const rec of records) {
+    if (!launchable.has(rec.id)) continue;
+    assert.equal(
+      rec.product.studentDataProfile?.storesStudentData, "no",
+      `${rec.id} is launchable but its student-data answer is "${rec.product.studentDataProfile?.storesStudentData ?? "unset"}"`,
+    );
+  }
+});
+
 // ── the payload ─────────────────────────────────────────────────────────────
 
 test("the public payload carries no internal structure", () => {

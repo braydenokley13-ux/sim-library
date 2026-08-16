@@ -63,8 +63,8 @@
       {
         "kind": "live-url",
         "label": "Play in browser (GitHub Pages)",
-        "url": "https://braydenokley13-ux.github.io/BSC-BUILDANALYTIC/",
-        "verified": "2026-08-14"
+        "url": "https://braydenokley13-ux.github.io/BSC-BUILDANALYTIC/track101/",
+        "verified": "2026-08-16"
       },
       {
         "kind": "repo",
@@ -86,7 +86,7 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Deep link verified 2026-08-16: returns 200 and renders this experience directly, rather than the shared hub page it previously pointed at.",
       "documentation": "minimal",
       "knownBlockers": []
     },
@@ -95,7 +95,7 @@
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     }
   },
   "provenance": {

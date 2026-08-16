@@ -45,6 +45,18 @@ Computed in one place, from observable facts only:
 5. `health.technical` is `healthy`. Resolving is not the same as working.
 6. `summary` and `whatStudentsDo` are substantial enough that a visitor knows
    what they are opening before they click.
+7. `studentDataProfile.storesStudentData` is `no`.
+
+Rule 7 is the one that is easy to skip and shouldn't be. A public Launch button
+is an **unsupervised link**: a child can follow it from a marketing page with no
+teacher, no consent and no class context. A simulation that records or transmits
+their data is a different proposition from one that does not, and that is a
+decision for someone who understands BOW's obligations to children — not for a
+build script that noticed the page loads. `unknown` is treated the same as
+`yes`, because an unanswered question about children's data is not a "no".
+
+The rule applies to launch actions, not to listings. An in-development card
+carries no link at all, so there is nothing for a child to reach.
 
 **Nothing can be hand-promoted.** There is no field a record can set to force
 its way onto the public site. The only human input is a veto:
@@ -109,9 +121,9 @@ halves.
 
 Run `npm run build:public` for current numbers. At the last build:
 
-- **45** playable, labelled Beta
+- **41** playable, labelled Beta
 - **8** in development, with no launch action
-- **23** held back entirely — every one of them accounted for in
+- **27** held back entirely — every one of them accounted for in
   `docs/work-queue.md` and `public/exclusions.json`
 
 Excluded is not the same as forgotten. The exclusion ledger is written next to

@@ -4,17 +4,19 @@
 
 Generated 2026-08-16 from 76 registry records.
 
-**45 are publicly playable today.** The other 31 are below, grouped by what
+**41 are publicly playable today.** The other 35 are below, grouped by what
 would actually have to happen to change that.
 
 ## Handle first — personal data in a repository
 
-2 records have a real person's details committed as
+4 records have a real person's details committed as
 leftover test data. This is not a scheduling question and it does not belong in a queue
 sorted by effort, so it is listed here regardless of what else is true of the record.
 
 - **Decision Room (memo exercise)** (`decision-room-memo`) — The committed workbook contains a real name and email address as leftover test data.
 - **Reputation & the Long Game** (`reputation-and-the-long-game`) — The committed workbook contains a real name and email address as leftover test data.
+- **Signal Engine — Sports Agent Negotiation Sim** (`signal-engine`) — Asks the student for an email address before play begins.
+- **WAR ROOM — NBA Decision Simulator** (`war-room-nba-decision-simulator`) — Asks the student for an email address before play begins.
 
 Neither is published, and the public build could not have published this field in any
 case. The exposure is the repository itself.
@@ -28,7 +30,7 @@ case. The exposure is the repository itself.
 | 3 | Substantial product repair | 6 |
 | 4 | In development | 9 |
 | 5 | Archive or review candidate | 3 |
-| 6 | Needs a human decision | 2 |
+| 6 | Needs a human decision | 6 |
 
 ---
 
@@ -303,7 +305,7 @@ Visibility is "superseded", replaced by the-front-office.
 
 - Ends at the claim code with no score breakdown, philosophy selection or replay.
 
-## 6. Needs a human decision — 2
+## 6. Needs a human decision — 6
 
 Blocked on a judgement no script can make. Deliberately not assigned to anyone — see the note at the end of this file.
 
@@ -314,6 +316,37 @@ Blocked on a judgement no script can make. Deliberately not assigned to anyone �
 Runs inside the website behind a login and prior module completion. Whether a public visitor should ever reach it is a decision, not a bug.
 
 - Gated behind a student account and prior module completion.
+
+### Gauntlet L2: Supply Chain Crisis
+
+`gauntlet-l2-supply-chain-crisis` · PLAYABLE · health healthy
+
+It records or transmits student data. A public Launch button is an unsupervised link, so publishing it needs someone who understands BOW's obligations to children. Recorded: Posts student email, score, tier, XP and full financial results to a Google Apps Script endpoint. This is the only Gauntlet level that transmits student data. Descriptive only.
+
+### Signal Engine — Sports Agent Negotiation Sim
+
+`signal-engine` · PLAYABLE · health healthy
+
+Held off the public site by an explicit BOW decision: Asks for full name and school email before play. No network call was observed, but a public Launch button is an unsupervised link and that is not a call to make automatically.
+
+- Asks the student for an email address before play begins.
+
+### The Front Office
+
+`the-front-office` · PLAYABLE · health healthy
+
+It records or transmits student data. A public Launch button is an unsupervised link, so publishing it needs someone who understands BOW's obligations to children. Recorded: Name, class code, quiz scores and metrics persist in browser localStorage under tfr_* keys. No server was observed, so records live only on the device that produced them.
+
+- Teacher records live only in the browser that created them — clearing storage or changing device loses the class.
+- A 22,000-line single file with no automated tests.
+
+### WAR ROOM — NBA Decision Simulator
+
+`war-room-nba-decision-simulator` · PLAYABLE · health healthy
+
+Held off the public site by an explicit BOW decision: The landing screen asks for a name and an email address before play begins (input#playerEmail, for a completion code). Whether BOW points an unsupervised public visitor at that is a decision for a human, not a build script.
+
+- Asks the student for an email address before play begins.
 
 ### Simulation Room — Westbrook Wolves
 
@@ -327,7 +360,7 @@ Runs inside the website behind a login and prior module completion. Whether a pu
 
 ## Published, but the card could be better
 
-42 of the 45 published simulations are missing a field a teacher looks for first.
+38 of the 41 published simulations are missing a field a teacher looks for first.
 None of this blocks publication; all of it makes a card more useful. A duration cannot be
 guessed from the outside — it needs someone to run the thing and time it.
 
@@ -349,7 +382,6 @@ guessed from the outside — it needs someone to run the thing and time it.
 | Front Office: Build the Roster | no duration |
 | The Front Office Dashboard — Data to Decisions | no duration |
 | Front Office Draft | no duration |
-| Gauntlet L2: Supply Chain Crisis | no grade band |
 | Gauntlet L3: Economic Policy Simulator | no grade band |
 | The GM Challenge — Master the Efficiency Frontier | no duration, no grade band |
 | BOW Sports Capital — GM Decision Game | no duration, no grade band |
@@ -363,17 +395,14 @@ guessed from the outside — it needs someone to run the thing and time it.
 | NFL System Stress Test | no duration, no grade band |
 | Process vs Results Lab — Football Edition | no duration |
 | Risk, Volatility & Rational Aggression | no duration, no grade band |
-| Signal Engine — Sports Agent Negotiation Sim | no duration, no grade band |
 | Small Markets, Big Money | no duration |
 | Sports Analytics Team Builder | no duration |
 | Stat Inventor | no duration |
 | Stats vs Scouts — Basketball Decision Lab | no duration |
 | The Asset Everyone Wants | no duration |
-| The Front Office | no duration |
 | The League in a Box | no duration, no grade band |
 | Trade Deadline War Room (Track 201) | no duration |
 | Venture Capital Tycoon | no duration, no grade band |
-| WAR ROOM — NBA Decision Simulator | no duration, no grade band |
 | Why the Draft Isn't a Ranking | no duration |
 
 ---

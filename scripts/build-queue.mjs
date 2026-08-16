@@ -92,7 +92,9 @@ function classify(rec, verdict) {
     return [BUCKETS.ARCHIVE, `Visibility is "${g.visibility}"${g.supersededBy ? `, replaced by ${g.supersededBy}` : ""}.`];
   }
   if (g.publicRelease?.hold === true) {
-    return [BUCKETS.OWNERSHIP, "Held off the public site by an explicit BOW decision."];
+    // This is an internal document, so it shows the actual reason. A queue that
+    // says only "held" tells the next reader nothing they can act on.
+    return [BUCKETS.OWNERSHIP, `Held off the public site by an explicit BOW decision: ${g.publicRelease.holdReason}`];
   }
   if (g.publicRelease?.preview === true) {
     return [BUCKETS.IN_DEVELOPMENT, "Shown publicly as in development. Needs a deployment before it can launch."];
@@ -118,6 +120,14 @@ function classify(rec, verdict) {
   }
   if (g.maturity === "EXPERIMENTAL") {
     return [BUCKETS.IN_DEVELOPMENT, "Still experimental — not represented as finished anywhere."];
+  }
+  // Student data is a decision, not a defect. The build stops; a person decides.
+  if (verdict.reason === "student-data-needs-a-human-decision") {
+    const d = p.studentDataProfile ?? {};
+    const detail = d.storesStudentData === "yes"
+      ? "It records or transmits student data."
+      : "Whether it records student data has not been established.";
+    return [BUCKETS.OWNERSHIP, `${detail} A public Launch button is an unsupervised link, so publishing it needs someone who understands BOW's obligations to children.${d.notes ? ` Recorded: ${d.notes}` : ""}`];
   }
   if (verdict.reason === "insufficient-public-copy") {
     return [BUCKETS.METADATA, "Reachable and working, but the description is too thin to publish."];

@@ -46,6 +46,7 @@ export const EXCLUSION = {
   THIN_COPY: "insufficient-public-copy",
   HELD: "held-by-bow",
   PREVIEW_HAS_LAUNCH: "preview-flag-on-a-launchable-record",
+  STUDENT_DATA: "student-data-needs-a-human-decision",
 };
 
 const isNonEmpty = (s, min) => typeof s === "string" && s.trim().length >= min;
@@ -113,6 +114,19 @@ export function assess(rec) {
   if (!isNonEmpty(p.summary, 20) || !isNonEmpty(p.whatStudentsDo, 60)) {
     return no(EXCLUSION.THIN_COPY);
   }
+
+  // 7. Student data. A public Launch button is an unsupervised link: a child can
+  //    reach it from a marketing page with no teacher, no consent and no class
+  //    context. A simulation that transmits or retains their data is a different
+  //    proposition from one that does not, and that decision belongs to a human
+  //    who understands BOW's obligations — not to a build script that noticed
+  //    the page loads.
+  //
+  //    So "yes" is not published automatically, and neither is "unknown": an
+  //    unanswered question about children's data is not the same as a "no".
+  //    Either can still be published deliberately, by recording the answer.
+  const stores = p.studentDataProfile?.storesStudentData;
+  if (stores !== "no") return no(EXCLUSION.STUDENT_DATA);
 
   return { eligible: true, state: STATE.AVAILABLE, reason: null, launchUrl: launch.url };
 }
