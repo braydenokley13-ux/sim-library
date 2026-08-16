@@ -86,7 +86,7 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. No defects found across two full playthroughs and no dominant heuristic: always taking the best-player-available tag scored 100 while always taking the team-fit tag scored 775, and a rebuilding team explicitly rewarded the BPA pick that the fit-first strategy got wrong. Correct answers are genuinely context-dependent.",
       "documentation": "minimal",
       "knownBlockers": []
     },
@@ -95,7 +95,7 @@
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     }
   },
   "provenance": {

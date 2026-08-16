@@ -86,10 +86,11 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. The strongest narrative writing in the account and the most dramatic divergence measured anywhere: a combative run collapsed to trust 0 and revenue 0 for 26/100, a cooperative run held trust 100 for 95/100, and the branch genuinely locks in by round 8. Undermined by an ordering exploit.",
       "documentation": "minimal",
       "knownBlockers": [
-        "index.html and espn-leak-activity.html are byte-identical duplicates, leaving two entry points for one activity."
+        "Clicking the first option every round without reading scored 95 out of 100 and the top \"Crisis Captain\" tier. Shuffling option order per round would remove it.",
+        "Visually the plainest of the 301-tier simulations — a flat background and unstyled meters next to the dashboard treatment its siblings use."
       ]
     },
     "validation": {
@@ -97,7 +98,7 @@
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     }
   },
   "provenance": {

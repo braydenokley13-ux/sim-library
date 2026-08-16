@@ -94,16 +94,20 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. Real tradeoffs underneath — clicking a city zone moved cash from $10.0M to $9.0M while orders and restaurants rose — but they sit behind a long quiz, and two on-screen defects reproduce.",
       "documentation": "missing",
-      "knownBlockers": []
+      "knownBlockers": [
+        "Raw HTML entities print literally on screen instead of emoji: \"&#128640;\" and \"&#129464;\" appear as visible text in achievement toasts and on the coach avatar, on desktop and reproduced twice.",
+        "The coach praises any score. Answering every pre-quiz question wrong produced \"Nice job! You got 0%!\".",
+        "Roughly twelve screens, including a five-question quiz, stand between the start and the first real decision."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     }
   },
   "provenance": {
