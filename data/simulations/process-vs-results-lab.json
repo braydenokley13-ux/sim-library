@@ -86,7 +86,7 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. No defects found and no dominant strategy — always picking one quadrant scored 0 of 6. Reaches its first decision with no reading screen at all.",
       "documentation": "minimal",
       "knownBlockers": []
     },
@@ -95,7 +95,7 @@
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     }
   },
   "provenance": {

@@ -83,11 +83,11 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. The richest simulation in the account: stochastic seasons, enforced cap constraints, and scoring that tracks the moves actually made rather than the strategy label chosen. Two defects, one of which misleads on the concept being taught.",
       "documentation": "minimal",
       "knownBlockers": [
-        "The browser tab still reads 'React App' — the default title was never set.",
-        "The onboarding component references an image that does not exist in the repo, so it will 404 on the deployed site."
+        "The dashboard contradicts the rest of the game on the core lesson: it tells the player their team should AVOID risk while the onboarding modal, team select and risk-context card all say the same team SHOULD take risks.",
+        "The final score prints an unrounded float (43.666666666666664)."
       ]
     },
     "validation": {
@@ -95,7 +95,7 @@
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     }
   },
   "provenance": {

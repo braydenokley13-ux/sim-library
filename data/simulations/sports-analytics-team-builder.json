@@ -95,16 +95,19 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. Scenario 1 can be passed without reading a single statistic.",
       "documentation": "partial",
-      "knownBlockers": []
+      "knownBlockers": [
+        "No real optimisation: every player in the Scenario 1 pool clears the team-average pass thresholds alone, so any pair satisfying the position rules passes. Spending the minimum $34M produced the same result as spending the full $40M.",
+        "A page error fires on every scenario completion: \"Cannot set properties of null (setting textContent)\"."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     }
   },
   "provenance": {

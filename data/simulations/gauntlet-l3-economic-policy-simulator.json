@@ -89,17 +89,20 @@
       "productOwner": "UNOWNED"
     },
     "health": {
-      "technical": "healthy",
-      "technicalBasis": "Reachable via the Gauntlet landing page on 2026-08-14. Reachability only.",
+      "technical": "needs-attention",
+      "technicalBasis": "Playtested end to end 2026-08-16. Loads and plays, but a successful run never resolves: after submitting Quarter 8 the game re-offers the same Submit button indefinitely and no victory report appears. Two full 8-quarter runs (final approval 68% and 76%) both ended this way. A run that FAILS gets a complete report with mastery tier and XP, so playing well is rewarded with less closure than playing badly.",
       "documentation": "missing",
-      "knownBlockers": []
+      "knownBlockers": [
+        "A successful 8-quarter run has no ending — Quarter 8 can be resubmitted forever and no victory report is ever shown. The losing path already renders a full report; the winning path needs to fire the same component.",
+        "Reward logic is inverted in practice: a run that got fired in Quarter 2 produced a claim-code report, while two successful runs produced nothing."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     },
     "notes": "The only simulation in the account with substantial macroeconomics coverage — fiscal policy, monetary policy, inflation, the business cycle and the multiplier all appear here and almost nowhere else."
   },

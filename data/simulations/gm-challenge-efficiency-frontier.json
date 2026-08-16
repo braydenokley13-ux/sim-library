@@ -85,16 +85,18 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. The cleanest marginal-analysis demonstration in the account: the same five players bought at Premium rather than Efficient prices cost 53% more for 24% more wins, dropping efficiency from 48% to 39%.",
       "documentation": "partial",
-      "knownBlockers": []
+      "knownBlockers": [
+        "Below-replacement players print raw unformatted salaries such as $-874286 instead of the -$0.87M style used elsewhere."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     }
   },
   "provenance": {

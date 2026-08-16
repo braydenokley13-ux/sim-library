@@ -87,16 +87,19 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16 across three full 9-decision runs. Scoring contains a dominant strategy: always choosing the middle SMOOTH option scores 45/45 on every decision regardless of scenario, while always-ACCELERATE and always-REBUILD both score 26/45.",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "Dominant strategy: picking option B nine times without reading any scenario scores a perfect 45/45 and \"Hall of Fame GM\". This teaches \"always pick the middle option\" rather than the stated lesson that context decides.",
+        "The advertised \"score 33+ to unlock your claim code\" threshold is not enforced — two runs scoring 26/45 both unlocked codes, and the two different losing strategies received the identical code."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     }
   },
   "provenance": {

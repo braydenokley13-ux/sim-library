@@ -85,10 +85,13 @@
       "productOwner": "UNOWNED"
     },
     "health": {
-      "technical": "healthy",
-      "technicalBasis": "Deep link verified 2026-08-16: returns 200 and renders this experience directly, rather than the shared hub page it previously pointed at.",
+      "technical": "needs-attention",
+      "technicalBasis": "Playtested end to end 2026-08-16. The weighting sliders and leaderboard recompute correctly, but the charting half of the tool does not run at all.",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "The \"Your Chart\" panel renders as an empty box. Four \"Cannot read properties of null\" errors fire on load before any interaction, followed by \"Maximum call stack size exceeded\" — consistent with a broken chart-library init.",
+        "On a phone the stats table silently drops the STL column rather than scrolling, so data disappears instead of being reachable."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",

@@ -97,6 +97,18 @@ signal that can honestly be automated**, and the script never claims more.
 - **`knownBlockers`** — short, specific, actionable. "The page throws on load
   because state.js is never included" beats "needs work". 32 active experiences
   carry at least one.
+
+  **A defect is not automatically a health problem.** Health drives whether a
+  record reaches the public site, so downgrading it removes a working
+  simulation from the library — which is the right call for a broken build and
+  the wrong one for a flawed design. The line: health answers *can a student
+  open this and play it through?* A dominant strategy, contradictory copy, an
+  unrounded number or a confusing wait are all real, all worth recording, and
+  none of them stops a playthrough — they belong in `knownBlockers` and in the
+  curation tier. Only an advertised path that cannot be completed downgrades
+  the record. Three do today: a tutorial mode that throws on its first
+  question, a chart that never renders, and a policy simulator whose winning
+  path never resolves.
 - **`validation`** — student and facilitator. Defaults to `unknown` and stays
   there until a human says otherwise. GitHub cannot tell us whether a class
   enjoyed something.

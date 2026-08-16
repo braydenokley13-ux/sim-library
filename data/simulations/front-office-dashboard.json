@@ -90,7 +90,7 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. No defects found and no exploit: deliberate TRAP and ALBATROSS player tiers punish buying famous names, a randomised owner mandate changes the constraint each run, and a season simulation with a trade deadline forces adaptation.",
       "documentation": "minimal",
       "knownBlockers": []
     },
@@ -99,7 +99,7 @@
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     }
   },
   "provenance": {
