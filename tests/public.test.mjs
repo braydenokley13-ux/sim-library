@@ -251,7 +251,7 @@ test("internal-only tiers never reach the public payload", () => {
   // they would read as a public verdict on work BOW has not withdrawn.
   for (const sim of payload.simulations) {
     assert.ok(
-      sim.tier === null || ["FLAGSHIP", "RECOMMENDED", "EXPERIMENTAL"].includes(sim.tier),
+      sim.tier === null || ["flagship", "recommended", "experimental"].includes(sim.tier),
       `${sim.id} publishes the internal tier "${sim.tier}"`,
     );
   }

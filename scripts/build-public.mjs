@@ -173,10 +173,15 @@ const publish = ({ rec, verdict }) => {
     // only for the three tiers that mean "try this" — HOLD, REBUILD and
     // ARCHIVE are internal decisions and would read publicly as a verdict on
     // work BOW is still standing behind.
+    // Lowercased on the way out, and that is not cosmetic. `EXPERIMENTAL` is
+    // also a MATURITY level, meaning "may not even run" — the opposite of what
+    // the tier means, which is "runs, but is rough". Publishing the uppercase
+    // token would put the maturity ladder's vocabulary on the public site,
+    // where it reads as a claim about evidence rather than a note about polish.
     tier:
       verdict.state === "available" &&
       ["FLAGSHIP", "RECOMMENDED", "EXPERIMENTAL"].includes(rec.governance?.curation?.tier)
-        ? rec.governance.curation.tier
+        ? rec.governance.curation.tier.toLowerCase()
         : null,
 
     educatorResources: (p.runResources ?? [])
