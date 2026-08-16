@@ -18,8 +18,7 @@ sorted by effort, so it is listed here regardless of what else is true of the re
 - **Signal Engine — Sports Agent Negotiation Sim** (`signal-engine`) — Asks the student for an email address before play begins.
 - **WAR ROOM — NBA Decision Simulator** (`war-room-nba-decision-simulator`) — Asks the student for an email address before play begins.
 
-Neither is published, and the public build could not have published this field in any
-case. The exposure is the repository itself.
+None is published, and the public build could not have published this field in any case. The exposure is the repository itself.
 
 ---
 
