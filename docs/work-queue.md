@@ -144,7 +144,8 @@ The experience itself is incomplete or broken. Real product work, not a deployme
 
 Recorded as broken, and there is no launch surface to fall back on.
 
-- The page fails on load — state.js is never included, and the dependency check in sim1.js throws without it.
+- A syntax error kills all scripting on load, so every control is inert — Start Run and the four strategy presets do nothing.
+- index.html never includes state.js, and the dependency check in sim1.js throws without it.
 - state.js is a malformed patch dump containing a second copy of index.html pasted in as a comment.
 - Only Sim 1 of an intended three-part module exists; sim2 and sim3 are referenced but absent.
 
