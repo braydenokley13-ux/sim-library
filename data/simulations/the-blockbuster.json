@@ -100,6 +100,10 @@
     },
     "lastVerified": {
       "technical": "2026-08-14"
+    },
+    "publicRelease": {
+      "preview": true,
+      "previewReason": "A focused trade-construction game; among the strongest of the standalone GM sims."
     }
   },
   "provenance": {

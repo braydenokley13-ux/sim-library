@@ -96,6 +96,10 @@
     },
     "lastVerified": {
       "technical": "2026-08-14"
+    },
+    "publicRelease": {
+      "preview": true,
+      "previewReason": "The Front Office City engine rebuilt for the NFL across three roles."
     }
   },
   "provenance": {

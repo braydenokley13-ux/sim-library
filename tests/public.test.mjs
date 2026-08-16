@@ -14,7 +14,7 @@ import assert from "node:assert/strict";
 import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { join } from "node:path";
-import { assess, partition, FORBIDDEN_PUBLIC_WORDS, PUBLIC_LABEL } from "../scripts/public-readiness.mjs";
+import { assess, partition, FORBIDDEN_PUBLIC_WORDS, PUBLIC_LABEL, IN_DEVELOPMENT_LABEL } from "../scripts/public-readiness.mjs";
 
 const ROOT = join(import.meta.dirname, "..");
 const records = readdirSync(join(ROOT, "data", "simulations"))
@@ -118,17 +118,52 @@ test("no public record uses a maturity word BOW has not earned", () => {
   }
 });
 
-test("every published record is labelled Beta and nothing else", () => {
-  const payload = build();
-  const labels = new Set(payload.simulations.map((s) => s.label));
-  assert.deepEqual([...labels], [PUBLIC_LABEL]);
+test("the only two public labels are Beta and In development", () => {
+  const labels = new Set(build().simulations.map((s) => s.label));
+  for (const l of labels) assert.ok([PUBLIC_LABEL, IN_DEVELOPMENT_LABEL].includes(l), `unexpected label "${l}"`);
 });
 
-test("every published record can do the one thing its card promises", () => {
+test("the label always agrees with the availability state", () => {
   for (const sim of build().simulations) {
+    const expected = sim.availability === "available" ? PUBLIC_LABEL : IN_DEVELOPMENT_LABEL;
+    assert.equal(sim.label, expected, `${sim.id} is "${sim.availability}" but labelled "${sim.label}"`);
+  }
+});
+
+test("every playable record can do the one thing its card promises", () => {
+  for (const sim of build().simulations.filter((s) => s.availability === "available")) {
     assert.match(sim.playUrl ?? "", /^https:\/\//, `${sim.id} has no usable launch URL`);
     assert.ok(!/github\.com/.test(sim.playUrl), `${sim.id} offers a repository as a game`);
   }
+});
+
+test("an in-development record carries no launch URL at all", () => {
+  // The contradiction this file exists to make impossible: "In development"
+  // printed beside a button that goes somewhere, or one that goes nowhere.
+  for (const sim of build().simulations.filter((s) => s.availability !== "available")) {
+    assert.equal(sim.playUrl, null, `${sim.id} is in development but carries ${sim.playUrl}`);
+  }
+});
+
+test("the preview flag is refused on anything that already launches", () => {
+  const r = anEligible();
+  r.governance.publicRelease = { preview: true, previewReason: "why" };
+  assert.equal(assess(r).eligible, false);
+});
+
+test("the preview flag does not bypass the copy requirement", () => {
+  const r = anEligible();
+  r.product.runResources = [];
+  r.product.whatStudentsDo = "Students play it.";
+  r.governance.publicRelease = { preview: true, previewReason: "why" };
+  assert.equal(assess(r).eligible, false);
+});
+
+test("a hold beats a preview flag", () => {
+  const r = anEligible();
+  r.product.runResources = [];
+  r.governance.publicRelease = { preview: true, previewReason: "why", hold: true, holdReason: "not yet" };
+  assert.equal(assess(r).eligible, false);
 });
 
 test("availability never contradicts the presence of a launch URL", () => {

@@ -101,7 +101,11 @@
     "lastVerified": {
       "technical": "2026-08-14"
     },
-    "notes": "Its own header states Grades 8–10, which sits outside the Track 201 convention of Grades 7–8. Recorded as stated rather than reconciled."
+    "notes": "Its own header states Grades 8–10, which sits outside the Track 201 convention of Grades 7–8. Recorded as stated rather than reconciled.",
+    "publicRelease": {
+      "preview": true,
+      "previewReason": "A five-month online-business simulation with knowledge gates between months."
+    }
   },
   "provenance": {
     "discoveredBy": "account-wide discovery, August 2026",

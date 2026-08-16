@@ -177,7 +177,9 @@
           "description": "BOW's VETO over the public site. Eligibility itself is computed in scripts/public-readiness.mjs from observable facts — a record cannot be hand-promoted onto the public site, only held back from it.",
           "properties": {
             "hold": { "type": "boolean", "default": false, "description": "Keep this off the public site even though it otherwise qualifies." },
-            "holdReason": { "type": "string", "description": "Required whenever hold is true. Internal only — never published." }
+            "holdReason": { "type": "string", "description": "Required whenever hold is true. Internal only — never published." },
+            "preview": { "type": "boolean", "default": false, "description": "Show publicly as \"In development\", with no launch action. Only valid on a record that has NO live-url, so a dead launch button is impossible by construction." },
+            "previewReason": { "type": "string", "description": "Why this unfinished work is worth showing. Required whenever preview is true. Internal only." }
           }
         },
 

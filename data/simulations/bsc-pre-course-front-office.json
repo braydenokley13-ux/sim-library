@@ -112,7 +112,11 @@
     "lastVerified": {
       "technical": "2026-08-14"
     },
-    "notes": "Spans both Track 101 and Track 201 from one codebase via a content-simplification overlay — the only BOW product that does this."
+    "notes": "Spans both Track 101 and Track 201 from one codebase via a content-simplification overlay — the only BOW product that does this.",
+    "publicRelease": {
+      "preview": true,
+      "previewReason": "The live, team-based entry point to BOW. Facilitator-run rather than self-serve, so it has no launch URL by nature."
+    }
   },
   "provenance": {
     "discoveredBy": "account-wide discovery, August 2026",

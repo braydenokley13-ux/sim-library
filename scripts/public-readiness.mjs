@@ -28,6 +28,9 @@ export const PUBLIC_LABEL = "Beta";
 export const PUBLIC_LABEL_MEANING =
   "Built and playable. Free to try. Not yet studied in a classroom.";
 
+/** Shown on a card with no launch action. Never on anything playable. */
+export const IN_DEVELOPMENT_LABEL = "In development";
+
 /** Words that would overstate what BOW actually knows. Asserted against output. */
 export const FORBIDDEN_PUBLIC_WORDS = ["tested", "validated", "proven", "core"];
 
@@ -42,17 +45,36 @@ export const EXCLUSION = {
   UNHEALTHY: "health-not-confirmed",
   THIN_COPY: "insufficient-public-copy",
   HELD: "held-by-bow",
+  PREVIEW_HAS_LAUNCH: "preview-flag-on-a-launchable-record",
 };
 
 const isNonEmpty = (s, min) => typeof s === "string" && s.trim().length >= min;
 
 /**
- * @returns {{eligible: boolean, reason: string|null, launchUrl: string|null}}
+ * A record may reach the public site in one of two states:
+ *
+ *   available       it launches, and the card carries a Launch button
+ *   in-development  it does NOT launch, and the card carries no launch action
+ *
+ * The second exists so BOW can show work that is genuinely underway — Highway
+ * World, Front Office City — without either hiding it or lying about it. It is
+ * strictly opt-in (`governance.publicRelease.preview`), because the default for
+ * something with no way to run it must be silence, not a teaser.
+ *
+ * The rule that makes this safe: an in-development record must have NO launch
+ * URL at all. That removes the failure mode by construction rather than by
+ * discipline — there is no path where "In development" and a working Launch
+ * button can appear on the same card, and none where a dead button can.
+ */
+export const STATE = { AVAILABLE: "available", IN_DEVELOPMENT: "in-development", EXCLUDED: "excluded" };
+
+/**
+ * @returns {{eligible: boolean, state: string, reason: string|null, launchUrl: string|null}}
  */
 export function assess(rec) {
   const p = rec.product ?? {};
   const g = rec.governance ?? {};
-  const no = (reason) => ({ eligible: false, reason, launchUrl: null });
+  const no = (reason) => ({ eligible: false, state: STATE.EXCLUDED, reason, launchUrl: null });
 
   // 1. Superseded and archived work is not shown. Visitors should not be able to
   //    reach a build BOW has already replaced.
@@ -66,6 +88,16 @@ export function assess(rec) {
   //    a teacher to source code and calling it Play is the precise lie this
   //    registry exists to prevent, so only `live-url` counts.
   const launch = (p.runResources ?? []).find((r) => r.kind === "live-url" && r.url);
+
+  // The in-development path. Deliberately checked BEFORE the launch requirement
+  // and refused if a launch URL exists at all, so the two states can never
+  // describe the same record.
+  if (g.publicRelease?.preview === true) {
+    if (launch) return no(EXCLUSION.PREVIEW_HAS_LAUNCH);
+    if (!isNonEmpty(p.summary, 20) || !isNonEmpty(p.whatStudentsDo, 60)) return no(EXCLUSION.THIN_COPY);
+    return { eligible: true, state: STATE.IN_DEVELOPMENT, reason: null, launchUrl: null };
+  }
+
   if (!launch) return no(EXCLUSION.NO_LAUNCH);
 
   // 4. That URL must have been confirmed reachable by the probe, and recently
@@ -82,7 +114,7 @@ export function assess(rec) {
     return no(EXCLUSION.THIN_COPY);
   }
 
-  return { eligible: true, reason: null, launchUrl: launch.url };
+  return { eligible: true, state: STATE.AVAILABLE, reason: null, launchUrl: launch.url };
 }
 
 /** Convenience: partition a whole registry in one pass. */

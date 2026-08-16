@@ -188,6 +188,15 @@ for (const { file, rec } of records) {
     fail(file, "publicRelease.hold is true without a holdReason — say why it is being kept off the public site");
   if (g.publicRelease && g.publicRelease.hold !== true && g.publicRelease.holdReason)
     warn(file, "publicRelease.holdReason is set but hold is not true — the record will be published");
+  if (g.publicRelease?.preview === true) {
+    if (!isNonEmptyString(g.publicRelease.previewReason))
+      fail(file, "publicRelease.preview is true without a previewReason — say why unfinished work is worth showing");
+    // Belt and braces alongside the same rule in public-readiness.mjs. A record
+    // that both launches and calls itself unfinished is the exact contradiction
+    // the public library must never print, so it is caught at authoring time too.
+    if ((p.runResources ?? []).some((r) => r.kind === "live-url" && r.url))
+      fail(file, "publicRelease.preview is true on a record that has a live URL — it launches, so it is not in development");
+  }
 
   // 12. dated fields must be real dates, not in the future
   const today = new Date().toISOString().slice(0, 10);

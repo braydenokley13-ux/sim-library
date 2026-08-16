@@ -2,8 +2,8 @@
   "generated": "2026-08-16",
   "totals": {
     "records": 76,
-    "included": 45,
-    "excluded": 31
+    "included": 53,
+    "excluded": 23
   },
   "excluded": [
     {
@@ -15,16 +15,6 @@
       "id": "bow-zoom-discovery-game",
       "title": "BOW Sports Capital Zoom Game",
       "reason": "not-active"
-    },
-    {
-      "id": "bsc-pre-course-front-office",
-      "title": "BOW Sports Capital: Pre-Course",
-      "reason": "no-launch-url"
-    },
-    {
-      "id": "candlecart-business-strategy",
-      "title": "BOW Business Strategy Simulator — CandleCart.com",
-      "reason": "no-launch-url"
     },
     {
       "id": "decision-room-memo",
@@ -62,16 +52,6 @@
       "reason": "no-launch-url"
     },
     {
-      "id": "front-office-city-district-a",
-      "title": "Front Office City — District A",
-      "reason": "no-launch-url"
-    },
-    {
-      "id": "front-office-city-nfl-capital-run",
-      "title": "Front Office City: NFL Capital Run",
-      "reason": "no-launch-url"
-    },
-    {
       "id": "gauntlet-l1-market-master",
       "title": "Gauntlet L1: Market Master",
       "reason": "health-not-confirmed"
@@ -87,11 +67,6 @@
       "reason": "no-launch-url"
     },
     {
-      "id": "highway-world-episode-1",
-      "title": "Highway World — Episode 1: Origin District",
-      "reason": "no-launch-url"
-    },
-    {
       "id": "luxury-tax-in-action",
       "title": "Luxury Tax in Action — Scenario Simulation",
       "reason": "not-active"
@@ -99,11 +74,6 @@
     {
       "id": "module-4-econ-final-101",
       "title": "Module 4 Econ Final — Track 101",
-      "reason": "no-launch-url"
-    },
-    {
-      "id": "plan-under-pressure",
-      "title": "Plan Under Pressure",
       "reason": "no-launch-url"
     },
     {
@@ -127,11 +97,6 @@
       "reason": "no-launch-url"
     },
     {
-      "id": "the-blockbuster",
-      "title": "The Blockbuster",
-      "reason": "no-launch-url"
-    },
-    {
       "id": "the-dumpster-fire",
       "title": "The Dumpster Fire",
       "reason": "no-launch-url"
@@ -145,11 +110,6 @@
       "id": "the-gms-model",
       "title": "The GM's Model",
       "reason": "health-not-confirmed"
-    },
-    {
-      "id": "the-lebron-files",
-      "title": "The LeBron Files",
-      "reason": "no-launch-url"
     },
     {
       "id": "the-rookie-deal",

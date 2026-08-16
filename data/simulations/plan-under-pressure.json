@@ -150,7 +150,11 @@
     "lastVerified": {
       "technical": "2026-08-14"
     },
-    "notes": "Owns its own registry, stable ids and scoring model. The Library references challengeId 'plan-under-pressure' and must never restate its worlds or evidence model. A second world ('fashion') is reserved in the type system and fully specced but not implemented — when it ships it is a variant of this entry, not a new one."
+    "notes": "Owns its own registry, stable ids and scoring model. The Library references challengeId 'plan-under-pressure' and must never restate its worlds or evidence model. A second world ('fashion') is reserved in the type system and fully specced but not implemented — when it ships it is a variant of this entry, not a new one.",
+    "publicRelease": {
+      "preview": true,
+      "previewReason": "The strongest financial-literacy experience BOW has. The pillar is thin publicly and this is the work that will fill it."
+    }
   },
   "provenance": {
     "discoveredBy": "account-wide discovery, August 2026",

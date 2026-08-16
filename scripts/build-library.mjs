@@ -41,30 +41,41 @@ const payload = JSON.parse(readFileSync(PUBLIC_JSON, "utf8"));
  * and the count beside it is computed from what actually launches today.
  */
 const TRACK_STATUS = {
+  "pre-course": { order: 0, status: "established" },
   "track-101": { order: 1, status: "established" },
   "track-201": { order: 2, status: "established" },
   "track-301": { order: 3, status: "in-development" },
-  "pre-course": { order: 0, status: "established" },
   gauntlet: { order: 4, status: "established" },
   "analytics-lab": { order: 5, status: "established" },
   "bow-website": { order: 6, status: "established" },
+  "highway-world": { order: 7, status: "in-development" },
+  "front-office-city": { order: 8, status: "in-development" },
+  "bonus-gm-sims": { order: 9, status: "in-development" },
+  "decision-challenges": { order: 10, status: "in-development" },
+  "entrepreneurship-lab": { order: 11, status: "in-development" },
 };
 
 const byTrack = new Map();
 for (const s of payload.simulations) {
   if (!s.track) continue;
-  if (!byTrack.has(s.track.id)) byTrack.set(s.track.id, { ...s.track, available: 0 });
-  byTrack.get(s.track.id).available += 1;
+  if (!byTrack.has(s.track.id)) byTrack.set(s.track.id, { ...s.track, available: 0, inDev: 0 });
+  const t = byTrack.get(s.track.id);
+  if (s.availability === "available") t.available += 1; else t.inDev += 1;
 }
 
 const tracks = [...byTrack.values()]
   .map((t) => {
     const cfg = TRACK_STATUS[t.id] ?? { order: 99, status: "established" };
+    // A track with nothing playable must not advertise "0 ready to play". It
+    // says what is true instead: work is underway and none of it opens yet.
     return {
       id: t.id,
       name: t.name,
       note: cfg.status === "in-development" ? `${t.note} — actively being built` : t.note,
       available: t.available,
+      stat: t.available > 0
+        ? `${t.available} ready to play`
+        : `${t.inDev} in development`,
       inDevelopment: cfg.status === "in-development",
       order: cfg.order,
     };
@@ -101,5 +112,5 @@ writeFileSync(OUT, html);
 const kb = (html.length / 1024).toFixed(0);
 console.log(`public/index.html: ${payload.simulations.length} simulations, ${tracks.length} programs, ${kb} KB.`);
 for (const t of tracks) {
-  console.log(`  ${t.name.padEnd(24)} ${String(t.available).padStart(2)} ready${t.inDevelopment ? "   [in development]" : ""}`);
+  console.log(`  ${t.name.padEnd(24)} ${t.stat.padEnd(22)}${t.inDevelopment ? "[in development]" : ""}`);
 }

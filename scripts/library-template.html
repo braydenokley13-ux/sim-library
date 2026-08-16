@@ -403,7 +403,7 @@ function renderTracks(){
     el.innerHTML = `
       <p class="track-name">${esc(t.name)}${t.inDevelopment ? '<span class="wip-tag">In development</span>' : ""}</p>
       <p class="track-note">${esc(t.note)}</p>
-      <p class="track-stat">${t.available} ready to play</p>`;
+      <p class="track-stat">${esc(t.stat)}</p>`;
     host.appendChild(el);
   }
 }

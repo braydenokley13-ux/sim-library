@@ -19,7 +19,7 @@
 import { readFileSync, readdirSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { partition, PUBLIC_LABEL, PUBLIC_LABEL_MEANING, FORBIDDEN_PUBLIC_WORDS } from "./public-readiness.mjs";
+import { partition, PUBLIC_LABEL, PUBLIC_LABEL_MEANING, IN_DEVELOPMENT_LABEL, FORBIDDEN_PUBLIC_WORDS } from "./public-readiness.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SIM_DIR = join(ROOT, "data", "simulations");
@@ -162,8 +162,8 @@ const publish = ({ rec, verdict }) => {
     },
     instructorNeed: instructorNeed(p),
 
-    availability: "available",
-    label: PUBLIC_LABEL,
+    availability: verdict.state,
+    label: verdict.state === "available" ? PUBLIC_LABEL : IN_DEVELOPMENT_LABEL,
     playUrl: verdict.launchUrl,
 
     educatorResources: (p.runResources ?? [])
@@ -208,14 +208,21 @@ for (const sim of simulations) {
   }
 }
 
-// Every published card must be able to do the one thing a card promises.
+// Every card must be able to do the one thing its own state promises. The two
+// halves of this are the contradiction the public library exists to avoid:
+// "Play now" with nothing behind it, and "In development" beside a live link.
 for (const sim of simulations) {
-  if (!sim.playUrl || !/^https:\/\//.test(sim.playUrl)) {
-    console.error(`REFUSING TO WRITE: ${sim.id} is published without a usable https launch URL.`);
-    process.exit(1);
-  }
-  if (/github\.com/.test(sim.playUrl)) {
-    console.error(`REFUSING TO WRITE: ${sim.id} presents a repository URL as a playable experience.`);
+  if (sim.availability === "available") {
+    if (!sim.playUrl || !/^https:\/\//.test(sim.playUrl)) {
+      console.error(`REFUSING TO WRITE: ${sim.id} says available but has no usable https launch URL.`);
+      process.exit(1);
+    }
+    if (/github\.com/.test(sim.playUrl)) {
+      console.error(`REFUSING TO WRITE: ${sim.id} presents a repository URL as a playable experience.`);
+      process.exit(1);
+    }
+  } else if (sim.playUrl) {
+    console.error(`REFUSING TO WRITE: ${sim.id} says "${sim.availability}" but carries a launch URL.`);
     process.exit(1);
   }
 }
@@ -232,7 +239,8 @@ const ledger = {
 };
 writeFileSync(join(OUT_DIR, "exclusions.json"), JSON.stringify(ledger, null, 2) + "\n");
 
-console.log(`public/simulations.json: ${included.length} of ${all.length} records published, all labelled "${PUBLIC_LABEL}".`);
+const nAvailable = simulations.filter((s) => s.availability === "available").length;
+console.log(`public/simulations.json: ${included.length} of ${all.length} records published — ${nAvailable} "${PUBLIC_LABEL}" and ready to play, ${included.length - nAvailable} "${IN_DEVELOPMENT_LABEL}".`);
 const byReason = {};
 for (const { verdict } of excluded) byReason[verdict.reason] = (byReason[verdict.reason] ?? 0) + 1;
 console.log(`public/exclusions.json: ${excluded.length} held back —`, byReason);

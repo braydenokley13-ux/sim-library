@@ -221,6 +221,94 @@
       "educatorResources": []
     },
     {
+      "id": "bsc-pre-course-front-office",
+      "title": "BOW Sports Capital: Pre-Course",
+      "summary": "A live, team-based front-office mission chain with asymmetric roles, built for two grade bands.",
+      "whatStudentsDo": "A teacher opens a session and students join in teams. Across eight missions the team navigates an HQ floor map; within each mission up to four students hold different private information as Capologist, Team President, Head Scout or Marketing Director, and must vote across multiple rounds. Consequences carry forward and rewrite later missions, and concept checks gate progress.",
+      "track": {
+        "id": "pre-course",
+        "name": "Pre-Course",
+        "note": "Getting started"
+      },
+      "subject": {
+        "id": "cross-pillar",
+        "name": "Economics & financial literacy"
+      },
+      "concepts": [
+        {
+          "id": "econ.salary-cap",
+          "name": "Salary Cap"
+        },
+        {
+          "id": "econ.luxury-tax",
+          "name": "Luxury Tax"
+        },
+        {
+          "id": "econ.bird-rights",
+          "name": "Bird Rights"
+        },
+        {
+          "id": "econ.mid-level-exception",
+          "name": "Mid-Level Exception"
+        },
+        {
+          "id": "econ.revenue-sharing",
+          "name": "Revenue Sharing"
+        },
+        {
+          "id": "econ.roster-construction",
+          "name": "Roster Construction"
+        },
+        {
+          "id": "econ.stakeholder-management",
+          "name": "Stakeholder Management"
+        },
+        {
+          "id": "econ.tradeoffs",
+          "name": "Tradeoffs"
+        }
+      ],
+      "contexts": [
+        {
+          "id": "sports-front-office",
+          "name": "Front office & GM"
+        }
+      ],
+      "gradeBands": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "gradeLabel": "Grades 5–8",
+      "durationBucket": null,
+      "durationLabel": null,
+      "format": {
+        "setting": [
+          {
+            "id": "facilitator-led",
+            "name": "Led by an instructor"
+          },
+          {
+            "id": "whole-class",
+            "name": "Run with the whole class"
+          }
+        ],
+        "grouping": [
+          {
+            "id": "teams",
+            "name": "In teams"
+          }
+        ],
+        "devices": "one device per team, plus a teacher device"
+      },
+      "instructorNeed": "An instructor runs this one",
+      "availability": "in-development",
+      "label": "In development",
+      "playUrl": null,
+      "educatorResources": []
+    },
+    {
       "id": "bsc-pregame-cap-simulator",
       "title": "BOW Sports Capital: Pregame",
       "summary": "A twelve-week single-player front-office season with a running CBA glossary.",
@@ -363,6 +451,81 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M2-ECON/",
+      "educatorResources": []
+    },
+    {
+      "id": "candlecart-business-strategy",
+      "title": "BOW Business Strategy Simulator — CandleCart.com",
+      "summary": "Run an online candle store across five months, with a knowledge gate between each.",
+      "whatStudentsDo": "Students choose a launch plan that sets demand and marginal cost, then run each month against randomised demand — ordering inventory, setting ad spend and price, absorbing a progressive tax in month five — and must pass a five-question check before the next month opens.",
+      "track": {
+        "id": "track-201",
+        "name": "Track 201",
+        "note": "Intermediate"
+      },
+      "subject": {
+        "id": "economics",
+        "name": "Economics"
+      },
+      "concepts": [
+        {
+          "id": "econ.marginal-value",
+          "name": "Marginal Value"
+        },
+        {
+          "id": "econ.pricing-strategy",
+          "name": "Pricing Strategy"
+        },
+        {
+          "id": "econ.law-of-demand",
+          "name": "Law of Demand"
+        },
+        {
+          "id": "econ.fiscal-policy",
+          "name": "Fiscal Policy"
+        },
+        {
+          "id": "econ.optionality",
+          "name": "Optionality"
+        },
+        {
+          "id": "econ.opportunity-cost",
+          "name": "Opportunity Cost"
+        }
+      ],
+      "contexts": [
+        {
+          "id": "business",
+          "name": "Running a business"
+        }
+      ],
+      "gradeBands": [
+        "8",
+        "9",
+        "10"
+      ],
+      "gradeLabel": "Grades 8–10",
+      "durationBucket": null,
+      "durationLabel": null,
+      "format": {
+        "setting": [
+          {
+            "id": "facilitator-led",
+            "name": "Led by an instructor"
+          }
+        ],
+        "grouping": [
+          {
+            "id": "individual",
+            "name": "Individually"
+          }
+        ],
+        "devices": "one browser per student"
+      },
+      "instructorNeed": "An instructor runs this one",
+      "availability": "in-development",
+      "label": "In development",
+      "playUrl": null,
       "educatorResources": []
     },
     {
@@ -1065,6 +1228,162 @@
       "educatorResources": []
     },
     {
+      "id": "front-office-city-district-a",
+      "title": "Front Office City — District A",
+      "summary": "A 3D walk-around city where eight mission zones each hold a cap decision.",
+      "whatStudentsDo": "Students steer an avatar through a stylised 3D city to eight sequential mission zones, opening each to make a decision on Bird Rights, the mid-level exception, trade exceptions or dead money, with legality checks and payroll and flexibility consequences, ending in a tier and claim code.",
+      "track": {
+        "id": "front-office-city",
+        "name": "Front Office City",
+        "note": "3D sports-business city"
+      },
+      "subject": {
+        "id": "economics",
+        "name": "Economics"
+      },
+      "concepts": [
+        {
+          "id": "econ.salary-cap",
+          "name": "Salary Cap"
+        },
+        {
+          "id": "econ.bird-rights",
+          "name": "Bird Rights"
+        },
+        {
+          "id": "econ.mid-level-exception",
+          "name": "Mid-Level Exception"
+        },
+        {
+          "id": "econ.luxury-tax",
+          "name": "Luxury Tax"
+        },
+        {
+          "id": "econ.optionality",
+          "name": "Optionality"
+        },
+        {
+          "id": "econ.roster-construction",
+          "name": "Roster Construction"
+        }
+      ],
+      "contexts": [
+        {
+          "id": "city-and-policy",
+          "name": "Cities & policy"
+        },
+        {
+          "id": "sports-front-office",
+          "name": "Front office & GM"
+        }
+      ],
+      "gradeBands": [
+        "7",
+        "8"
+      ],
+      "gradeLabel": "Grades 7–8",
+      "durationBucket": null,
+      "durationLabel": null,
+      "format": {
+        "setting": [
+          {
+            "id": "self-guided",
+            "name": "Students can run it alone"
+          }
+        ],
+        "grouping": [
+          {
+            "id": "individual",
+            "name": "Individually"
+          }
+        ],
+        "devices": "browser with WebGL; needs a build step to run"
+      },
+      "instructorNeed": "Any instructor can run it",
+      "availability": "in-development",
+      "label": "In development",
+      "playUrl": null,
+      "educatorResources": []
+    },
+    {
+      "id": "front-office-city-nfl-capital-run",
+      "title": "Front Office City: NFL Capital Run",
+      "summary": "The same 3D city, rebuilt for the NFL and rotated across three roles.",
+      "whatStudentsDo": "Students pick a difficulty and one of two teams, then rotate through agent, league office and owner roles across missions on holdouts, compliance, tampering, revenue allocation and franchise valuation, trading cap room against trust, and finish with a per-role report and a review checksum.",
+      "track": {
+        "id": "front-office-city",
+        "name": "Front Office City",
+        "note": "3D sports-business city"
+      },
+      "subject": {
+        "id": "economics",
+        "name": "Economics"
+      },
+      "concepts": [
+        {
+          "id": "econ.salary-cap",
+          "name": "Salary Cap"
+        },
+        {
+          "id": "econ.stakeholder-management",
+          "name": "Stakeholder Management"
+        },
+        {
+          "id": "econ.principal-agent",
+          "name": "Principal-Agent"
+        },
+        {
+          "id": "econ.revenue-sharing",
+          "name": "Revenue Sharing"
+        },
+        {
+          "id": "econ.asset-valuation",
+          "name": "Asset Valuation"
+        },
+        {
+          "id": "econ.negotiation",
+          "name": "Negotiation"
+        }
+      ],
+      "contexts": [
+        {
+          "id": "football",
+          "name": "Football"
+        },
+        {
+          "id": "city-and-policy",
+          "name": "Cities & policy"
+        }
+      ],
+      "gradeBands": [
+        "7",
+        "8"
+      ],
+      "gradeLabel": "Grades 7–8",
+      "durationBucket": null,
+      "durationLabel": null,
+      "format": {
+        "setting": [
+          {
+            "id": "self-guided",
+            "name": "Students can run it alone"
+          }
+        ],
+        "grouping": [
+          {
+            "id": "individual",
+            "name": "Individually"
+          }
+        ],
+        "devices": "browser with WebGL; served statically"
+      },
+      "instructorNeed": "Any instructor can run it",
+      "availability": "in-development",
+      "label": "In development",
+      "playUrl": null,
+      "educatorResources": []
+    },
+    {
       "id": "front-office-dashboard",
       "title": "The Front Office Dashboard — Data to Decisions",
       "summary": "Draft nine players under a cap and an owner mandate, then simulate the season.",
@@ -1625,6 +1944,186 @@
       "educatorResources": []
     },
     {
+      "id": "highway-world-episode-1",
+      "title": "Highway World — Episode 1: Origin District",
+      "summary": "A 3D sports-business city where eleven missions each force one real front-office call.",
+      "whatStudentsDo": "Students drive between destinations in a stylised city as a basketball front-office decision-maker. Eleven missions — three venue rooms and eight career rooms — each present one forced trade-off on interactive boards: splitting development minutes, working the trade deadline, managing the sheet under the tax line, ranking a draft board where scouting and analytics disagree, negotiating with an agent, pricing the arena. Consequences ripple through six stakeholders and the run ends with a synthesised GM identity review.",
+      "track": {
+        "id": "highway-world",
+        "name": "Highway World",
+        "note": "3D sports-business city"
+      },
+      "subject": {
+        "id": "economics",
+        "name": "Economics"
+      },
+      "concepts": [
+        {
+          "id": "econ.opportunity-cost",
+          "name": "Opportunity Cost"
+        },
+        {
+          "id": "econ.expected-value",
+          "name": "Expected Value"
+        },
+        {
+          "id": "econ.risk-and-reward",
+          "name": "Risk and Reward"
+        },
+        {
+          "id": "econ.uncertainty",
+          "name": "Uncertainty"
+        },
+        {
+          "id": "econ.tradeoffs",
+          "name": "Tradeoffs"
+        },
+        {
+          "id": "econ.sunk-cost",
+          "name": "Sunk Cost"
+        },
+        {
+          "id": "econ.marginal-value",
+          "name": "Marginal Value"
+        },
+        {
+          "id": "econ.scarcity",
+          "name": "Scarcity"
+        },
+        {
+          "id": "econ.incentives",
+          "name": "Incentives"
+        },
+        {
+          "id": "econ.optionality",
+          "name": "Optionality"
+        },
+        {
+          "id": "econ.portfolio-thinking",
+          "name": "Portfolio Thinking"
+        },
+        {
+          "id": "econ.time-horizon",
+          "name": "Time Horizon"
+        },
+        {
+          "id": "econ.leadership-under-constraints",
+          "name": "Leadership Under Constraints"
+        },
+        {
+          "id": "econ.negotiation",
+          "name": "Negotiation"
+        },
+        {
+          "id": "econ.batna",
+          "name": "BATNA"
+        },
+        {
+          "id": "econ.leverage",
+          "name": "Leverage"
+        },
+        {
+          "id": "econ.asset-valuation",
+          "name": "Asset Valuation"
+        },
+        {
+          "id": "econ.roster-construction",
+          "name": "Roster Construction"
+        },
+        {
+          "id": "econ.salary-cap",
+          "name": "Salary Cap"
+        },
+        {
+          "id": "econ.price-elasticity",
+          "name": "Price Elasticity"
+        },
+        {
+          "id": "econ.revenue-management",
+          "name": "Revenue Management"
+        },
+        {
+          "id": "econ.customer-segmentation",
+          "name": "Customer Segmentation"
+        },
+        {
+          "id": "econ.fan-engagement",
+          "name": "Fan Engagement"
+        },
+        {
+          "id": "econ.sponsorship-and-brand",
+          "name": "Sponsorship & Brand Fit"
+        },
+        {
+          "id": "econ.media-rights",
+          "name": "Media Rights"
+        },
+        {
+          "id": "econ.operations-tradeoffs",
+          "name": "Operations Tradeoffs"
+        },
+        {
+          "id": "econ.stakeholder-management",
+          "name": "Stakeholder Management"
+        },
+        {
+          "id": "econ.principal-agent",
+          "name": "Principal-Agent"
+        },
+        {
+          "id": "econ.crisis-management",
+          "name": "Crisis Management"
+        },
+        {
+          "id": "econ.reputation-risk",
+          "name": "Reputation Risk"
+        }
+      ],
+      "contexts": [
+        {
+          "id": "city-and-policy",
+          "name": "Cities & policy"
+        },
+        {
+          "id": "sports-front-office",
+          "name": "Front office & GM"
+        }
+      ],
+      "gradeBands": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "gradeLabel": "Grades 5–8",
+      "durationBucket": "45-90",
+      "durationLabel": "60 min",
+      "format": {
+        "setting": [
+          {
+            "id": "self-guided",
+            "name": "Students can run it alone"
+          },
+          {
+            "id": "facilitator-led",
+            "name": "Led by an instructor"
+          }
+        ],
+        "grouping": [
+          {
+            "id": "individual",
+            "name": "Individually"
+          }
+        ],
+        "devices": "one GPU-capable browser per student; WebGL required"
+      },
+      "instructorNeed": "Any instructor can run it",
+      "availability": "in-development",
+      "label": "In development",
+      "playUrl": null,
+      "educatorResources": []
+    },
+    {
       "id": "mega-city-tycoon",
       "title": "Mega City Tycoon",
       "summary": "A city-building economics game where students balance a municipal budget against growth.",
@@ -2094,6 +2593,89 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M2-L3/",
+      "educatorResources": []
+    },
+    {
+      "id": "plan-under-pressure",
+      "title": "Plan Under Pressure",
+      "summary": "Build an eight-week plan for someone else's money, then repair it when week five breaks it.",
+      "whatStudentsDo": "Students plan Avery Reyes's eight-week season: read a contract separating dependable income from money that depends on a condition, cost out housing, and build a plan across a savings goal, a reserve and flexible cash. Week five cancels the showcase and adds a required cost, and the plan must be repaired first with what is already there and then with two new decisions. Finally students defend the plan in their own words, citing their own numbers.",
+      "track": {
+        "id": "decision-challenges",
+        "name": "Decision Challenges",
+        "note": "Financial-literacy scenarios"
+      },
+      "subject": {
+        "id": "financial-literacy",
+        "name": "Financial literacy"
+      },
+      "concepts": [
+        {
+          "id": "fin.income-reliability",
+          "name": "Use Income by Reliability"
+        },
+        {
+          "id": "fin.full-cost",
+          "name": "Calculate and Compare Full Cost"
+        },
+        {
+          "id": "fin.viable-budget",
+          "name": "Construct a Viable Budget"
+        },
+        {
+          "id": "fin.contingency-planning",
+          "name": "Build an Executable Contingency"
+        },
+        {
+          "id": "fin.adaptation",
+          "name": "Adapt After Conditions Change"
+        },
+        {
+          "id": "fin.financial-defense",
+          "name": "Defend a Financial Strategy"
+        },
+        {
+          "id": "fin.saving",
+          "name": "Saving Toward a Goal"
+        },
+        {
+          "id": "econ.opportunity-cost",
+          "name": "Opportunity Cost"
+        }
+      ],
+      "contexts": [
+        {
+          "id": "personal-finance",
+          "name": "Personal finance"
+        }
+      ],
+      "gradeBands": [
+        "6",
+        "7",
+        "8"
+      ],
+      "gradeLabel": "Grades 6–8",
+      "durationBucket": "under-20",
+      "durationLabel": "12–15 min",
+      "format": {
+        "setting": [
+          {
+            "id": "facilitator-led",
+            "name": "Led by an instructor"
+          }
+        ],
+        "grouping": [
+          {
+            "id": "individual",
+            "name": "Individually"
+          }
+        ],
+        "devices": "one browser per student; no sound needed"
+      },
+      "instructorNeed": "An instructor runs this one",
+      "availability": "in-development",
+      "label": "In development",
+      "playUrl": null,
       "educatorResources": []
     },
     {
@@ -2639,6 +3221,78 @@
       "educatorResources": []
     },
     {
+      "id": "the-blockbuster",
+      "title": "The Blockbuster",
+      "summary": "Build, negotiate and close a franchise-altering trade.",
+      "whatStudentsDo": "Students assemble a trade from players and picks, then negotiate across rounds against an AI counterpart that counters their offers, and must satisfy salary-matching rules before any deal can close.",
+      "track": {
+        "id": "bonus-gm-sims",
+        "name": "GM Sims",
+        "note": "Standalone front-office games"
+      },
+      "subject": {
+        "id": "economics",
+        "name": "Economics"
+      },
+      "concepts": [
+        {
+          "id": "econ.negotiation",
+          "name": "Negotiation"
+        },
+        {
+          "id": "econ.salary-cap",
+          "name": "Salary Cap"
+        },
+        {
+          "id": "econ.asset-valuation",
+          "name": "Asset Valuation"
+        },
+        {
+          "id": "econ.pick-value-and-decay",
+          "name": "Pick Value & Decay"
+        },
+        {
+          "id": "econ.batna",
+          "name": "BATNA"
+        }
+      ],
+      "contexts": [
+        {
+          "id": "sports-front-office",
+          "name": "Front office & GM"
+        }
+      ],
+      "gradeBands": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "gradeLabel": "Grades 5–8",
+      "durationBucket": "under-20",
+      "durationLabel": "15 min",
+      "format": {
+        "setting": [
+          {
+            "id": "self-guided",
+            "name": "Students can run it alone"
+          }
+        ],
+        "grouping": [
+          {
+            "id": "individual",
+            "name": "Individually"
+          }
+        ],
+        "devices": "one browser per student"
+      },
+      "instructorNeed": "Any instructor can run it",
+      "availability": "in-development",
+      "label": "In development",
+      "playUrl": null,
+      "educatorResources": []
+    },
+    {
       "id": "the-front-office",
       "title": "The Front Office",
       "summary": "The Track 201 capstone: run a franchise through four decision cycles.",
@@ -2793,6 +3447,82 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/league-in-a-box/",
+      "educatorResources": []
+    },
+    {
+      "id": "the-lebron-files",
+      "title": "The LeBron Files",
+      "summary": "Five career decisions where each choice narrows the next.",
+      "whatStudentsDo": "Students steer a career through team selection, a contract, endorsements, business investments and a final family decision, with each choice cascading into the options available at the next, ending in a legacy grade.",
+      "track": {
+        "id": "bonus-gm-sims",
+        "name": "GM Sims",
+        "note": "Standalone front-office games"
+      },
+      "subject": {
+        "id": "cross-pillar",
+        "name": "Economics & financial literacy"
+      },
+      "concepts": [
+        {
+          "id": "econ.time-horizon",
+          "name": "Time Horizon"
+        },
+        {
+          "id": "fin.income-reliability",
+          "name": "Use Income by Reliability"
+        },
+        {
+          "id": "econ.capital-and-investment",
+          "name": "Capital & Investment"
+        },
+        {
+          "id": "econ.sponsorship-and-brand",
+          "name": "Sponsorship & Brand Fit"
+        },
+        {
+          "id": "econ.reputation-risk",
+          "name": "Reputation Risk"
+        },
+        {
+          "id": "econ.negotiation",
+          "name": "Negotiation"
+        }
+      ],
+      "contexts": [
+        {
+          "id": "basketball",
+          "name": "Basketball"
+        }
+      ],
+      "gradeBands": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "gradeLabel": "Grades 5–8",
+      "durationBucket": "under-20",
+      "durationLabel": "20 min",
+      "format": {
+        "setting": [
+          {
+            "id": "self-guided",
+            "name": "Students can run it alone"
+          }
+        ],
+        "grouping": [
+          {
+            "id": "individual",
+            "name": "Individually"
+          }
+        ],
+        "devices": "one browser per student"
+      },
+      "instructorNeed": "Any instructor can run it",
+      "availability": "in-development",
+      "label": "In development",
+      "playUrl": null,
       "educatorResources": []
     },
     {
