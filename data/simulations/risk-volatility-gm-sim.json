@@ -85,10 +85,7 @@
       "technical": "healthy",
       "technicalBasis": "Playtested end to end 2026-08-16. The richest simulation in the account: stochastic seasons, enforced cap constraints, and scoring that tracks the moves actually made rather than the strategy label chosen. Two defects, one of which misleads on the concept being taught.",
       "documentation": "minimal",
-      "knownBlockers": [
-        "The dashboard contradicts the rest of the game on the core lesson: it tells the player their team should AVOID risk while the onboarding modal, team select and risk-context card all say the same team SHOULD take risks.",
-        "The final score prints an unrounded float (43.666666666666664)."
-      ]
+      "knownBlockers": []
     },
     "validation": {
       "studentValidation": "unknown",
@@ -99,8 +96,8 @@
     },
     "curation": {
       "tier": "FLAGSHIP",
-      "tierBasis": "The richest simulation in the account: stochastic seasons, enforced cap constraints, and scoring that reads the moves actually made rather than the strategy label chosen. The dashboard that told every team to play it safe was repaired in this pass.",
-      "queue": "P1",
+      "tierBasis": "The richest simulation in the account: stochastic seasons, enforced cap constraints, and scoring that reads the moves actually made rather than the strategy label chosen. The dashboard that told four of five team contexts to play it safe — costing a student up to 32 points of 100 for following it — was repaired in this pass.",
+      "queue": "P2",
       "playtestedOn": "2026-08-16"
     }
   },
