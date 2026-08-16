@@ -233,3 +233,36 @@ test("the rendered page never points at a repository as a game", () => {
   const html = readFileSync(page, "utf8");
   assert.ok(!/href="https:\/\/github\.com/.test(html), "the page links a repository");
 });
+
+// ── curation reaching the public site ───────────────────────────────────────
+
+test("a published tier only ever sits on something a visitor can open", () => {
+  const payload = JSON.parse(readFileSync(join(ROOT, "public", "simulations.json"), "utf8"));
+  for (const sim of payload.simulations) {
+    if (!sim.tier) continue;
+    assert.equal(sim.availability, "available", `${sim.id} publishes tier ${sim.tier} but cannot be opened`);
+    assert.ok(sim.playUrl, `${sim.id} publishes tier ${sim.tier} with no launch URL`);
+  }
+});
+
+test("internal-only tiers never reach the public payload", () => {
+  const payload = JSON.parse(readFileSync(join(ROOT, "public", "simulations.json"), "utf8"));
+  // HOLD, REBUILD and ARCHIVE are decisions about BOW's own roadmap. Published,
+  // they would read as a public verdict on work BOW has not withdrawn.
+  for (const sim of payload.simulations) {
+    assert.ok(
+      sim.tier === null || ["FLAGSHIP", "RECOMMENDED", "EXPERIMENTAL"].includes(sim.tier),
+      `${sim.id} publishes the internal tier "${sim.tier}"`,
+    );
+  }
+});
+
+test("a held record cannot reach the public payload through curation", () => {
+  const payload = JSON.parse(readFileSync(join(ROOT, "public", "simulations.json"), "utf8"));
+  const published = new Set(payload.simulations.map((s) => s.id));
+  for (const rec of records) {
+    if (rec.governance?.publicRelease?.hold === true) {
+      assert.ok(!published.has(rec.id), `${rec.id} is held by BOW but appears on the public site`);
+    }
+  }
+});

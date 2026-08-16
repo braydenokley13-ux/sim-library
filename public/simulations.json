@@ -69,6 +69,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/BSC-BUILDANALYTIC/track201/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -140,6 +141,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/GAUNTLET/Boss%20Sim/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -218,6 +220,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M3-ECON/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -306,6 +309,7 @@
       "availability": "in-development",
       "label": "In development",
       "playUrl": null,
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -377,6 +381,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/BSC-pre-course/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -451,6 +456,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M2-ECON/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -526,6 +532,7 @@
       "availability": "in-development",
       "label": "In development",
       "playUrl": null,
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -596,6 +603,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/T201-M1-L1/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -674,6 +682,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M2-ECON/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -744,6 +753,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M1-L2/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -819,6 +829,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M3-ECON/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -886,6 +897,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M4-L2/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -952,6 +964,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M2-ECON/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -1018,6 +1031,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M3-ECON/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -1084,6 +1098,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M4-L3/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -1155,6 +1170,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M2-L1/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -1225,6 +1241,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/T101-M1-L1/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -1303,6 +1320,7 @@
       "availability": "in-development",
       "label": "In development",
       "playUrl": null,
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -1381,6 +1399,7 @@
       "availability": "in-development",
       "label": "In development",
       "playUrl": null,
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -1459,6 +1478,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M3-L1/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -1525,6 +1545,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M3-L3/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -1595,6 +1616,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/T101-M2-L1/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -1670,6 +1692,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/GAUNTLET/gauntlet-l3/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -1741,6 +1764,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M1-L3/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -1808,6 +1832,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M1-L1/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -1874,6 +1899,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M4-L3/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -2054,6 +2080,7 @@
       "availability": "in-development",
       "label": "In development",
       "playUrl": null,
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -2120,6 +2147,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M1-ECON/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -2190,6 +2218,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M2-L2/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -2264,6 +2293,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/T201-M2-L1/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -2327,6 +2357,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M4-L3/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -2393,6 +2424,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M3-L1/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -2459,6 +2491,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M4-L2/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -2526,6 +2559,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M2-L3/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -2609,6 +2643,7 @@
       "availability": "in-development",
       "label": "In development",
       "playUrl": null,
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -2675,6 +2710,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M3-L3/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -2750,6 +2786,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M2-L2/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -2816,6 +2853,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M2-L2/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -2886,6 +2924,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M3-L2/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -2948,6 +2987,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/BSC-BUILDANALYTIC/track101/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -3010,6 +3050,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M3-L2/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -3080,6 +3121,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://bowsportscapital.com/simulation",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -3152,6 +3194,7 @@
       "availability": "in-development",
       "label": "In development",
       "playUrl": null,
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -3227,6 +3270,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/league-in-a-box/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -3303,6 +3347,7 @@
       "availability": "in-development",
       "label": "In development",
       "playUrl": null,
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -3369,6 +3414,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/T101-M1-L2/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -3435,6 +3481,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/T201-M1-L2/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -3510,6 +3557,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M1-ECON/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -3576,6 +3624,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M4-L1/",
+      "tier": null,
       "educatorResources": []
     }
   ]
