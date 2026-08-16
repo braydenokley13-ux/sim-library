@@ -80,13 +80,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/201-M3-L2"
       }
-    ]
+    ],
+    "contexts": [
+      "multi-sport"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Complete and publicly reachable, with an earlier prototype retained in-repo showing a finished refactor. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

@@ -73,13 +73,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/T201-M1-L1"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Pure logic separated from UI with two passing test suites and a README explaining the design rationale — the strongest engineering of any single-lesson repo. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

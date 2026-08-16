@@ -67,13 +67,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/301-M4-L3"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Complete, publicly reachable and the most privacy-minimal build in the Track 301 set — it collects nothing. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

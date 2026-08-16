@@ -70,13 +70,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/301-M1-L3"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Complete and publicly reachable, with a substantial design plan and real historical data. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

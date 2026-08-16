@@ -74,13 +74,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/BSC-anythingelse"
       }
-    ]
+    ],
+    "contexts": [
+      "basketball"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "The largest of the bonus simulations and fully built. Not deployed, and no student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },
@@ -98,6 +101,10 @@
     },
     "lastVerified": {
       "technical": "2026-08-14"
+    },
+    "publicRelease": {
+      "preview": true,
+      "previewReason": "Five career decisions that each narrow the next — a distinctive shape not covered elsewhere in the catalog."
     }
   },
   "provenance": {

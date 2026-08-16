@@ -74,13 +74,16 @@
         "label": "Student route (requires login and unlock)",
         "url": "https://bowsportscapital.com/simulation-room"
       }
-    ]
+    ],
+    "contexts": [
+      "basketball"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Complete with server-authoritative scoring and a graded report card. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

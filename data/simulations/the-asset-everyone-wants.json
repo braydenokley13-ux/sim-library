@@ -67,13 +67,16 @@
         "url": "https://bowsportscapital.com/simulation",
         "verified": "2026-08-14"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Live, public and login-free — the most accessible simulation BOW has. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

@@ -71,13 +71,17 @@
         "label": "Deploy guide",
         "path": "DEPLOY.md"
       }
-    ]
+    ],
+    "contexts": [
+      "city-and-policy",
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "EXPERIMENTAL",
     "maturityBasis": "Substantial infrastructure — signed attempt locks, teacher strict-lock, audit history — with no automated tests behind it. Ambition outruns verification.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },
@@ -98,7 +102,11 @@
     "lastVerified": {
       "technical": "2026-08-14"
     },
-    "notes": "Despite the name, this is not a 'final' version of T201-M1-L1. It is a separate 3D product line that predates the T201 lessons, which appear to have superseded it for classroom use."
+    "notes": "Despite the name, this is not a 'final' version of T201-M1-L1. It is a separate 3D product line that predates the T201 lessons, which appear to have superseded it for classroom use.",
+    "publicRelease": {
+      "preview": true,
+      "previewReason": "3D walk-around city with eight cap-decision mission zones. Real, unfinished, and the clearest signal of where BOW is heading."
+    }
   },
   "provenance": {
     "discoveredBy": "account-wide discovery, August 2026",

@@ -72,13 +72,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/T201-M1-L2"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Modular build with a passing engine test suite and a README. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

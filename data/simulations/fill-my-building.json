@@ -72,13 +72,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/BSC-anythingelse"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "A complete short-format experience and one of the clearest demonstrations of elasticity in the portfolio. Not deployed, and no student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

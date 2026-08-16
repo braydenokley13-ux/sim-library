@@ -71,13 +71,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/101-M3-L3"
       }
-    ]
+    ],
+    "contexts": [
+      "football"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Runs end-to-end and is publicly reachable. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

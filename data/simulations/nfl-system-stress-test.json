@@ -69,13 +69,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/301-M2-L3"
       }
-    ]
+    ],
+    "contexts": [
+      "football"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "The most thoroughly self-documented repo in the Track 301 set, including its own honest list of limitations. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

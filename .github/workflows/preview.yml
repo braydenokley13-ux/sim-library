@@ -1,0 +1,61 @@
+name: publish preview
+
+# Publishes public/index.html to GitHub Pages so the library can be looked at
+# and shared before it goes anywhere permanent.
+#
+# MANUAL ONLY, on purpose. Putting a page on the public internet is a
+# publishing decision, and a workflow that did it on every push would take that
+# decision away from whoever owns it. Run it from the Actions tab when you want
+# a preview; nothing happens until someone does.
+#
+# It publishes `public/` and nothing else. `app/index.html` is the internal
+# tool — it inlines owner gaps, known blockers and leadership notes — and this
+# workflow must never be pointed at it.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci || npm install
+
+      - name: Rebuild the public artefacts from the registry
+        run: npm run build:public
+
+      - name: Refuse to publish anything internal
+        # Belt and braces over the build's own leakage gate. If either internal
+        # artefact has somehow reached public/, this stops before upload rather
+        # than after.
+        run: |
+          if [ -e public/app ] || grep -rlq "knownBlockers\|UNOWNED\|maturityBasis" public/; then
+            echo "::error::Internal content found in public/. Refusing to publish."
+            exit 1
+          fi
+
+      - name: Every published simulation still opens
+        run: npm run verify -- --public
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - id: deploy
+        uses: actions/deploy-pages@v4

@@ -63,27 +63,30 @@
       {
         "kind": "live-url",
         "label": "Play in browser (GitHub Pages)",
-        "url": "https://braydenokley13-ux.github.io/BSC-BUILDANALYTIC/",
-        "verified": "2026-08-14"
+        "url": "https://braydenokley13-ux.github.io/BSC-BUILDANALYTIC/track101/",
+        "verified": "2026-08-16"
       },
       {
         "kind": "repo",
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/BSC-BUILDANALYTIC"
       }
-    ]
+    ],
+    "contexts": [
+      "multi-sport"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Complete and reachable, with a share-link path into the facilitator collector. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Deep link verified 2026-08-16: returns 200 and renders this experience directly, rather than the shared hub page it previously pointed at.",
       "documentation": "minimal",
       "knownBlockers": []
     },
@@ -92,7 +95,7 @@
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     }
   },
   "provenance": {

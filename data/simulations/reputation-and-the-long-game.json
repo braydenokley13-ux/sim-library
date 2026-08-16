@@ -59,13 +59,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/301-M3-L3"
       }
-    ]
+    ],
+    "contexts": [
+      "business"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "EXPERIMENTAL",
     "maturityBasis": "The source describes itself as content and data model only, with automation deferred. It cannot be played.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

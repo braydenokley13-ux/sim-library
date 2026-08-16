@@ -68,13 +68,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/BSC-anythingelse"
       }
-    ]
+    ],
+    "contexts": [
+      "media-and-brand"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "A complete short-format experience. Not deployed, and no student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

@@ -67,13 +67,17 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/M2-201-FINAL"
       }
-    ]
+    ],
+    "contexts": [
+      "football",
+      "city-and-policy"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Two passing test suites, GitHub Actions CI, a documented mission matrix and a deterministic balance harness — the strongest engineering in the Front Office City family. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },
@@ -92,6 +96,10 @@
     },
     "lastVerified": {
       "technical": "2026-08-14"
+    },
+    "publicRelease": {
+      "preview": true,
+      "previewReason": "The Front Office City engine rebuilt for the NFL across three roles."
     }
   },
   "provenance": {

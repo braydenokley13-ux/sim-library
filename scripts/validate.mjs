@@ -15,7 +15,10 @@ import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const SIM_DIR = join(ROOT, "data", "simulations");
+// Overridable so the adversarial suite can validate a throwaway registry rather
+// than writing probe records into the real one. Tests that mutate shared data
+// are a race waiting to happen, and did in fact become one.
+const SIM_DIR = process.env.BOW_SIM_DIR ?? join(ROOT, "data", "simulations");
 
 const errors = [];
 const warnings = [];
@@ -23,6 +26,7 @@ const fail = (file, msg) => errors.push(`${file}: ${msg}`);
 const warn = (file, msg) => warnings.push(`${file}: ${msg}`);
 
 const readJson = (p) => JSON.parse(readFileSync(p, "utf8"));
+const isNonEmptyString = (s) => typeof s === "string" && s.trim().length > 0;
 
 // ── load schemas + concept taxonomy ──────────────────────────────────────────
 const simSchema = readJson(join(ROOT, "schema", "simulation.schema.json"));
@@ -121,6 +125,14 @@ for (const { file, rec } of records) {
   if (p.gradeBandBasis === "unknown" && p.gradeBands?.length)
     fail(file, 'gradeBandBasis "unknown" cannot accompany gradeBands');
 
+  // 6b. contexts, like grade bands, must say where they came from
+  if (p.contexts?.length && !p.contextBasis)
+    fail(file, "contexts set without contextBasis — say whether it is stated in the source or editorial");
+  if (p.contextBasis === "unknown" && p.contexts?.length)
+    fail(file, 'contextBasis "unknown" cannot accompany contexts');
+  if (p.contexts && new Set(p.contexts).size !== p.contexts.length)
+    fail(file, "duplicate contexts");
+
   // 7. source references must be coherent for their type
   const checkSource = (s, where) => {
     if (s.type === "github" && !s.repo) fail(file, `${where}: github source needs repo`);
@@ -169,11 +181,22 @@ for (const { file, rec } of records) {
   if (g.supersededBy && g.visibility !== "superseded")
     warn(file, "supersededBy set but visibility is not superseded");
 
-  // 11. public listing must not advertise something BOW cannot stand behind
-  if (g.publicListing && !["TESTED", "BOW_APPROVED", "CORE"].includes(g.maturity))
-    fail(file, `maturity ${g.maturity} must not be publicly listed — nothing untested goes on the public site`);
-  if (g.publicListing && g.visibility !== "active")
-    fail(file, `visibility "${g.visibility}" must not be publicly listed`);
+  // 11. public release is COMPUTED (scripts/public-readiness.mjs), not declared.
+  //     The only thing a human may write here is a veto, and a veto without a
+  //     stated reason is indistinguishable from an accident.
+  if (g.publicRelease?.hold === true && !isNonEmptyString(g.publicRelease.holdReason))
+    fail(file, "publicRelease.hold is true without a holdReason — say why it is being kept off the public site");
+  if (g.publicRelease && g.publicRelease.hold !== true && g.publicRelease.holdReason)
+    warn(file, "publicRelease.holdReason is set but hold is not true — the record will be published");
+  if (g.publicRelease?.preview === true) {
+    if (!isNonEmptyString(g.publicRelease.previewReason))
+      fail(file, "publicRelease.preview is true without a previewReason — say why unfinished work is worth showing");
+    // Belt and braces alongside the same rule in public-readiness.mjs. A record
+    // that both launches and calls itself unfinished is the exact contradiction
+    // the public library must never print, so it is caught at authoring time too.
+    if ((p.runResources ?? []).some((r) => r.kind === "live-url" && r.url))
+      fail(file, "publicRelease.preview is true on a record that has a live URL — it launches, so it is not in development");
+  }
 
   // 12. dated fields must be real dates, not in the future
   const today = new Date().toISOString().slice(0, 10);

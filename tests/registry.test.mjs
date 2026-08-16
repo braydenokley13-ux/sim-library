@@ -91,9 +91,17 @@ test("superseded records point at a simulation that exists", () => {
   }
 });
 
-test("an experimental simulation is never publicly listed", () => {
+test("a public-release hold always states a reason", () => {
   for (const s of sims) {
-    if (s.governance.maturity === "EXPERIMENTAL") assert.notEqual(s.governance.publicListing, true, s.id);
+    if (s.governance.publicRelease?.hold === true) {
+      assert.ok(s.governance.publicRelease.holdReason?.trim(), `${s.id} is held with no reason`);
+    }
+  }
+});
+
+test("contexts, where present, declare where they came from", () => {
+  for (const s of sims) {
+    if (s.product.contexts?.length) assert.ok(s.product.contextBasis, `${s.id} has contexts with no basis`);
   }
 });
 
@@ -138,7 +146,7 @@ test("every record states a technical health value", () => {
 });
 
 test("public/internal separation: no governance field leaks into product", () => {
-  const forbidden = ["maturity", "health", "owner", "validation", "knownBlockers", "publicListing"];
+  const forbidden = ["maturity", "health", "owner", "validation", "knownBlockers", "publicListing", "publicRelease"];
   for (const s of sims) for (const k of forbidden) {
     assert.ok(!(k in s.product), `${s.id} has governance field "${k}" inside product`);
   }

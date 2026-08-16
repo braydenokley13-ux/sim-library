@@ -72,13 +72,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/101-M4-ECON"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "EXPERIMENTAL",
     "maturityBasis": "Cannot be confirmed runnable from the repo alone — the workbook it drives is not present.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

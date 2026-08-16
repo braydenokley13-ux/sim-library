@@ -71,13 +71,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/301-M3-ECON"
       }
-    ]
+    ],
+    "contexts": [
+      "business"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Complete and publicly reachable, with an explicit teaching note closing each round. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

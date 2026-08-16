@@ -75,13 +75,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/201-M4-L2"
       }
-    ]
+    ],
+    "contexts": [
+      "basketball"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "A small, complete, publicly reachable puzzle converted from a spreadsheet. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

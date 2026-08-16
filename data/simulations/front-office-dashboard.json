@@ -75,13 +75,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/201-M3-L1"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "The most feature-dense single-file lesson in the account, publicly reachable, with a persistent leaderboard. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

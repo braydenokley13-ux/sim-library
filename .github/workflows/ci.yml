@@ -19,11 +19,16 @@ jobs:
         run: npm test
       - name: Public payload carries nothing internal
         run: npm run build:public
-      - name: Catalog and interface are in sync with the data
+      - name: Generated files are in sync with the data
+        # Every generated artefact is checked in so it can be reviewed in a pull
+        # request. That only helps if it is actually current, so the build is run
+        # and the working tree must come back clean.
         run: |
           npm run build
-          if ! git diff --quiet -- CATALOG.md app/index.html; then
-            echo "::error::CATALOG.md or app/index.html is stale. Run 'npm run build' and commit the result."
-            git --no-pager diff --stat -- CATALOG.md app/index.html
+          npm run build:public
+          npm run queue
+          if ! git diff --quiet -- CATALOG.md app/index.html public docs/work-queue.md; then
+            echo "::error::A generated file is stale. Run 'npm run check' and commit the result."
+            git --no-pager diff --stat -- CATALOG.md app/index.html public docs/work-queue.md
             exit 1
           fi

@@ -105,13 +105,16 @@
     "version": {
       "contentVersion": "0.7.0",
       "asOf": "2026-08-14"
-    }
+    },
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "309 unit tests and twelve browser tests pass under a five-job CI pipeline, and the founder dashboard is genuinely built. It stops short of TESTED because the repo states plainly that no real student has used this build.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

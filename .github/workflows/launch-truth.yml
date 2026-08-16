@@ -1,0 +1,32 @@
+name: launch truth
+
+# Does every Launch button still open a playable experience?
+#
+# This is deliberately NOT part of the pull-request check. It talks to the
+# public internet, so it can fail for reasons that have nothing to do with the
+# change under review, and a check that cries wolf gets ignored — which is the
+# worst possible outcome for the one check that guards against a dead link.
+#
+# It runs on a schedule instead, because the failure it catches is a change in
+# the world rather than a change in the diff: a simulation that worked in
+# August returned "Site not found" days later, and nothing in this repository
+# had moved. Nightly is the granularity at which that is worth knowing.
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci || npm install
+      - name: Every published simulation still opens
+        # Exits non-zero only when a PUBLISHED record fails. Problems with
+        # records that are not on the public site are reported and not fatal.
+        run: npm run verify -- --public

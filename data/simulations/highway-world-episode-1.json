@@ -116,13 +116,17 @@
         "label": "60-minute run guide",
         "path": "docs/60-minute-run-guide.md"
       }
-    ]
+    ],
+    "contexts": [
+      "city-and-policy",
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Around 2,700 tests across 225 files, CI with typecheck, full suite, build and two guardrails, and a curriculum spine whose coverage is enforced as a build contract. Its own CTO report recommends shipping only as a supervised pilot, and no student has run it.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },
@@ -145,7 +149,11 @@
     "lastVerified": {
       "technical": "2026-08-14"
     },
-    "notes": "Rooms are individually addressable by URL and route-integrity tested, but only the curated two-room hour is documented, timed and scripted. Recorded as one experience for that reason. 'Gold master' here is an internal engineering milestone, not an external certification."
+    "notes": "Rooms are individually addressable by URL and route-integrity tested, but only the curated two-room hour is documented, timed and scripted. Recorded as one experience for that reason. 'Gold master' here is an internal engineering milestone, not an external certification.",
+    "publicRelease": {
+      "preview": true,
+      "previewReason": "BOW's largest product. A 3D sports-business city with eleven missions; substantial and actively built, but with no deployment yet."
+    }
   },
   "provenance": {
     "discoveredBy": "account-wide discovery, August 2026",

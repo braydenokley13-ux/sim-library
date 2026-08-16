@@ -70,13 +70,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/301-M1-ECON"
       }
-    ]
+    ],
+    "contexts": [
+      "investing"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Complete and publicly reachable. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

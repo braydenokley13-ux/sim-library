@@ -76,13 +76,17 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/T201-M2-L1"
       }
-    ]
+    ],
+    "contexts": [
+      "baseball",
+      "media-and-brand"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Complete, modular and publicly reachable, but without tests. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

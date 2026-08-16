@@ -68,13 +68,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/scout-model"
       }
-    ]
+    ],
+    "contexts": [
+      "sports-front-office"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "EXPERIMENTAL",
     "maturityBasis": "The experience itself is well built, but the repository around it is disordered enough that no one could safely tell which file is canonical.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },

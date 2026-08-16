@@ -68,13 +68,16 @@
         "label": "Source",
         "url": "https://github.com/braydenokley13-ux/301-M4-L1"
       }
-    ]
+    ],
+    "contexts": [
+      "basketball"
+    ],
+    "contextBasis": "editorial"
   },
   "governance": {
     "maturity": "PLAYABLE",
     "maturityBasis": "Fifteen fully authored scenarios with individual outcome text. No student-run evidence exists.",
     "visibility": "active",
-    "publicListing": false,
     "owner": {
       "productOwner": "UNOWNED"
     },
@@ -82,7 +85,9 @@
       "technical": "healthy",
       "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "Asks the student for an email address before play begins."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
@@ -90,6 +95,10 @@
     },
     "lastVerified": {
       "technical": "2026-08-14"
+    },
+    "publicRelease": {
+      "hold": true,
+      "holdReason": "The landing screen asks for a name and an email address before play begins (input#playerEmail, for a completion code). Whether BOW points an unsupervised public visitor at that is a decision for a human, not a build script."
     }
   },
   "provenance": {

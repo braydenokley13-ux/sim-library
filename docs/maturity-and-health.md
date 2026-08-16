@@ -117,6 +117,6 @@ current build has evidence behind it.
 | --- | --- |
 | `health.technical`, `lastVerified.technical` | The probe script, automatically |
 | `knownBlockers`, `documentation` | Whoever last worked on it |
-| `maturity`, `visibility`, `publicListing` | BOW leadership |
+| `maturity`, `visibility`, `publicRelease` | BOW leadership |
 | `validation.*`, `lastVerified.studentRun` | Whoever was in the room |
 | `owner` | BOW leadership. Never inferred from commits — the person who committed most is routinely not the person accountable. |
