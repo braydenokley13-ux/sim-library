@@ -111,7 +111,7 @@ once:
 - **The track** is stated as in development, explicitly, in the Programs strip.
 - **The simulations inside it** are counted from what actually launches today.
 
-So Track 301 reads *"In development — 13 ready to play"*, which is precisely
+So Track 301 reads *"In development — 11 ready to play"*, which is precisely
 what is true. A track's status is a fact about the product; a simulation's
 status is a fact about that build. Neither is allowed to overwrite the other,
 and `tests/website/simulation-library.test.ts` in the website repo asserts both

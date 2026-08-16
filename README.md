@@ -155,7 +155,7 @@ consume the same source without any of them owning it.
 - **Some records have no grade band.** Track 301's audience is contested: two
   repositories say Grades 9–10, the website calls it "executive level", most say
   nothing. Track 301 itself is not in doubt — it is a real, active BOW product,
-  the largest family in the registry, and 13 of its experiences can be played
+  the largest family in the registry, and 11 of its experiences can be played
   today.
 - **This is a GitHub audit.** Materials in Drive, Slides or physical form are not
   represented, and the source model is built to accept them later.
