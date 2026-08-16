@@ -98,6 +98,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "Five years of portfolio construction where passing on everything is correctly punished. A visible impossible equity figure and templated feedback that contradicts its own scorecard need fixing before it is used for assessment.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

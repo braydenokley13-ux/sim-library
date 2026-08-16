@@ -106,6 +106,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "A complementarity puzzle with real synergy and conflict penalties and four hidden combinations to find. Two different numbers are labelled Final Score on the same results screen.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

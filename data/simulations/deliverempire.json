@@ -108,6 +108,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "EXPERIMENTAL",
+      "tierBasis": "Real tradeoffs underneath a long quiz, with raw HTML entities printed on screen and a coach who congratulates a score of zero.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

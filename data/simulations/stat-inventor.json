@@ -99,6 +99,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "EXPERIMENTAL",
+      "tierBasis": "A sound metric-construction lab whose charting half does not run at all, and whose phone layout silently drops a data column.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

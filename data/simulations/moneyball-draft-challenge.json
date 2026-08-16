@@ -86,16 +86,24 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. No defects found. A genuine constrained-optimisation puzzle that is gated rather than narrated: choosing the two flashiest players is rejected outright and does not advance, and the value ranking is shown afterwards so the student can see why.",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "The value ranking only appears after a failed attempt, so the insight is delivered as a correction rather than something the student can discover while choosing."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "A tight constrained-optimisation puzzle that is gated rather than narrated: chasing the flashy players is rejected outright and does not advance.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

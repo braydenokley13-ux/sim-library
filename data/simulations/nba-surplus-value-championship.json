@@ -90,16 +90,25 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16, with the scoring logic read from the shipped JavaScript to confirm the finding. Real multi-objective tension: the three highest-surplus players clear the surplus target but fail the synergy one.",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "The win check does not match the stated target. On screen the mission reads TOTAL SURPLUS >= 25; the code computes totalSurplus + synergy >= 25 && synergy >= 6. A roster whose own dashboard showed surplus 24 — visibly under the stated target — still triggered the championship banner and the claim code. In a simulation about reading your numbers, the numbers shown are not the numbers scored.",
+        "Because synergy is folded into the surplus check, two high-surplus rookies plus exactly one veteran reliably clears the real condition and shortcuts the intended value reasoning."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "Real multi-objective tension between surplus and synergy. Held back by a win check that does not match the target printed on screen, which is a one-line fix in a simulation about reading your own numbers.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

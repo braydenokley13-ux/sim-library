@@ -98,6 +98,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "FLAGSHIP",
+      "tierBasis": "The best writing in the account, over real branching. Every option shows its stakeholder deltas before commitment, and two opposed paths ended far apart on competitive balance. Nothing here can be bluffed.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

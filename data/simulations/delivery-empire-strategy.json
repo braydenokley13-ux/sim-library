@@ -107,6 +107,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "EXPERIMENTAL",
+      "tierBasis": "The applied economics content is strong; the interaction is twenty-five multiple-choice questions bookended by two decisions, and a runtime error fires on quick clicking.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

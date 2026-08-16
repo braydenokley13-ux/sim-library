@@ -108,6 +108,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "REBUILD",
+      "tierBasis": "A good premise defeated by its data: every player in the pool clears the thresholds alone, so any legal pair passes and minimum spend equals maximum spend.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

@@ -96,6 +96,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "Reaches its first decision with no reading screen at all, has no dominant quadrant, and makes one idea land cleanly. Deliberately narrow.",
+      "queue": "P2",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

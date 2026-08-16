@@ -98,6 +98,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "Real historical cases that resist a single heuristic, plus a genuine value-for-money round. The final round looks frozen while a hidden timer runs out.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

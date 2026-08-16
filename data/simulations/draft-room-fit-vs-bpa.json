@@ -96,6 +96,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "FLAGSHIP",
+      "tierBasis": "The cleanest tradeoff design measured. Always taking the best available player scored 100 and always taking team fit scored 775, yet a rebuilding team rewards the BPA pick that fit-first gets wrong, so no single heuristic survives the scenarios. No defects found.",
+      "queue": "P2",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

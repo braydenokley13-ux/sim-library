@@ -99,6 +99,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "Signalling, BATNA, repeated games and multi-party bargaining in one coherent arc, with feedback that explains why an option failed. Reputation currently carries no weight at the ending.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

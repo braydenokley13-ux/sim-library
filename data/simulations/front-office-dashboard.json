@@ -100,6 +100,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "FLAGSHIP",
+      "tierBasis": "The best decision design in the account. TRAP and ALBATROSS player tiers exist specifically to punish buying famous names, a randomised owner mandate changes the constraint every run, and a season simulation with a trade deadline forces adaptation after the roster is set. Played clean with no exploit found.",
+      "queue": "P2",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

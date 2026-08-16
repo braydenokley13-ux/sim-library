@@ -107,7 +107,13 @@
     "lastVerified": {
       "technical": "2026-08-16"
     },
-    "notes": "Depends on a CDN for Chart.js, so it will not run on a fully offline classroom network."
+    "notes": "Depends on a CDN for Chart.js, so it will not run on a fully offline classroom network.",
+    "curation": {
+      "tier": "EXPERIMENTAL",
+      "tierBasis": "Six teams across three sports and a real ideal-curve concept, but on a win-now team always spending the most beats the deliberate curve the closing text teaches.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
+    }
   },
   "provenance": {
     "discoveredBy": "account-wide discovery, August 2026",

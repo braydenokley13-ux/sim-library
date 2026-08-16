@@ -96,6 +96,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "FLAGSHIP",
+      "tierBasis": "The richest simulation in the account: stochastic seasons, enforced cap constraints, and scoring that reads the moves actually made rather than the strategy label chosen. The dashboard that told every team to play it safe was repaired in this pass.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

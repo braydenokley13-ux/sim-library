@@ -104,7 +104,13 @@
     "lastVerified": {
       "technical": "2026-08-16"
     },
-    "notes": "The only simulation in the account with substantial macroeconomics coverage — fiscal policy, monetary policy, inflation, the business cycle and the multiplier all appear here and almost nowhere else."
+    "notes": "The only simulation in the account with substantial macroeconomics coverage — fiscal policy, monetary policy, inflation, the business cycle and the multiplier all appear here and almost nowhere else.",
+    "curation": {
+      "tier": "EXPERIMENTAL",
+      "tierBasis": "Genuine macro tradeoffs across eight quarters with random shocks, but a successful run never resolves: Quarter 8 resubmits forever while a failed run gets a full report.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
+    }
   },
   "provenance": {
     "discoveredBy": "account-wide discovery, August 2026",

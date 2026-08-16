@@ -88,16 +88,25 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16 with no defects found across twelve-plus rounds. The closing board report is the best diagnostic in the account: a per-concept mastery breakdown across all seven concepts plus a study plan naming what to review. A naive run bled cash to zero by round 12 and ended early, which is a real failure state.",
       "documentation": "partial",
-      "knownBlockers": []
+      "knownBlockers": [
+        "Framed as a strategy simulation, but every round has one objectively correct answer and an explicit best path — rigorous timed multiple choice rather than a tradeoff space.",
+        "On a phone all six stat tiles stack full width, so a student scrolls past seven tiles to reach the question while a 27-second clock runs."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "Rigorous timed economics with the best closing diagnostic in the account — per-concept mastery and a study plan naming what to review. Honestly a quiz rather than a strategy space, and worth using as one.",
+      "queue": "P2",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

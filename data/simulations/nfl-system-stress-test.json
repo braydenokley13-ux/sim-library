@@ -96,6 +96,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "EXPERIMENTAL",
+      "tierBasis": "Real Mode plays well and resists guessing, but Tutorial Mode — one of the two routes the entry screen offers — throws on its first question and cannot be completed.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

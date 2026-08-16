@@ -99,6 +99,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "The most dramatic consequence divergence measured — trust 0 and revenue 0 against a 95 out of 100 run — and excellent writing. Clicking the first option every round scores 95 without reading, which shuffling option order would fix.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

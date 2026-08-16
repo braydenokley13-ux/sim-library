@@ -89,19 +89,30 @@
       "productOwner": "UNOWNED"
     },
     "health": {
-      "technical": "healthy",
-      "technicalBasis": "Reachable via the Gauntlet landing page on 2026-08-14. Reachability only.",
+      "technical": "broken",
+      "technicalBasis": "Playtested 2026-08-16 and found unplayable. The negotiation premise is the strongest in the account — five cities, a coalition to form, and a secret side deal that adds a genuine ethics dimension — but no honest playthrough can get past round 2 of 6.",
       "documentation": "missing",
-      "knownBlockers": []
+      "knownBlockers": [
+        "Reproducible softlock: after locking in or declining a round 2 alliance, no continue control is ever rendered anywhere in the DOM. Round 3 exists in the code and can be reached only by calling startRound3() from the console.",
+        "The round 1 opening statement is not read. A considered pro-business statement and the text \"asdf asdf asdf\" drew identical neutral reactions from all three cities.",
+        "Start Summit silently does nothing when the initials field is blank — no message, just a dead button.",
+        "On a phone the sidebar floats over the main column and the cards overlap illegibly."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     },
-    "notes": "The only genuinely two-student experience discovered in the account. Both students share one device — there is no networked multiplayer."
+    "notes": "The only genuinely two-student experience discovered in the account. Both students share one device — there is no networked multiplayer.",
+    "curation": {
+      "tier": "HOLD",
+      "tierBasis": "The strongest negotiation premise in the account, and unplayable: no honest run gets past round 2 of 6 because the continue control is never rendered.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
+    }
   },
   "provenance": {
     "discoveredBy": "account-wide discovery, August 2026",

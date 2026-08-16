@@ -100,6 +100,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "REBUILD",
+      "tierBasis": "The framework is sound and the scenarios are well written, but choosing the middle option nine times without reading scores a perfect 45 of 45, so the build teaches the opposite of its own lesson.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

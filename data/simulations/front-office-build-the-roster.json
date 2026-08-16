@@ -108,6 +108,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "A randomised owner curveball and a real failure state — a deliberately poor build scored 51 against 99. The economics lean on soft chemistry and clout rather than cap arithmetic.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

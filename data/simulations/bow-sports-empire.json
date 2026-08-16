@@ -98,16 +98,25 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16 across two full runs. The best-looking simulation in the account and genuinely responsive — the flashy recruit moved revenue 20 to 25, morale 50 to 60, efficiency 30 to 25 and risk 20 to 35, with the information-asymmetry lesson named explicitly. The managed stats do not reach the grade.",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "The final tier is driven by the 15-question quiz, not by the four stats the student spends the whole game managing. An all-risky run and an all-safe run ended with clearly different stats (morale 75 against 100, risk 30 against 20) and the identical D-TIER grade, so optimising the economy is optional.",
+        "Season 1 opens on generic startup copy — juggling product development and customer churn — under the sports-empire skin."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "The best-looking simulation in the account, and genuinely responsive to choices. The final grade currently ignores the four stats the student spends the game managing.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

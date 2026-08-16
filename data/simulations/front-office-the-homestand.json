@@ -104,6 +104,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "Three chained decisions with consequences narrated clearly and real divergence between paths. Deterministic and unscored, which suits discussion and blunts replay.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

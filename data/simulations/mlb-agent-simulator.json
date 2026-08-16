@@ -101,16 +101,25 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16 across two full eight-player strategies. The expected-value teaching is the clearest in the account: every decision shows the guarantee, the incentive, the injury risk and the computed EV edge, and each result screen states the counterfactual the student did not choose. Always-guarantee earned $237.0M against $322.1M optimal; always-bet earned $274.8M.",
       "documentation": "partial",
-      "knownBlockers": []
+      "knownBlockers": [
+        "A player card looks identical before and after a decision is locked, with no tick and no greyed state. Clicking the same card repeatedly silently reopens the same result, so a student can finish the game having decided one player of eight without ever being warned.",
+        "Guaranteed money is not guaranteed. A $35M guarantee paid out $30.7M on screen after a moderate injury roll while the flavour text said \"$35M locked in\", and the final table then showed the full $35M. A guarantee that moves with the injury roll contradicts the exact distinction the simulation teaches."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "FLAGSHIP",
+      "tierBasis": "The clearest expected-value teaching anywhere in the account — the EV edge is shown, and each result names the counterfactual the student did not take. Two defects hold it below its ceiling, and both are contained.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

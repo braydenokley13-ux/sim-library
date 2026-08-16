@@ -80,12 +80,12 @@
       "productOwner": "UNOWNED"
     },
     "health": {
-      "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technical": "broken",
+      "technicalBasis": "Playtested 2026-08-16 and found unplayable. The most polished cap-management concept in the account, with real cap, tax and apron thresholds and a roster $67.0M over the cap from the first turn, but it does not survive its own first week.",
       "documentation": "missing",
       "knownBlockers": [
-        "Undocumented: not referenced by the repo README or by the Next.js app it sits beside.",
-        "Its own header checklist lists animation, responsive and storage verification as outstanding."
+        "Reproducible crash: pressing Continue after the FIRST decision of week 1 blanks the application. Verified in five isolated trials across safe, balanced and risky choices — the game screen gains a hidden class, nothing replaces it, and no console error is thrown, so the page simply dies silently. The game only survives if the student happens to make a second chained decision before pressing the Continue button it has already enabled and offered.",
+        "An eight-step tutorial with no skip control stands between launch and the first decision."
       ]
     },
     "validation": {
@@ -93,7 +93,13 @@
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "HOLD",
+      "tierBasis": "The most polished cap-management concept in the account, and unplayable: pressing the Continue button it offers after the first decision of week 1 blanks the application, reproducibly.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

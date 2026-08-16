@@ -99,6 +99,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "FLAGSHIP",
+      "tierBasis": "The only simulation that proves its own thesis instead of asserting it: replaying one strategy twenty times returns scores from 40 to 93, and process and outcome are scored separately. Mobile layout and keyboard access repaired in this pass.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

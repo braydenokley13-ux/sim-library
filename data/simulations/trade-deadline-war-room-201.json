@@ -98,7 +98,13 @@
     "lastVerified": {
       "technical": "2026-08-16"
     },
-    "notes": "Shares a title with trade-deadline-war-room-101. The two are pitched at different grade bands and are recorded as deliberate siblings, not duplicates — worth a human confirmation."
+    "notes": "Shares a title with trade-deadline-war-room-101. The two are pitched at different grade bands and are recorded as deliberate siblings, not duplicates — worth a human confirmation.",
+    "curation": {
+      "tier": "FLAGSHIP",
+      "tierBasis": "Real luxury-tax arithmetic where the same trade is right or wrong depending on the team: the identical star swing produced a 209 million dollar tax bill and an alarmed owner on one roster and a zero bill and a delighted one on another. No defects, no exploit, and the best mobile layout tested.",
+      "queue": "P2",
+      "playtestedOn": "2026-08-16"
+    }
   },
   "provenance": {
     "discoveredBy": "account-wide discovery, August 2026",

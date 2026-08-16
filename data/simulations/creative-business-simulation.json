@@ -97,16 +97,25 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. Five chapters of branching narrative with correctly applied economics and a gated knowledge check — deliberately failing produced 0/5 and blocked progress, so the gate is real.",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "The strategic choices drive no tracked state. There is no meter, score or resource anywhere; a choice only selects which narrative text and which quiz questions come next, so nothing is at stake in choosing.",
+        "Begin Journey silently does nothing until a school email is entered, with no required-field indicator, on an otherwise unauthenticated public page."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "EXPERIMENTAL",
+      "tierBasis": "Correctly applied economics chapter by chapter, but no meter, score or resource exists, so the strategic choices only gate which quiz comes next.",
+      "queue": "P2",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

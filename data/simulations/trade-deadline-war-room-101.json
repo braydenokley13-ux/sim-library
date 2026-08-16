@@ -113,7 +113,13 @@
     "lastVerified": {
       "technical": "2026-08-16"
     },
-    "notes": "Shares a title with trade-deadline-war-room-201. Evidence points to deliberate grade-band differentiation rather than accidental duplication, but this was never confirmed by a human."
+    "notes": "Shares a title with trade-deadline-war-room-201. Evidence points to deliberate grade-band differentiation rather than accidental duplication, but this was never confirmed by a human.",
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "Strong production and a genuine ownership pressure beat, undermined by scoring that rates standing pat twice above the most aggressive path available.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
+    }
   },
   "provenance": {
     "discoveredBy": "account-wide discovery, August 2026",

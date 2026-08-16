@@ -94,6 +94,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "Three chained trade decisions with deltas shown before commitment and a strong closing report. The ending archetype is too coarse to distinguish opposite strategies.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {
