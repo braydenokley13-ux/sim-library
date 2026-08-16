@@ -82,16 +82,24 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "bowsportscapital.com/simulation returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. Three trade rounds with stat deltas shown before commitment; choosing win-now moved WIN-NOW 50 to 72 while FUTURE ASSETS fell 58 to 34. Deterministic, no randomness. Ends in a full report with an earned archetype.",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "The ending archetype is too coarse to reflect the play: an all-aggressive run and an all-conservative run both returned \"THE BALANCED BUILDER\" with identical flavour text, and only a maximally extreme path produced a different label."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "Three chained trade decisions with deltas shown before commitment and a strong closing report. The ending archetype is too coarse to distinguish opposite strategies.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

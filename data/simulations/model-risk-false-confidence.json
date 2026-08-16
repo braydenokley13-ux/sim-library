@@ -82,18 +82,27 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. Fifteen well-researched scenarios across three levels using real cases, with one correct answer each and an explanation on a miss. Mechanically it is a multiple-choice quiz: nothing carries forward between scenarios, there is no state, and a wrong answer changes only the tally.",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "Described as training judgement under uncertainty, but there is no uncertainty and no accumulating state — the same fifteen questions in the same order every time, so replay is answer recall.",
+        "A page error, \"Cannot read properties of undefined (reading context)\", fired once on a rapid double-click; it did not reproduce in clean play but wants a defensive check."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     },
-    "notes": "Its structure is closer to a worked diagnostic quiz than a turn-based simulation. It is included because the decisions are genuine judgement calls with explained consequences, but it sits at the boundary of the inclusion rule."
+    "notes": "Its structure is closer to a worked diagnostic quiz than a turn-based simulation. It is included because the decisions are genuine judgement calls with explained consequences, but it sits at the boundary of the inclusion rule.",
+    "curation": {
+      "tier": "EXPERIMENTAL",
+      "tierBasis": "Sharp, well-researched writing on model risk with no accumulating state behind it. The strongest candidate in the account for turning a quiz into a decision engine.",
+      "queue": "P2",
+      "playtestedOn": "2026-08-16"
+    }
   },
   "provenance": {
     "discoveredBy": "account-wide discovery, August 2026",

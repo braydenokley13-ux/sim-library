@@ -90,16 +90,24 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. Three difficulty tiers with real information asymmetry — surplus and window are hidden behind question marks at higher levels — and a timer that tightens from 90 to 45 seconds. Two strategies produced genuinely different endings: always trading up cleared all three levels at 8.3, always taking the star swing failed level two at 5.3 with total surplus -5.",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "The strongest option is listed first and looks the same every round, so a student can pattern-click the first card without reading the EV numbers. Shuffling option order would force the reading the lesson depends on."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "Explicit EV, surplus and window numbers with real information asymmetry at higher tiers and a tightening clock. Divergent endings confirmed.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

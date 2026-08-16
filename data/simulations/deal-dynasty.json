@@ -86,16 +86,25 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. Seven rounds covering signalling, BATNA, information asymmetry, repeated games and multi-party bargaining, with vivid scenario writing and feedback that explains why an option worked. A repeated pricing game iterates against a tit-for-tat rival, and squeezing an ally in the three-party round genuinely collapses the deal.",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "Reputation carries no weight at the ending. A deliberately greedy, dishonest run finished with MORE cash than an honest one ($43,000 against $41,000) despite reputation of 32 against 71, and both received the identical title \"Savvy Dealmaker\".",
+        "The Round Breakdown list on the results screen prints every row twice."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "Signalling, BATNA, repeated games and multi-party bargaining in one coherent arc, with feedback that explains why an option failed. Reputation currently carries no weight at the ending.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

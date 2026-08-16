@@ -83,19 +83,22 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. The richest simulation in the account: stochastic seasons, enforced cap constraints, and scoring that tracks the moves actually made rather than the strategy label chosen. Two defects, one of which misleads on the concept being taught.",
       "documentation": "minimal",
-      "knownBlockers": [
-        "The browser tab still reads 'React App' — the default title was never set.",
-        "The onboarding component references an image that does not exist in the repo, so it will 404 on the deployed site."
-      ]
+      "knownBlockers": []
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "FLAGSHIP",
+      "tierBasis": "The richest simulation in the account: stochastic seasons, enforced cap constraints, and scoring that reads the moves actually made rather than the strategy label chosen. The dashboard that told four of five team contexts to play it safe — costing a student up to 32 points of 100 for following it — was repaired in this pass.",
+      "queue": "P2",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

@@ -88,7 +88,7 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. No defects found and no dominant strategy: buying the highest-talent players affordable produced four players, 37 wins and an illegal roster, while buying value produced thirteen players, 41 wins and chemistry 95. Depth beating star-stacking is a real, non-obvious result, and the roster-size rule closes the obvious exploit. Season variance is separate from the choices and labelled as such.",
       "documentation": "complete",
       "knownBlockers": []
     },
@@ -97,7 +97,13 @@
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "FLAGSHIP",
+      "tierBasis": "A genuinely open sandbox with a non-obvious result: buying the best affordable players produced four players and 37 wins, buying value produced thirteen and 41. The roster-size rule closes the star-stacking exploit by construction, and season variance is separated from the choices.",
+      "queue": "P2",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

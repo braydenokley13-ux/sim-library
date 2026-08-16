@@ -222,6 +222,27 @@
           }
         },
 
+        "curation": {
+          "type": "object", "additionalProperties": false,
+          "required": ["tier", "tierBasis"],
+          "description": "BOW's editorial judgement about where a simulation sits in the portfolio. This is a THIRD axis, and it must not be confused with the other two: maturity asks 'how much has this been proven?' (earned, and mostly unearned because nothing is student-tested), public readiness asks 'is this safe to click?' (computed mechanically). Curation asks a question neither can answer — 'of the things that do run, which ones should a teacher reach for first?'. It is an opinion, formed by playing them, and it is allowed to rank an unproven simulation highly. What it must never do is imply evidence: tier is never rendered as a maturity claim, and FLAGSHIP/RECOMMENDED are gated below on the record actually being playable, so curation can never smuggle something onto the public site that readiness excluded.",
+          "properties": {
+            "tier": {
+              "enum": ["FLAGSHIP", "RECOMMENDED", "EXPERIMENTAL", "HOLD", "REBUILD", "ARCHIVE"],
+              "description": "FLAGSHIP: carries the library, worth investing in. RECOMMENDED: solid, teach it today. EXPERIMENTAL: interesting but rough — opt in knowingly. HOLD: do not teach yet. REBUILD: the idea is worth keeping, this execution is not. ARCHIVE: stop spending time on it."
+            },
+            "tierBasis": {
+              "type": "string", "minLength": 20,
+              "description": "Why this tier, in a sentence a stranger could argue with. Required so a tier is never a bare assertion."
+            },
+            "queue": {
+              "enum": ["P0", "P1", "P2", "ARCHIVE"],
+              "description": "Repair priority for work not yet done. P0: broken or nearly-good, fix next. P1: worthwhile. P2: later. ARCHIVE: no further work planned."
+            },
+            "playtestedOn": { "type": "string", "format": "date", "description": "When a human or agent last actually played it end to end. Not student evidence — see governance.validation for that." }
+          }
+        },
+
         "notes": { "type": "string", "description": "Leadership-facing. Internal only." }
       }
     },

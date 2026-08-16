@@ -86,10 +86,16 @@
       "productOwner": "UNOWNED"
     },
     "health": {
-      "technical": "healthy",
-      "technicalBasis": "Deep link verified 2026-08-16: returns 200 and renders this experience directly, rather than the shared hub page it previously pointed at.",
+      "technical": "needs-attention",
+      "technicalBasis": "Playtested end to end 2026-08-16. The weighting tool itself works and the leaderboard genuinely reorders — a scoring-first weighting put Embiid first at 81, a defence-first weighting put Gilgeous-Alexander first at 66 — but the charting throughout is dead and the console fills with errors.",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "Selecting any sport fires 24 repeated page errors (Cannot read properties of null, reading id / ppg / reb), every time.",
+        "Every chart renders an empty plot area with axis labels and no bars, in both Build Stat and the Report.",
+        "Write My Report throws Maximum call stack size exceeded.",
+        "QR export is blocked and does not load.",
+        "On a phone the stats table shows 3 of 8 columns with no scroll affordance, and the tab bar loses its labels."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
@@ -97,6 +103,12 @@
     },
     "lastVerified": {
       "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "EXPERIMENTAL",
+      "tierBasis": "The weighting tool works and the leaderboard genuinely reorders, but every chart renders empty, the report throws, and selecting a sport fires 24 errors.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

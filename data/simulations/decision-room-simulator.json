@@ -97,7 +97,7 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. No defects and no dominant strategy found. Two competing model dashboards disagree with explicit tradeoffs and named blind spots, three meters move every phase, and a mid-run REALITY SHIFTS event forces a genuine reconsideration. Distinct play styles produced distinct archetypes and different claim codes.",
       "documentation": "minimal",
       "knownBlockers": []
     },
@@ -106,7 +106,13 @@
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "FLAGSHIP",
+      "tierBasis": "Teaches epistemics rather than arithmetic: two model dashboards disagree, each with a named blind spot, and a mid-run injury event breaks whichever story the student had settled on. Distinct play styles produce distinct archetypes rather than better or worse scores.",
+      "queue": "P2",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

@@ -2,10 +2,20 @@
   "generated": "2026-08-16",
   "totals": {
     "records": 76,
-    "included": 49,
-    "excluded": 27
+    "included": 43,
+    "excluded": 33
   },
   "excluded": [
+    {
+      "id": "analytics-lab",
+      "title": "Analytics Lab",
+      "reason": "health-not-confirmed"
+    },
+    {
+      "id": "bow-boss-sim-economic-summit",
+      "title": "BOW Boss Sim — Economic Summit",
+      "reason": "health-not-confirmed"
+    },
     {
       "id": "bow-universe-sandbox",
       "title": "Sandbox Impact Model",
@@ -15,6 +25,11 @@
       "id": "bow-zoom-discovery-game",
       "title": "BOW Sports Capital Zoom Game",
       "reason": "not-active"
+    },
+    {
+      "id": "bsc-pregame-cap-simulator",
+      "title": "BOW Sports Capital: Pregame",
+      "reason": "health-not-confirmed"
     },
     {
       "id": "decision-room-memo",
@@ -62,6 +77,11 @@
       "reason": "student-data-needs-a-human-decision"
     },
     {
+      "id": "gauntlet-l3-economic-policy-simulator",
+      "title": "Gauntlet L3: Economic Policy Simulator",
+      "reason": "health-not-confirmed"
+    },
+    {
       "id": "ground-zero",
       "title": "Ground Zero",
       "reason": "no-launch-url"
@@ -82,6 +102,11 @@
       "reason": "no-launch-url"
     },
     {
+      "id": "nfl-system-stress-test",
+      "title": "NFL System Stress Test",
+      "reason": "health-not-confirmed"
+    },
+    {
       "id": "reputation-and-the-long-game",
       "title": "Reputation & the Long Game",
       "reason": "no-launch-url"
@@ -95,6 +120,11 @@
       "id": "startup-tycoon",
       "title": "Startup Tycoon: Data-Driven Decisions",
       "reason": "launch-url-not-verified"
+    },
+    {
+      "id": "stat-inventor",
+      "title": "Stat Inventor",
+      "reason": "health-not-confirmed"
     },
     {
       "id": "structural-leverage-sim",

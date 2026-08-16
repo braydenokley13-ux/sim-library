@@ -58,12 +58,16 @@ nowhere. The website's lesson catalog has since been retired — `/lessons` now
 redirects to `/programs` — so there was nothing left to fix, only something to
 add. **The gap was a linking problem, not a building problem**, and it was the
 cheapest, largest win available. `public/index.html` and the `/simulations`
-route in the website repo close it: see `docs/public-library.md`.
+route in the website repo close it: see `docs/public-library.md`. That route
+now exists — it renders this repository's published payload, vendored rather
+than fetched, so the one page whose job is to reach the simulations cannot be
+taken down by a database it does not need.
 
-**3. 23 experiences cannot be launched at all.** No link of any kind. That includes
-Highway World, the largest product in the account: it has roughly 2,700 tests
-and no deployment of any kind, so running it requires cloning a repo and
-starting a dev server. For teaching purposes those 23 do not currently exist.
+**3. 25 experiences cannot be launched at all.** Every one has a repository and
+none has a live URL, so reaching it means cloning source and starting a dev
+server. That includes Highway World, the largest product in the account, which
+has roughly 2,700 tests and no deployment of any kind. For teaching purposes
+those 25 do not currently exist.
 
 **4. Financial literacy is thin.** BOW calls Economics and Financial Literacy
 co-equal pillars. The portfolio is 59 economics to 5 financial literacy, and the

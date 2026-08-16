@@ -73,6 +73,14 @@ const BUCKETS = {
  * nobody will look. These are pulled out and listed first, whatever else is
  * true of the record.
  */
+/**
+ * Repair priority, where a human has set one. Deliberately separate from the
+ * bucket: the bucket says what KIND of work an item needs, this says which to
+ * do first. Anything unranked sorts last — silence is not urgency.
+ */
+const PRIORITY_ORDER = { P0: 0, P1: 1, P2: 2, ARCHIVE: 4 };
+const PRIORITY_RANK = (rec) => PRIORITY_ORDER[rec.governance.curation?.queue] ?? 3;
+
 const PERSONAL_DATA = /personal data|real name|email address|\bPII\b/i;
 const hasPersonalData = (rec) =>
   (rec.governance.health.knownBlockers ?? []).some((b) => PERSONAL_DATA.test(b));
@@ -192,8 +200,12 @@ if (privacy.length) {
     w(`- **${rec.product.title}** (\`${rec.id}\`) — ${blockers.join(" ")}`);
   }
   w();
-  w("Neither is published, and the public build could not have published this field in any");
-  w("case. The exposure is the repository itself.");
+  const published = privacy.filter(({ rec }) => assess(rec).state === "available").length;
+  w(
+    published === 0
+      ? `${privacy.length === 1 ? "It is" : "None is"} published, and the public build could not have published this field in any case. The exposure is the repository itself.`
+      : `${published} of these ${privacy.length} ${published === 1 ? "is" : "are"} published. The public build strips the field, so the exposure is the repository itself — but it is reachable history either way.`,
+  );
   w();
   w("---");
   w();
@@ -215,11 +227,33 @@ for (const b of Object.values(BUCKETS)) {
     w("*Nothing in this group.*");
     continue;
   }
+  // Within a group every item needs the same KIND of work, so the only thing
+  // left to say is which to do first. That is a judgement, and where someone
+  // has made it, it sorts. Unranked items sink rather than float: an item
+  // nobody has assessed is not thereby urgent.
+  items.sort((a, b) => PRIORITY_RANK(a.rec) - PRIORITY_RANK(b.rec) || a.rec.id.localeCompare(b.rec.id));
+
   for (const { rec, why } of items) {
+    const priority = rec.governance.curation?.queue;
+    const tier = rec.governance.curation?.tier;
     w();
     w(`### ${rec.product.title}`);
     w();
-    w(`\`${rec.id}\` · ${rec.governance.maturity} · health ${rec.governance.health.technical}`);
+    w(
+      [
+        `\`${rec.id}\``,
+        priority ? `**${priority}**` : null,
+        tier ? tier : null,
+        rec.governance.maturity,
+        `health ${rec.governance.health.technical}`,
+      ]
+        .filter(Boolean)
+        .join(" · "),
+    );
+    if (rec.governance.curation?.tierBasis) {
+      w();
+      w(`*${rec.governance.curation.tierBasis}*`);
+    }
     w();
     w(why);
     const blockers = rec.governance.health.knownBlockers ?? [];

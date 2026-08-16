@@ -96,16 +96,24 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. Real roster, live meters, a randomised owner curveball, and a genuine failure state — a deliberately poor build scored 51 against 99 for a strong one.",
       "documentation": "partial",
-      "knownBlockers": []
+      "knownBlockers": [
+        "The final report always prints the same curveball verdict text (\"carry at least 9 players\") regardless of which curveball was actually issued, including when the real one was marked complete."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "A randomised owner curveball and a real failure state — a deliberately poor build scored 51 against 99. The economics lean on soft chemistry and clout rather than cap arithmetic.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

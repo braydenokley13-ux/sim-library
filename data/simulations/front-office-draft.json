@@ -94,16 +94,24 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. Strong complementarity puzzle with real synergy and conflict penalties, undermined by contradictory scoring shown on one screen.",
       "documentation": "complete",
-      "knownBlockers": []
+      "knownBlockers": [
+        "Two different numbers are both labelled \"Final Score\" on the results screen at once — a live preview reading 10.4 sits directly above an official rating of 4.9 out of 7.0."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "A complementarity puzzle with real synergy and conflict penalties and four hidden combinations to find. Two different numbers are labelled Final Score on the same results screen.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

@@ -94,7 +94,7 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. No defects found. The budget constraint is genuinely enforced — selecting a fifth project at $100 of $100 spent produced no state change at all — and the closing reflection question is generated from the projects the student actually skipped rather than asked generically.",
       "documentation": "missing",
       "knownBlockers": []
     },
@@ -103,7 +103,13 @@
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "FLAGSHIP",
+      "tierBasis": "Civic economics done properly for the youngest audience: the budget constraint is genuinely enforced rather than decorative, and the closing reflection question is generated from the projects the student actually skipped.",
+      "queue": "P2",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

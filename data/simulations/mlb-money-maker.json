@@ -92,7 +92,7 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16 with both endings reached. No defects found in two full playthroughs and no dominant allocation — every combination tried left at least one stakeholder under 55 percent. An even $2B split across four stakeholders still collapses the deal, which is a genuinely good economics point, and the second phase forces levers that money alone cannot fix.",
       "documentation": "minimal",
       "knownBlockers": []
     },
@@ -101,7 +101,13 @@
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "FLAGSHIP",
+      "tierBasis": "Multi-stakeholder bargaining that cannot be solved by one lever. Every allocation tried left someone under 55 percent happy, an even split still collapses the deal, and the second phase forces non-monetary terms. Both the win and the collapse were reached, and no defects were found.",
+      "queue": "P2",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

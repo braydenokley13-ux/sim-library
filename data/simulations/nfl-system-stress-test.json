@@ -83,17 +83,25 @@
       "productOwner": "UNOWNED"
     },
     "health": {
-      "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technical": "needs-attention",
+      "technicalBasis": "Playtested end to end 2026-08-16. Real Mode plays correctly through all 15 scenarios and resists guessing. Tutorial Mode — one of the two routes the entry screen offers — is a dead end.",
       "documentation": "complete",
-      "knownBlockers": []
+      "knownBlockers": [
+        "Tutorial Mode softlocks on its first scenario: submitting throws \"evaluateAlignment is not defined\" and the screen never advances. The entry page advertises it as one of two ways in, so half the front door is broken."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "EXPERIMENTAL",
+      "tierBasis": "Real Mode plays well and resists guessing, but Tutorial Mode — one of the two routes the entry screen offers — throws on its first question and cannot be completed.",
+      "queue": "P0",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

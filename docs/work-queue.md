@@ -4,7 +4,7 @@
 
 Generated 2026-08-16 from 76 registry records.
 
-**41 are publicly playable today.** The other 35 are below, grouped by what
+**35 are publicly playable today.** The other 41 are below, grouped by what
 would actually have to happen to change that.
 
 ## Handle first — personal data in a repository
@@ -18,15 +18,14 @@ sorted by effort, so it is listed here regardless of what else is true of the re
 - **Signal Engine — Sports Agent Negotiation Sim** (`signal-engine`) — Asks the student for an email address before play begins.
 - **WAR ROOM — NBA Decision Simulator** (`war-room-nba-decision-simulator`) — Asks the student for an email address before play begins.
 
-Neither is published, and the public build could not have published this field in any
-case. The exposure is the repository itself.
+None is published, and the public build could not have published this field in any case. The exposure is the repository itself.
 
 ---
 
 | # | Group | Count |
 | --- | --- | --- |
 | 1 | Launchable, needs metadata or copy | 0 |
-| 2 | High-value deployment fix | 11 |
+| 2 | High-value deployment fix | 17 |
 | 3 | Substantial product repair | 6 |
 | 4 | In development | 9 |
 | 5 | Archive or review candidate | 3 |
@@ -40,9 +39,79 @@ The experience works and is reachable. What is missing is the writing around it 
 
 *Nothing in this group.*
 
-## 2. High-value deployment fix — 11
+## 2. High-value deployment fix — 17
 
 A finished build with no working front door. Nothing needs designing or rewriting; something needs hosting, or a host that stopped serving needs restarting. The highest ratio of value to effort here.
+
+### Analytics Lab
+
+`analytics-lab` · **P0** · EXPERIMENTAL · PLAYABLE · health needs-attention
+
+*The weighting tool works and the leaderboard genuinely reorders, but every chart renders empty, the report throws, and selecting a sport fires 24 errors.*
+
+A launch URL exists but health is "needs-attention". The front door is the problem, not the product.
+
+- Selecting any sport fires 24 repeated page errors (Cannot read properties of null, reading id / ppg / reb), every time.
+- Every chart renders an empty plot area with axis labels and no bars, in both Build Stat and the Report.
+- Write My Report throws Maximum call stack size exceeded.
+- QR export is blocked and does not load.
+- On a phone the stats table shows 3 of 8 columns with no scroll affordance, and the tab bar loses its labels.
+
+### BOW Boss Sim — Economic Summit
+
+`bow-boss-sim-economic-summit` · **P0** · HOLD · PLAYABLE · health broken
+
+*The strongest negotiation premise in the account, and unplayable: no honest run gets past round 2 of 6 because the continue control is never rendered.*
+
+A launch URL exists but health is "broken". The front door is the problem, not the product.
+
+- Reproducible softlock: after locking in or declining a round 2 alliance, no continue control is ever rendered anywhere in the DOM. Round 3 exists in the code and can be reached only by calling startRound3() from the console.
+- The round 1 opening statement is not read. A considered pro-business statement and the text "asdf asdf asdf" drew identical neutral reactions from all three cities.
+- Start Summit silently does nothing when the initials field is blank — no message, just a dead button.
+- On a phone the sidebar floats over the main column and the cards overlap illegibly.
+
+### BOW Sports Capital: Pregame
+
+`bsc-pregame-cap-simulator` · **P0** · HOLD · EXPERIMENTAL · health broken
+
+*The most polished cap-management concept in the account, and unplayable: pressing the Continue button it offers after the first decision of week 1 blanks the application, reproducibly.*
+
+A launch URL exists but health is "broken". The front door is the problem, not the product.
+
+- Reproducible crash: pressing Continue after the FIRST decision of week 1 blanks the application. Verified in five isolated trials across safe, balanced and risky choices — the game screen gains a hidden class, nothing replaces it, and no console error is thrown, so the page simply dies silently. The game only survives if the student happens to make a second chained decision before pressing the Continue button it has already enabled and offered.
+- An eight-step tutorial with no skip control stands between launch and the first decision.
+
+### Gauntlet L3: Economic Policy Simulator
+
+`gauntlet-l3-economic-policy-simulator` · **P0** · EXPERIMENTAL · PLAYABLE · health needs-attention
+
+*Genuine macro tradeoffs across eight quarters with random shocks, but a successful run never resolves: Quarter 8 resubmits forever while a failed run gets a full report.*
+
+A launch URL exists but health is "needs-attention". The front door is the problem, not the product.
+
+- A successful 8-quarter run has no ending — Quarter 8 can be resubmitted forever and no victory report is ever shown. The losing path already renders a full report; the winning path needs to fire the same component.
+- Reward logic is inverted in practice: a run that got fired in Quarter 2 produced a claim-code report, while two successful runs produced nothing.
+
+### NFL System Stress Test
+
+`nfl-system-stress-test` · **P0** · EXPERIMENTAL · PLAYABLE · health needs-attention
+
+*Real Mode plays well and resists guessing, but Tutorial Mode — one of the two routes the entry screen offers — throws on its first question and cannot be completed.*
+
+A launch URL exists but health is "needs-attention". The front door is the problem, not the product.
+
+- Tutorial Mode softlocks on its first scenario: submitting throws "evaluateAlignment is not defined" and the screen never advances. The entry page advertises it as one of two ways in, so half the front door is broken.
+
+### Stat Inventor
+
+`stat-inventor` · **P0** · EXPERIMENTAL · PLAYABLE · health needs-attention
+
+*A sound metric-construction lab whose charting half does not run at all, and whose phone layout silently drops a data column.*
+
+A launch URL exists but health is "needs-attention". The front door is the problem, not the product.
+
+- The "Your Chart" panel renders as an empty box. Four "Cannot read properties of null" errors fire on load before any interaction, followed by "Maximum call stack size exceeded" — consistent with a broken chart-library init.
+- On a phone the stats table silently drops the STL column rather than scrolling, so data disappears instead of being reachable.
 
 ### Sandbox Impact Model
 
@@ -144,7 +213,8 @@ The experience itself is incomplete or broken. Real product work, not a deployme
 
 Recorded as broken, and there is no launch surface to fall back on.
 
-- The page fails on load — state.js is never included, and the dependency check in sim1.js throws without it.
+- A syntax error kills all scripting on load, so every control is inert — Start Run and the four strategy presets do nothing.
+- index.html never includes state.js, and the dependency check in sim1.js throws without it.
 - state.js is a malformed patch dump containing a second copy of index.html pasted in as a comment.
 - Only Sim 1 of an intended three-part module exists; sim2 and sim3 are referenced but absent.
 
@@ -360,16 +430,13 @@ Runs inside the website behind a login and prior module completion. Whether a pu
 
 ## Published, but the card could be better
 
-38 of the 41 published simulations are missing a field a teacher looks for first.
+32 of the 35 published simulations are missing a field a teacher looks for first.
 None of this blocks publication; all of it makes a card more useful. A duration cannot be
 guessed from the outside — it needs someone to run the thing and time it.
 
 | Simulation | Missing |
 | --- | --- |
-| Analytics Lab | no duration |
-| BOW Boss Sim — Economic Summit | no grade band |
 | Bow Sports Empire | no duration |
-| BOW Sports Capital: Pregame | no duration, no grade band |
 | Business Economics Challenge | no duration |
 | Cap Crash | no duration |
 | Bow Sports Capital — Creative Business Simulation | no duration |
@@ -382,7 +449,6 @@ guessed from the outside — it needs someone to run the thing and time it.
 | Front Office: Build the Roster | no duration |
 | The Front Office Dashboard — Data to Decisions | no duration |
 | Front Office Draft | no duration |
-| Gauntlet L3: Economic Policy Simulator | no grade band |
 | The GM Challenge — Master the Efficiency Frontier | no duration, no grade band |
 | BOW Sports Capital — GM Decision Game | no duration, no grade band |
 | GM Trade Challenge — The 5-Minute Decision Maker | no duration |
@@ -392,12 +458,10 @@ guessed from the outside — it needs someone to run the thing and time it.
 | Model Risk & False Confidence | no duration, no grade band |
 | Moneyball Draft Challenge | no duration |
 | NBA Surplus Value Championship | no duration |
-| NFL System Stress Test | no duration, no grade band |
 | Process vs Results Lab — Football Edition | no duration |
 | Risk, Volatility & Rational Aggression | no duration, no grade band |
 | Small Markets, Big Money | no duration |
 | Sports Analytics Team Builder | no duration |
-| Stat Inventor | no duration |
 | Stats vs Scouts — Basketball Decision Lab | no duration |
 | The Asset Everyone Wants | no duration |
 | The League in a Box | no duration, no grade band |

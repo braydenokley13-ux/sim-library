@@ -86,16 +86,24 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. Genuine branching with transparent tradeoffs — every option shows its stat deltas before commitment, and two opposed paths ended far apart (competitive balance 50 versus 84).",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "On a 390px screen the step tracker overflows the right edge with no scroll cue."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "FLAGSHIP",
+      "tierBasis": "The best writing in the account, over real branching. Every option shows its stakeholder deltas before commitment, and two opposed paths ended far apart on competitive balance. Nothing here can be bluffed.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

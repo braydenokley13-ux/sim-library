@@ -92,11 +92,10 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. Three chained decisions with clearly narrated consequences; two opposed paths diverged substantially. Deterministic by design.",
       "documentation": "missing",
       "knownBlockers": [
-        "No persistence — a refresh loses all student progress.",
-        "Stylesheet still carries 'MLB MONEY MAKER' scaffolding from a different game it was reskinned from."
+        "Ends with a reflective report and no score of any kind, so nothing pulls a student to replay it."
       ]
     },
     "validation": {
@@ -104,7 +103,13 @@
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "Three chained decisions with consequences narrated clearly and real divergence between paths. Deterministic and unscored, which suits discussion and blunts replay.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

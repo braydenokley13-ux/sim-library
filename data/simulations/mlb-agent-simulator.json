@@ -101,16 +101,24 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16 across two full eight-player strategies, then repaired. The expected-value teaching is the clearest in the account. Three arithmetic defects were fixed on branch claude/sim-library-audit-upgrade-5sdd36: injury severity was unordered (a mild injury paid less than a severe one), the expected value on the decision screen assumed an injured bet paid the full guarantee when it never did, and the healthy branch was centred 20 percent above the figure the screen promised. A grid that never re-rendered also let a student decide one player eight times while the counter read 8 of 8. A Monte Carlo test now holds the shown and paid values within one percent.",
       "documentation": "partial",
-      "knownBlockers": []
+      "knownBlockers": [
+        "DOCUMENTED, NOT FIXED — betting is expected-value positive for all eight players, so a student reasoning purely by expected value should always bet and the decision collapses into a variance preference the game does not score. Incentives are large relative to injury risk; correcting it means rebalancing eight contracts, which changes the difficulty of the lesson and is a product decision."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "FLAGSHIP",
+      "tierBasis": "The clearest expected-value teaching anywhere in the account — the EV edge is shown before the choice and each result names the counterfactual not taken. Three arithmetic defects and a state bug were repaired in this pass; what remains is a balance question about the contract data.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

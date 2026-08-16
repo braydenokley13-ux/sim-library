@@ -86,16 +86,24 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. Plays correctly, but the final round appears frozen.",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "After locking in the Round 2 pick the button disables and no Continue appears — results only arrive when a still-running 44-second timer expires, with nothing on screen saying so. A student would reasonably assume it had crashed and reload, losing the result."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "RECOMMENDED",
+      "tierBasis": "Real historical cases that resist a single heuristic, plus a genuine value-for-money round. The final round looks frozen while a hidden timer runs out.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

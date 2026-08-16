@@ -94,16 +94,25 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. The economics content is rigorous — expected value, opportunity cost and comparative advantage tested with real applied arithmetic — but the interaction model is answering questions rather than playing.",
       "documentation": "missing",
-      "knownBlockers": []
+      "knownBlockers": [
+        "An uncaught error, \"Cannot read properties of undefined (reading answer)\", fires repeatedly during quick interaction with the quiz — a realistic path for a student who double-clicks.",
+        "Twenty-five multiple-choice questions dominate the runtime, bookended by one strategy choice and one crisis decision."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
+    },
+    "curation": {
+      "tier": "EXPERIMENTAL",
+      "tierBasis": "The applied economics content is strong; the interaction is twenty-five multiple-choice questions bookended by two decisions, and a runtime error fires on quick clicking.",
+      "queue": "P1",
+      "playtestedOn": "2026-08-16"
     }
   },
   "provenance": {

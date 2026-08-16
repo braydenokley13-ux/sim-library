@@ -6,143 +6,6 @@
   },
   "simulations": [
     {
-      "id": "analytics-lab",
-      "title": "Analytics Lab",
-      "summary": "Build a weighted metric, test it against the data, and write the scouting report.",
-      "whatStudentsDo": "Students pick a sport, explore a full statistical dataset, build a custom weighted metric with live sliders, examine percentiles, scatter plots and correlations, run what-if changes, then write and export a scouting report defending the metric they built.",
-      "track": {
-        "id": "analytics-lab",
-        "name": "Analytics Lab",
-        "note": "Build and test a metric"
-      },
-      "subject": {
-        "id": "cross-pillar",
-        "name": "Economics & financial literacy"
-      },
-      "concepts": [
-        {
-          "id": "econ.analytics-and-war",
-          "name": "Analytics & WAR"
-        },
-        {
-          "id": "econ.asset-valuation",
-          "name": "Asset Valuation"
-        },
-        {
-          "id": "econ.signal-vs-noise",
-          "name": "Signal vs Noise"
-        },
-        {
-          "id": "econ.model-risk",
-          "name": "Model Risk & False Confidence"
-        }
-      ],
-      "contexts": [
-        {
-          "id": "multi-sport",
-          "name": "Multi-sport"
-        }
-      ],
-      "gradeBands": [
-        "7",
-        "8"
-      ],
-      "gradeLabel": "Grades 7–8",
-      "durationBucket": null,
-      "durationLabel": null,
-      "format": {
-        "setting": [
-          {
-            "id": "self-guided",
-            "name": "Students can run it alone"
-          }
-        ],
-        "grouping": [
-          {
-            "id": "individual",
-            "name": "Individually"
-          }
-        ],
-        "devices": "one browser per student"
-      },
-      "instructorNeed": "Any instructor can run it",
-      "availability": "available",
-      "label": "Beta",
-      "playUrl": "https://braydenokley13-ux.github.io/BSC-BUILDANALYTIC/track201/",
-      "educatorResources": []
-    },
-    {
-      "id": "bow-boss-sim-economic-summit",
-      "title": "BOW Boss Sim — Economic Summit",
-      "summary": "Two students negotiate for one city against three AI cities over a recovery budget.",
-      "whatStudentsDo": "A pair of students represent one of five cities across six rounds — opening statements, forming coalitions, allocating a shared recovery budget, and a final negotiation — needing three of four votes to pass their plan while holding public approval above half.",
-      "track": {
-        "id": "gauntlet",
-        "name": "The Gauntlet",
-        "note": "Economics challenge ladder"
-      },
-      "subject": {
-        "id": "economics",
-        "name": "Economics"
-      },
-      "concepts": [
-        {
-          "id": "econ.negotiation",
-          "name": "Negotiation"
-        },
-        {
-          "id": "econ.stakeholder-management",
-          "name": "Stakeholder Management"
-        },
-        {
-          "id": "econ.fiscal-policy",
-          "name": "Fiscal Policy"
-        },
-        {
-          "id": "econ.leverage",
-          "name": "Leverage"
-        },
-        {
-          "id": "econ.batna",
-          "name": "BATNA"
-        },
-        {
-          "id": "econ.public-goods",
-          "name": "Public Goods"
-        }
-      ],
-      "contexts": [
-        {
-          "id": "city-and-policy",
-          "name": "Cities & policy"
-        }
-      ],
-      "gradeBands": [],
-      "gradeLabel": null,
-      "durationBucket": "45-90",
-      "durationLabel": "50 min",
-      "format": {
-        "setting": [
-          {
-            "id": "facilitator-led",
-            "name": "Led by an instructor"
-          }
-        ],
-        "grouping": [
-          {
-            "id": "pairs",
-            "name": "In pairs"
-          }
-        ],
-        "devices": "one browser per student"
-      },
-      "instructorNeed": "Any instructor can run it",
-      "availability": "available",
-      "label": "Beta",
-      "playUrl": "https://braydenokley13-ux.github.io/GAUNTLET/Boss%20Sim/",
-      "educatorResources": []
-    },
-    {
       "id": "bow-sports-empire",
       "title": "Bow Sports Empire",
       "summary": "Five seasons of building a sports business, ending in an adaptive final round.",
@@ -218,6 +81,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M3-ECON/",
+      "tier": "recommended",
       "educatorResources": []
     },
     {
@@ -306,77 +170,7 @@
       "availability": "in-development",
       "label": "In development",
       "playUrl": null,
-      "educatorResources": []
-    },
-    {
-      "id": "bsc-pregame-cap-simulator",
-      "title": "BOW Sports Capital: Pregame",
-      "summary": "A twelve-week single-player front-office season with a running CBA glossary.",
-      "whatStudentsDo": "Students take a team through a twelve-week season as club president, making a major decision each week plus minor ones, working a trade deadline and a finale, while a glossary panel defines each cap term as it becomes relevant. Owner patience running out ends the run.",
-      "track": {
-        "id": "pre-course",
-        "name": "Pre-Course",
-        "note": "Getting started"
-      },
-      "subject": {
-        "id": "economics",
-        "name": "Economics"
-      },
-      "concepts": [
-        {
-          "id": "econ.salary-cap",
-          "name": "Salary Cap"
-        },
-        {
-          "id": "econ.luxury-tax",
-          "name": "Luxury Tax"
-        },
-        {
-          "id": "econ.bird-rights",
-          "name": "Bird Rights"
-        },
-        {
-          "id": "econ.mid-level-exception",
-          "name": "Mid-Level Exception"
-        },
-        {
-          "id": "econ.roster-windows",
-          "name": "Roster Windows"
-        },
-        {
-          "id": "econ.time-horizon",
-          "name": "Time Horizon"
-        }
-      ],
-      "contexts": [
-        {
-          "id": "sports-front-office",
-          "name": "Front office & GM"
-        }
-      ],
-      "gradeBands": [],
-      "gradeLabel": null,
-      "durationBucket": null,
-      "durationLabel": null,
-      "format": {
-        "setting": [
-          {
-            "id": "self-guided",
-            "name": "Students can run it alone"
-          }
-        ],
-        "grouping": [
-          {
-            "id": "individual",
-            "name": "Individually"
-          }
-        ],
-        "devices": "one browser per student"
-      },
-      "instructorNeed": "Any instructor can run it",
-      "availability": "available",
-      "label": "Beta",
-      "playUrl": "https://braydenokley13-ux.github.io/BSC-pre-course/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -451,6 +245,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M2-ECON/",
+      "tier": "recommended",
       "educatorResources": []
     },
     {
@@ -526,6 +321,7 @@
       "availability": "in-development",
       "label": "In development",
       "playUrl": null,
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -596,6 +392,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/T201-M1-L1/",
+      "tier": "flagship",
       "educatorResources": []
     },
     {
@@ -674,6 +471,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M2-ECON/",
+      "tier": "experimental",
       "educatorResources": []
     },
     {
@@ -744,6 +542,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M1-L2/",
+      "tier": "experimental",
       "educatorResources": []
     },
     {
@@ -819,6 +618,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M3-ECON/",
+      "tier": "recommended",
       "educatorResources": []
     },
     {
@@ -886,6 +686,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M4-L2/",
+      "tier": "flagship",
       "educatorResources": []
     },
     {
@@ -952,6 +753,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M2-ECON/",
+      "tier": "experimental",
       "educatorResources": []
     },
     {
@@ -1018,6 +820,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M3-ECON/",
+      "tier": "experimental",
       "educatorResources": []
     },
     {
@@ -1084,6 +887,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M4-L3/",
+      "tier": "flagship",
       "educatorResources": []
     },
     {
@@ -1155,6 +959,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M2-L1/",
+      "tier": "recommended",
       "educatorResources": []
     },
     {
@@ -1225,6 +1030,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/T101-M1-L1/",
+      "tier": "recommended",
       "educatorResources": []
     },
     {
@@ -1303,6 +1109,7 @@
       "availability": "in-development",
       "label": "In development",
       "playUrl": null,
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -1381,6 +1188,7 @@
       "availability": "in-development",
       "label": "In development",
       "playUrl": null,
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -1459,6 +1267,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M3-L1/",
+      "tier": "flagship",
       "educatorResources": []
     },
     {
@@ -1525,6 +1334,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M3-L3/",
+      "tier": "recommended",
       "educatorResources": []
     },
     {
@@ -1595,81 +1405,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/T101-M2-L1/",
-      "educatorResources": []
-    },
-    {
-      "id": "gauntlet-l3-economic-policy-simulator",
-      "title": "Gauntlet L3: Economic Policy Simulator",
-      "summary": "Eight quarters of fiscal, monetary and trade policy for a city in crisis.",
-      "whatStudentsDo": "Students advise a city whose largest factory has closed, choosing fiscal, monetary and trade policy each quarter across two in-game years and balancing unemployment, inflation, growth and public approval. Policies take effect on a delay, and the engine models the trade-off between unemployment and inflation directly.",
-      "track": {
-        "id": "gauntlet",
-        "name": "The Gauntlet",
-        "note": "Economics challenge ladder"
-      },
-      "subject": {
-        "id": "economics",
-        "name": "Economics"
-      },
-      "concepts": [
-        {
-          "id": "econ.fiscal-policy",
-          "name": "Fiscal Policy"
-        },
-        {
-          "id": "econ.monetary-policy",
-          "name": "Monetary Policy"
-        },
-        {
-          "id": "econ.inflation",
-          "name": "Inflation"
-        },
-        {
-          "id": "econ.gdp-and-growth",
-          "name": "GDP & Economic Growth"
-        },
-        {
-          "id": "econ.business-cycle",
-          "name": "The Business Cycle"
-        },
-        {
-          "id": "econ.multiplier-effect",
-          "name": "The Multiplier Effect"
-        },
-        {
-          "id": "econ.tradeoffs",
-          "name": "Tradeoffs"
-        }
-      ],
-      "contexts": [
-        {
-          "id": "city-and-policy",
-          "name": "Cities & policy"
-        }
-      ],
-      "gradeBands": [],
-      "gradeLabel": null,
-      "durationBucket": "20-45",
-      "durationLabel": "35 min",
-      "format": {
-        "setting": [
-          {
-            "id": "self-guided",
-            "name": "Students can run it alone"
-          }
-        ],
-        "grouping": [
-          {
-            "id": "individual",
-            "name": "Individually"
-          }
-        ],
-        "devices": "one browser per student"
-      },
-      "instructorNeed": "Any instructor can run it",
-      "availability": "available",
-      "label": "Beta",
-      "playUrl": "https://braydenokley13-ux.github.io/GAUNTLET/gauntlet-l3/",
+      "tier": "recommended",
       "educatorResources": []
     },
     {
@@ -1741,6 +1477,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M1-L3/",
+      "tier": "flagship",
       "educatorResources": []
     },
     {
@@ -1808,6 +1545,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M1-L1/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -1874,6 +1612,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M4-L3/",
+      "tier": "recommended",
       "educatorResources": []
     },
     {
@@ -2054,6 +1793,7 @@
       "availability": "in-development",
       "label": "In development",
       "playUrl": null,
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -2120,6 +1860,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M1-ECON/",
+      "tier": "flagship",
       "educatorResources": []
     },
     {
@@ -2190,6 +1931,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M2-L2/",
+      "tier": "flagship",
       "educatorResources": []
     },
     {
@@ -2264,6 +2006,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/T201-M2-L1/",
+      "tier": "flagship",
       "educatorResources": []
     },
     {
@@ -2327,6 +2070,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M4-L3/",
+      "tier": "experimental",
       "educatorResources": []
     },
     {
@@ -2393,6 +2137,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M3-L1/",
+      "tier": "recommended",
       "educatorResources": []
     },
     {
@@ -2459,73 +2204,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M4-L2/",
-      "educatorResources": []
-    },
-    {
-      "id": "nfl-system-stress-test",
-      "title": "NFL System Stress Test",
-      "summary": "Judge whether a shock strengthens, strains or breaks an organisation.",
-      "whatStudentsDo": "Students read fifteen real stress scenarios across five teams, each with its own organisational profile, and classify each as something the system needs, absorbs, is strained by, or breaks under. A tutorial mode walks three scenarios with answers shown; the real mode runs all fifteen blind and scored.",
-      "track": {
-        "id": "track-301",
-        "name": "Track 301",
-        "note": "Advanced"
-      },
-      "subject": {
-        "id": "cross-pillar",
-        "name": "Economics & financial literacy"
-      },
-      "concepts": [
-        {
-          "id": "econ.operations-tradeoffs",
-          "name": "Operations Tradeoffs"
-        },
-        {
-          "id": "econ.uncertainty",
-          "name": "Uncertainty"
-        },
-        {
-          "id": "econ.reputation-risk",
-          "name": "Reputation Risk"
-        },
-        {
-          "id": "econ.stakeholder-management",
-          "name": "Stakeholder Management"
-        },
-        {
-          "id": "econ.roster-construction",
-          "name": "Roster Construction"
-        }
-      ],
-      "contexts": [
-        {
-          "id": "football",
-          "name": "Football"
-        }
-      ],
-      "gradeBands": [],
-      "gradeLabel": null,
-      "durationBucket": null,
-      "durationLabel": null,
-      "format": {
-        "setting": [
-          {
-            "id": "self-guided",
-            "name": "Students can run it alone"
-          }
-        ],
-        "grouping": [
-          {
-            "id": "individual",
-            "name": "Individually"
-          }
-        ],
-        "devices": "one browser per student"
-      },
-      "instructorNeed": "Any instructor can run it",
-      "availability": "available",
-      "label": "Beta",
-      "playUrl": "https://braydenokley13-ux.github.io/301-M2-L3/",
+      "tier": "recommended",
       "educatorResources": []
     },
     {
@@ -2609,6 +2288,7 @@
       "availability": "in-development",
       "label": "In development",
       "playUrl": null,
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -2675,6 +2355,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M3-L3/",
+      "tier": "recommended",
       "educatorResources": []
     },
     {
@@ -2750,6 +2431,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M2-L2/",
+      "tier": "flagship",
       "educatorResources": []
     },
     {
@@ -2816,6 +2498,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M2-L2/",
+      "tier": "flagship",
       "educatorResources": []
     },
     {
@@ -2886,68 +2569,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M3-L2/",
-      "educatorResources": []
-    },
-    {
-      "id": "stat-inventor",
-      "title": "Stat Inventor",
-      "summary": "Invent a scoring formula, then see who it crowns.",
-      "whatStudentsDo": "Students explore real player statistics across sports, star the players they rate, then build their own weighted formula in plain language and watch it decide a champion — discovering that what you choose to measure decides who wins.",
-      "track": {
-        "id": "analytics-lab",
-        "name": "Analytics Lab",
-        "note": "Build and test a metric"
-      },
-      "subject": {
-        "id": "cross-pillar",
-        "name": "Economics & financial literacy"
-      },
-      "concepts": [
-        {
-          "id": "econ.analytics-and-war",
-          "name": "Analytics & WAR"
-        },
-        {
-          "id": "econ.asset-valuation",
-          "name": "Asset Valuation"
-        },
-        {
-          "id": "econ.signal-vs-noise",
-          "name": "Signal vs Noise"
-        }
-      ],
-      "contexts": [
-        {
-          "id": "multi-sport",
-          "name": "Multi-sport"
-        }
-      ],
-      "gradeBands": [
-        "5",
-        "6"
-      ],
-      "gradeLabel": "Grades 5–6",
-      "durationBucket": null,
-      "durationLabel": null,
-      "format": {
-        "setting": [
-          {
-            "id": "self-guided",
-            "name": "Students can run it alone"
-          }
-        ],
-        "grouping": [
-          {
-            "id": "individual",
-            "name": "Individually"
-          }
-        ],
-        "devices": "one browser per student"
-      },
-      "instructorNeed": "Any instructor can run it",
-      "availability": "available",
-      "label": "Beta",
-      "playUrl": "https://braydenokley13-ux.github.io/BSC-BUILDANALYTIC/track101/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -3010,6 +2632,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M3-L2/",
+      "tier": "recommended",
       "educatorResources": []
     },
     {
@@ -3080,6 +2703,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://bowsportscapital.com/simulation",
+      "tier": "recommended",
       "educatorResources": []
     },
     {
@@ -3152,6 +2776,7 @@
       "availability": "in-development",
       "label": "In development",
       "playUrl": null,
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -3227,6 +2852,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/league-in-a-box/",
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -3303,6 +2929,7 @@
       "availability": "in-development",
       "label": "In development",
       "playUrl": null,
+      "tier": null,
       "educatorResources": []
     },
     {
@@ -3369,6 +2996,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/T101-M1-L2/",
+      "tier": "recommended",
       "educatorResources": []
     },
     {
@@ -3435,6 +3063,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/T201-M1-L2/",
+      "tier": "flagship",
       "educatorResources": []
     },
     {
@@ -3510,6 +3139,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/301-M1-ECON/",
+      "tier": "recommended",
       "educatorResources": []
     },
     {
@@ -3576,6 +3206,7 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/101-M4-L1/",
+      "tier": "flagship",
       "educatorResources": []
     }
   ]
