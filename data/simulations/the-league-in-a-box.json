@@ -92,16 +92,21 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. Ten policy levers produce genuinely different league typologies with a stakeholder matrix that rewrites its wording, not just its numbers. Deterministic, and the most conceptually ambitious design in the account.",
       "documentation": "missing",
-      "knownBlockers": []
+      "knownBlockers": [
+        "Written far above its stated audience: \"stochastic allocation\", \"progressive spending penalties\", \"interclub revenue redistribution\", \"typology\", \"oligopoly\". This is aimed at grades 5 to 8.",
+        "No scarcity anywhere — the ten levers are independent with no shared budget, so nothing stops a student maxing every dial in one direction and there is no tradeoff pressure while deciding.",
+        "No score, no win state and nothing to regret, so there is no reason to replay it.",
+        "On a phone the option labels look tappable but are not; only the small range-input thumb responds, which is a poor touch target for a three-position control."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     },
     "notes": "Its own copy calls it a Track 101 capstone, so it is filed under Track 101 rather than as an unattached standalone — but it appears in no Track 101 lesson list. Worth reconciling against the curriculum."
   },

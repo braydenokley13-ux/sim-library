@@ -85,16 +85,19 @@
     },
     "health": {
       "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technicalBasis": "Playtested end to end 2026-08-16. Five years of portfolio construction with real market events and a concept scorecard. Passing on everything is correctly punished — 1.00x and a D against 6.82x and a B for an active strategy — but two defects undercut the model's credibility.",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "A visible arithmetic error in an economics product: a startup valued at $3.0M asking $6.2M reported \"Invested $6.2M for 207% equity\". Equity is never clamped, and a second fresh run reproduced the asking-above-valuation pattern on a different deal.",
+        "The Key Takeaways text is templated rather than derived from play. A run that made zero investments in five years was still praised for \"Exit Timing\" and for acting \"decisively on opportunities\", and was told \"Good job cutting losers!\" directly beneath a D grade for Sunk Cost Awareness."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     }
   },
   "provenance": {
