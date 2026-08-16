@@ -1,9 +1,9 @@
 {
-  "generated": "2026-08-15",
+  "generated": "2026-08-16",
   "totals": {
     "records": 76,
-    "included": 46,
-    "excluded": 30
+    "included": 45,
+    "excluded": 31
   },
   "excluded": [
     {
@@ -110,6 +110,11 @@
       "id": "reputation-and-the-long-game",
       "title": "Reputation & the Long Game",
       "reason": "no-launch-url"
+    },
+    {
+      "id": "startup-tycoon",
+      "title": "Startup Tycoon: Data-Driven Decisions",
+      "reason": "launch-url-not-verified"
     },
     {
       "id": "structural-leverage-sim",

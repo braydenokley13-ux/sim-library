@@ -11,8 +11,9 @@
     "build": "node scripts/build-catalog.mjs",
     "test": "node --test tests/*.test.mjs",
     "build:public": "node scripts/build-public.mjs && node scripts/build-library.mjs",
-    "check": "npm run validate && npm test && npm run build:public",
-    "fonts": "node scripts/fetch-fonts.mjs"
+    "check": "npm run validate && npm test && npm run build:public && node scripts/verify-launch.mjs --public",
+    "fonts": "node scripts/fetch-fonts.mjs",
+    "verify": "node scripts/verify-launch.mjs"
   },
   "dependencies": {
     "ajv": "^8.17.1",

@@ -66,8 +66,7 @@
       {
         "kind": "live-url",
         "label": "Play in browser (GitHub Pages)",
-        "url": "https://braydenokley13-ux.github.io/301-M4-ECON/",
-        "verified": "2026-08-14"
+        "url": "https://braydenokley13-ux.github.io/301-M4-ECON/"
       },
       {
         "kind": "repo",
@@ -88,17 +87,19 @@
       "productOwner": "UNOWNED"
     },
     "health": {
-      "technical": "healthy",
-      "technicalBasis": "GitHub Pages returned 200 on 2026-08-14. Reachability only.",
+      "technical": "broken",
+      "technicalBasis": "GitHub Pages returned 404 \"Site not found\" on 2026-08-16. The repository exists but has no Pages deployment, so the recorded live URL opens nothing. It answered 200 on 2026-08-14, so this is a regression rather than a link that was never right.",
       "documentation": "minimal",
-      "knownBlockers": []
+      "knownBlockers": [
+        "GitHub Pages is not serving 301-M4-ECON; the published launch URL 404s."
+      ]
     },
     "validation": {
       "studentValidation": "unknown",
       "facilitatorValidation": "unknown"
     },
     "lastVerified": {
-      "technical": "2026-08-14"
+      "technical": "2026-08-16"
     }
   },
   "provenance": {

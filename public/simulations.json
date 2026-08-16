@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-15",
+  "generated": "2026-08-16",
   "label": {
     "name": "Beta",
     "meaning": "Built and playable. Free to try. Not yet studied in a classroom."
@@ -2442,77 +2442,6 @@
       "availability": "available",
       "label": "Beta",
       "playUrl": "https://braydenokley13-ux.github.io/201-M3-L2/",
-      "educatorResources": []
-    },
-    {
-      "id": "startup-tycoon",
-      "title": "Startup Tycoon: Data-Driven Decisions",
-      "summary": "Seven data-reasoning rounds under one startup scoreboard.",
-      "whatStudentsDo": "Students work through seven linked exercises — pricing risky deals by expected value, giving forecast ranges, avoiding an overfitted curve, updating on new evidence, combining models, choosing under ambiguity, and calibrating their own confidence — with one running score and a closing list of what they practised.",
-      "track": {
-        "id": "track-301",
-        "name": "Track 301",
-        "note": "Advanced"
-      },
-      "subject": {
-        "id": "economics",
-        "name": "Economics"
-      },
-      "concepts": [
-        {
-          "id": "econ.expected-value",
-          "name": "Expected Value"
-        },
-        {
-          "id": "econ.uncertainty",
-          "name": "Uncertainty"
-        },
-        {
-          "id": "econ.model-risk",
-          "name": "Model Risk & False Confidence"
-        },
-        {
-          "id": "econ.signal-vs-noise",
-          "name": "Signal vs Noise"
-        },
-        {
-          "id": "econ.entrepreneurship",
-          "name": "Entrepreneurship"
-        },
-        {
-          "id": "econ.risk-and-reward",
-          "name": "Risk and Reward"
-        }
-      ],
-      "contexts": [
-        {
-          "id": "business",
-          "name": "Running a business"
-        }
-      ],
-      "gradeBands": [],
-      "gradeLabel": null,
-      "durationBucket": "under-20",
-      "durationLabel": "15 min",
-      "format": {
-        "setting": [
-          {
-            "id": "self-guided",
-            "name": "Students can run it alone"
-          }
-        ],
-        "grouping": [
-          {
-            "id": "individual",
-            "name": "Individually"
-          }
-        ],
-        "devices": "one browser per student"
-      },
-      "instructorNeed": "Any instructor can run it",
-      "availability": "available",
-      "label": "Beta",
-      "playUrl": "https://braydenokley13-ux.github.io/301-M4-ECON/",
       "educatorResources": []
     },
     {
