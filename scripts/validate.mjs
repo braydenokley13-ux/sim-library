@@ -198,6 +198,31 @@ for (const { file, rec } of records) {
       fail(file, "publicRelease.preview is true on a record that has a live URL — it launches, so it is not in development");
   }
 
+  // 11b. curation is an OPINION, and opinions are cheap — so the two that carry
+  //      weight are constrained. A simulation cannot be recommended to a teacher
+  //      if that teacher has no way to open it, which makes FLAGSHIP and
+  //      RECOMMENDED claims about things that demonstrably run, not about ideas
+  //      someone likes. HOLD/REBUILD/ARCHIVE are deliberately unconstrained:
+  //      judging something unready must never require it to be working first.
+  const cur = g.curation;
+  if (cur) {
+    if (["FLAGSHIP", "RECOMMENDED"].includes(cur.tier)) {
+      const launches = (p.runResources ?? []).some((r) => r.kind === "live-url" && r.url);
+      if (!launches)
+        fail(file, `curation.tier ${cur.tier} on a record with no live URL — a tier a teacher cannot act on is not a recommendation`);
+      if (g.visibility !== "active")
+        fail(file, `curation.tier ${cur.tier} requires visibility "active" (found "${g.visibility}")`);
+      if (g.publicRelease?.hold === true)
+        fail(file, `curation.tier ${cur.tier} contradicts publicRelease.hold — BOW cannot recommend what BOW is withholding`);
+      if (g.health?.technical === "broken")
+        fail(file, `curation.tier ${cur.tier} on a record with technical health "broken"`);
+    }
+    if (cur.tier === "ARCHIVE" && cur.queue && cur.queue !== "ARCHIVE")
+      fail(file, `curation.tier ARCHIVE with queue ${cur.queue} — archived work has no repair priority`);
+    if (cur.playtestedOn && !/^\d{4}-\d{2}-\d{2}$/.test(cur.playtestedOn))
+      fail(file, `curation.playtestedOn "${cur.playtestedOn}" is not YYYY-MM-DD`);
+  }
+
   // 12. dated fields must be real dates, not in the future
   const today = new Date().toISOString().slice(0, 10);
   for (const [k, val] of Object.entries(g.lastVerified ?? {})) {

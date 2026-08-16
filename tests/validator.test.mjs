@@ -175,3 +175,71 @@ test("rejects a filename that does not match the id", () => {
   r.id = "some-other-id";
   assert.equal(accepts(r), false);
 });
+
+/* ---------------------------------------------------------------------------
+ * Curation tier.
+ *
+ * Tier is the one governance field that is pure opinion, so it is also the one
+ * most able to quietly become a truth claim. These cases pin the boundary: an
+ * opinion may rank an unproven thing highly, but it may not recommend something
+ * a teacher cannot open, and it may not contradict a decision already taken
+ * elsewhere in the record.
+ * ------------------------------------------------------------------------- */
+
+test("accepts a flagship on a healthy, launchable, active record", () => {
+  const r = base();
+  r.governance.curation = { tier: "FLAGSHIP", tierBasis: "Strong decisions and a real ending; carries the library." };
+  assert.equal(accepts(r), true);
+});
+
+test("rejects a tier with no basis — a bare assertion is not a judgement", () => {
+  const r = base();
+  r.governance.curation = { tier: "FLAGSHIP" };
+  assert.equal(accepts(r), false);
+});
+
+test("rejects a one-word tierBasis", () => {
+  const r = base();
+  r.governance.curation = { tier: "RECOMMENDED", tierBasis: "good" };
+  assert.equal(accepts(r), false);
+});
+
+test("rejects a flagship a teacher cannot open", () => {
+  const r = base();
+  r.product.runResources = [{ kind: "repo", label: "Source", url: "https://github.com/x/y" }];
+  r.governance.curation = { tier: "FLAGSHIP", tierBasis: "A genuinely excellent idea that has never been deployed anywhere." };
+  assert.equal(accepts(r), false);
+});
+
+test("rejects recommending something BOW is simultaneously withholding", () => {
+  const r = base();
+  r.governance.publicRelease = { hold: true, holdReason: "Collects student names with no privacy decision taken." };
+  r.governance.curation = { tier: "RECOMMENDED", tierBasis: "Plays well and teaches surplus value clearly." };
+  assert.equal(accepts(r), false);
+});
+
+test("rejects a flagship whose technical health is broken", () => {
+  const r = base();
+  r.governance.health = { technical: "broken", knownBlockers: ["ships a 404"] };
+  r.governance.curation = { tier: "FLAGSHIP", tierBasis: "Would be the best thing in the account if it loaded at all." };
+  assert.equal(accepts(r), false);
+});
+
+test("allows ARCHIVE on a record that does not run — judging something dead needs no live URL", () => {
+  const r = base();
+  r.product.runResources = [{ kind: "repo", label: "Source", url: "https://github.com/x/y" }];
+  r.governance.curation = { tier: "ARCHIVE", tierBasis: "Superseded by a later build; no reason to spend further time." , queue: "ARCHIVE" };
+  assert.equal(accepts(r), true);
+});
+
+test("rejects archived work that still carries a repair priority", () => {
+  const r = base();
+  r.governance.curation = { tier: "ARCHIVE", tierBasis: "Abandoned prototype with no path forward worth funding.", queue: "P0" };
+  assert.equal(accepts(r), false);
+});
+
+test("rejects a malformed playtest date", () => {
+  const r = base();
+  r.governance.curation = { tier: "EXPERIMENTAL", tierBasis: "Interesting core loop, rough edges throughout.", playtestedOn: "Aug 2026" };
+  assert.equal(accepts(r), false);
+});
