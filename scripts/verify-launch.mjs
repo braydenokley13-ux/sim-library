@@ -120,17 +120,30 @@ async function verify(url) {
       .filter((u) => /\.html?($|[?#])/i.test(u) || /\/$/.test(new URL(u).pathname));
 
     const tried = [...new Set(links)].slice(0, 4);
-    let reachedPlayable = null;
+    // Follow every candidate rather than stopping at the first hit, because the
+    // COUNT is what separates the two very different pages this branch catches.
+    const playable = [];
     for (const link of tried) {
       try {
         const r = await get(link);
-        if (r.status < 400 && isInteractive(await r.text())) { reachedPlayable = link; break; }
+        if (r.status < 400 && isInteractive(await r.text())) playable.push(link);
       } catch { /* try the next one */ }
     }
 
-    if (reachedPlayable) note("entry-is-a-hub", `title page; the experience is one click away at ${reachedPlayable}`);
-    else if (tried.length) note("nothing-interactive", `hub page whose ${tried.length} onward link(s) lead nowhere playable`);
-    else note("nothing-interactive", "no script, canvas, button, input or select, and nothing to click through to");
+    if (playable.length >= 2) {
+      // A page offering two or more distinct playable routes is a mode-select
+      // screen — tutorial vs scored run, or one episode of several. That is a
+      // deliberate front door presenting a choice the student is meant to make,
+      // not a click standing between them and the experience. Flagging it as
+      // degraded taught the release check to cry wolf about good design.
+      note("entry-is-a-mode-select", `front door offering ${playable.length} playable routes: ${playable.join(", ")}`);
+    } else if (playable.length === 1) {
+      note("entry-is-a-hub", `title page; the experience is one click away at ${playable[0]}`);
+    } else if (tried.length) {
+      note("nothing-interactive", `hub page whose ${tried.length} onward link(s) lead nowhere playable`);
+    } else {
+      note("nothing-interactive", "no script, canvas, button, input or select, and nothing to click through to");
+    }
   }
   if (/<title>index of /i.test(html) || lower.includes("<h1>index of")) {
     note("directory-listing", "the URL serves a file listing, not a page");
@@ -207,9 +220,16 @@ const FATAL = new Set([
   "directory-listing", "nothing-interactive", "suspiciously-empty", "redirected-off-site",
 ]);
 
+// A third kind: an observation worth recording that is not a defect at all. A
+// release check that reports good design as a problem gets ignored, and an
+// ignored check protects nothing — so these do not make a record "degraded".
+const INFORMATIONAL = new Set(["entry-is-a-mode-select"]);
+
 const failures = results.filter((r) => r.findings.some((f) => FATAL.has(f.code)));
-const warnings = results.filter((r) => !failures.includes(r) && r.findings.length);
-const clean = results.filter((r) => !r.findings.length);
+const warnings = results.filter(
+  (r) => !failures.includes(r) && r.findings.some((f) => !INFORMATIONAL.has(f.code)),
+);
+const clean = results.filter((r) => !failures.includes(r) && !warnings.includes(r));
 
 if (AS_JSON) {
   writeFileSync(join(ROOT, "public", "launch-verification.json"),
